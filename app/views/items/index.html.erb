@@ -1,0 +1,8 @@
+<h1>Item Index</h1>
+
+<% @items.each do |item| %>
+  <%= item.title %>
+  <%= item.description %>
+  <%= item.price %>
+  <%= image_tag(item.image)%>
+<% end %>
