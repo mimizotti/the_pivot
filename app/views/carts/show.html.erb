@@ -1,0 +1,8 @@
+<h1>Your Cart</h1>
+
+<% @items.each do |item| %>
+  <%= image_tag(item.image) %>
+  <%= item.title %>
+  <%= item.description %>
+  <%= item.price %>
+<% end %>
