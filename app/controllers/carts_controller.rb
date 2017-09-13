@@ -16,7 +16,15 @@ class CartsController < ApplicationController
     @items = Item.find(@cart.contents.keys)
   end
 
+  def destroy
+    # require 'pry', binding.pry
+    # item = Item.find(session[:cart].select{|k,v|k = :id}.keys)[0]
+    item = Item.find(params[:format])
+    @cart.contents.delete(params[:format])
+    flash[:successfully_removed] = "Successfully removed <a href=#{item_path(item)}>#{item.title}</a> from your cart."
 
+    redirect_to cart_path
+  end
 
 
 
