@@ -16,4 +16,14 @@ class Cart
   def total_count
     contents.values.sum
   end
+
+  def cart_total
+    running_total = 0
+    contents.each do |item_id, quantity|
+      item_cost = Item.find(item_id).price * quantity
+      running_total += item_cost
+    end
+    running_total
+  end
+  
 end
