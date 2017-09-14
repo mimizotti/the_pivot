@@ -25,5 +25,23 @@ class Cart
     end
     running_total
   end
-  
+
+  def quantity(item_id)
+    @contents[item_id.to_s]
+  end
+
+  def increase_item(item_id)
+    @contents[item_id.to_s] += 1
+  end
+
+  def decrease_item(item_id)
+    @contents[item_id.to_s] -= 1
+    if @contents[item_id.to_s] <= 0
+      remove_item(item_id)
+    end
+  end
+
+  def remove_item(item_id)
+    @contents.delete(item_id.to_s)
+  end
 end
