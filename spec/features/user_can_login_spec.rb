@@ -12,7 +12,6 @@ RSpec.feature "Visitor Can Login" do
       fill_in 'Last Name', with: 'Jovi'
       fill_in 'First Name', with: 'Bon'
       fill_in 'Username', with: 'bonjovirules'
-      fill_in 'Role', with: 'user'
       fill_in 'Password', with: 'deadoralive'
       fill_in 'Email', with: 'livingonaprayer@realtalk.com'
       fill_in 'Address', with: 'address'
