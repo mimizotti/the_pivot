@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "An unregistered user can create an account" do
-  xit "successfully" do
+  it "successfully" do
     visit '/'
     click_on 'Login'
 
@@ -16,15 +16,14 @@ RSpec.describe "An unregistered user can create an account" do
     fill_in "user[address]", with: "123 Some Street"
     fill_in "user[username]", with: "booboo"
     fill_in "user[password]", with: "1234"
-    click_on "Submit"
+
+    click_on "Create User"
 
     expect(current_path).to eq '/dashboard'
-    expect(page).to have_content("Logged in as mb@email.com")
+    expect(page).to have_content("Logged in as booboo")
     expect(page).to have_content("Mike Butera")
     expect(page).to have_content("123 Some Street")
     expect(page).to have_content("booboo")
-    expect(page).to have_content("123 Some Street")
-    expect(page).to have_content("Logout")
     expect(page).to_not have_content("Login")
   end
 end

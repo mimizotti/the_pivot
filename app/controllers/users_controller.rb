@@ -10,14 +10,13 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       session[:logged_in?] = true
-      redirect_to dashboard_path(@user)
+      redirect_to dashboard_path
     else
       redirect_to login_path
     end
   end
 
   def show
-    @user = User.find(params[:id])
   end
 
   private
