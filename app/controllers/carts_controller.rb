@@ -26,6 +26,15 @@ class CartsController < ApplicationController
     redirect_to cart_path
   end
 
+  def update
+    if params[:item_to_increase]
+      @cart.increase_item(params[:item_to_increase])
+    elsif params[:item_to_decrease]
+      @cart.decrease_item(params[:item_to_decrease])
+    end
+    redirect_to cart_path
+  end
+
 
 
 
