@@ -6,7 +6,4 @@ class Category < ApplicationRecord
   include FriendlyId
   friendly_id :name, use: :slugged
 
-  def to_param
-    slug
-  end
 end
