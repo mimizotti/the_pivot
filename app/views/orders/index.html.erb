@@ -1,0 +1,7 @@
+<h1> past orders </h1>
+
+<% @orders.each do |order| %>
+  <%= link_to "order #{order.id}", order_path(order) %>
+  <%= "total cost: #{order.total_price}" %>
+  <%= "Purchased: #{order.created_at}" %>
+<% end %>

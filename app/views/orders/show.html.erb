@@ -1,0 +1,9 @@
+<h1> <%= "order #{@order.id}" %></h1>
+<h3> Total Cost: <%= @order.total_price %></h3>
+<h3> Purchased on: <%= @order.created_at %></h3>
+
+<% @order.items.each do |item| %>
+  <%= item.title %>
+  <%= item.price %>
+  <%= image_tag(item.image) %>
+<% end %>
