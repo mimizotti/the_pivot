@@ -34,11 +34,12 @@
         </div>
       </li>
         </ul>
+
+        <%= link_to image_tag("glyphicons-203-shopping-cart.png"), cart_path, class: "logout" %>
         <% if logged_in? %>
         <button class="logout" type="button" name="logout"><%= link_to "Logout", logout_path, method: :delete %></button>
             <span class="navbar-text">Logged in as <%= current_user.first_name %>
           </span>
-
             <% else %>
           <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
           <% end %>
