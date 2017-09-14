@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Visitor Can Login" do
   context "as a user" do
-    it "can enter information and press login" do
+    xit "can enter information and press login" do
       visit "/"
       expect(page).to have_content("Login")
 

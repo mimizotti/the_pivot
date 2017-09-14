@@ -7,12 +7,14 @@ RSpec.describe "Visitor has an item in cart" do
 
     visit '/scuba'
     click_on 'Add to cart'
-    expect(current_path).to eq('/cart')
+
+    visit '/cart'
+
     expect(page).to have_content(item.title)
     expect(page).to have_content(1)
     expect(page).to have_content(49.95)
 
-    select('2', from: 'quantity')
+    click_on '+'
 
     expect(current_path).to eq('/cart')
     expect(page).to have_content(2)
@@ -25,7 +27,10 @@ RSpec.describe "Visitor has an item in cart" do
 
     visit '/scuba'
     click_on 'Add to cart'
-    select('0', from: 'quantity')
+
+    visit '/cart'
+
+    click_on '-'
 
     expect(current_path).to eq('/cart')
     expect(page).to have_content(0)

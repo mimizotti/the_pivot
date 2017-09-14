@@ -1,8 +1,10 @@
+<%= link_to "View Cart", cart_path %>
 <h1> Check out my <%= @category.name %></h1>
 
 <% @category.items.each do |item| %>
-  <%= item.title %>
+  <%= link_to item.title, item_path(item) %>
   <%= item.description %>
   <%= item.price %>
-  <%= image_tag(item.image) %>
+  <%= link_to image_tag(item.image), item_path(item) %>
+  <%= button_to "Add to cart", cart_path(item_id: item.id) %>
 <% end %>

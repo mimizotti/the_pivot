@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "An unregistered user can create an account" do
-  it "successfully" do
+  xit "successfully" do
     visit '/'
     click_on 'Login'
 

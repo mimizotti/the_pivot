@@ -1,0 +1,16 @@
+<h1>Your Cart</h1>
+
+<% @items.each do |item| %>
+  <%= image_tag(item.image) %>
+  <%= item.title %>
+  <%= item.description %>
+  <%= item.price %>
+  <div class="col-md-2" id="item-<%= item.id %>-quantity">
+    Quantity: <%= @cart.quantity(item.id) %>
+    <%= link_to "+", cart_path(item_to_increase: item.id), method: :patch %>
+    <%= link_to "-", cart_path(item_to_decrease: item.id), method: :patch %>
+  </div>
+  <%= link_to "Remove", cart_path(item), method: :delete %>
+<% end %>
+
+<p>Total Cart Price:<%= number_to_currency(@cart.cart_total) %></p>
