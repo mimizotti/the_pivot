@@ -1,16 +1,33 @@
-<h1>Your Cart</h1>
+<div class="jumbrotron">
+  <div class="container-fluid">
+    <h1>Your Cart</h1>
+<table class="table table-striped text-left table-bordered">
+  <thead>
+    <tr>
+     <th><h3>Image</h3></th>
+     <th><h3>Item</h3></th>
+      <th><h3>Description</h3></th>
+      <th><h3>Price</h3></th>
+      <th><h3>Remove Item</h3></th>
+      <th><h3>Quantity</h3></th>
+      </tr>
+    </thead>
+    <tbody>
+<tr><% @items.each do |item| %></tr>
+      <td><img class="img-thumbnail" <%= image_tag item.image %></td>
+      <td><%= item.title %></td>
+      <td><%= item.description %></td>
+      <td><%= item.price %></td>
+    <td><%= link_to "Remove", cart_path(item), method: :delete %></td>
+      <div class="col-md-2" id="item-<%= item.id %>-quantity">
+        <td>Quantity: <%= @cart.quantity(item.id) %>
+        <%= link_to "+", cart_path(item_to_increase: item.id), method: :patch %>
+        <%= link_to "-", cart_path(item_to_decrease: item.id), method: :patch %></td>
+      </div>
+      <% end %>
+  </tbody>
+</table>
+    <p>Total Cart Price:<%= @cart.cart_total %></p>
+</div>
+</div>
 
-<% @items.each do |item| %>
-  <%= image_tag(item.image) %>
-  <%= item.title %>
-  <%= item.description %>
-  <%= number_to_currency(item.price * @cart.quantity(item.id)) %>
-  <div class="col-md-2" id="item-<%= item.id %>-quantity">
-    Quantity: <%= @cart.quantity(item.id) %>
-    <%= link_to "+", cart_path(item_to_increase: item.id), method: :patch %>
-    <%= link_to "-", cart_path(item_to_decrease: item.id), method: :patch %>
-  </div>
-  <%= link_to "Remove", cart_path(item), method: :delete %>
-<% end %>
-
-<p>Total Cart Price:<%= number_to_currency(@cart.cart_total) %></p>

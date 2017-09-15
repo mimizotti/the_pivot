@@ -9,14 +9,46 @@
   </head>
 
   <body>
-    <% if current_user %>
-      <p> Logged in as <%= current_user.username %>
-      <%= link_to "User Page", dashboard_path(current_user)%>
-      <%= button_to "Logout", logout_path, method: :delete %></p>
-    <% end %>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <a class="navbar-brand" href="/">Knautical Knots</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/items">All Items</a>
+          </li>
+          <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/basket">Basket</a>
+          <a class="dropdown-item" href="/basketmaking">Basket Making Supplies</a>
+          <a class="dropdown-item" href="/scuba">Scuba Gear</a>
+          <a class="dropdown-item" href="/snorkel">Snorkel Gear</a>
+        </div>
+      </li>
+        </ul>
+
+        <%= link_to image_tag("glyphicons-203-shopping-cart.png"), cart_path, class: "logout" %>
+        <% if logged_in? %>
+        <button class="btn btn-link" type="button" name="logout"><%= link_to "Logout", logout_path, method: :delete %></button>
+            <span class="navbar-text">Logged in as <%= current_user.first_name %>
+          </span>
+            <% else %>
+          <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
+          <% end %>
+
+      </div>
+    </nav>
 
     <% flash.each do |name, msg| %>
-      <div class="alert alert-success" role="alert"">
+      <div class="alert alert-success" role="alert">
         <%= content_tag :div, raw(msg), class: name %>
       </div>
     <% end %>
@@ -26,4 +58,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   </body>
+  <br>
+  <footer class="footer">
+  <div class="container" class="footer fixed-bottom">
+    <div class="row" class="footer">
+      <div class="col-lg-12 text-center page-titles" class="footer">
+        <p class="normal-text">Copyright &copy; Cool Table 2017</p>
+      </div>
+    </div>
+  </div>
+</footer>
 </html>
