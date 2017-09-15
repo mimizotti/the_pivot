@@ -1,3 +1,12 @@
 .logout {
   margin-right: 10px;
 }
+
+.leitbild-text{
+  font-size: 2em;
+  line-height: 2em;
+  height: 13em;
+  display: table;
+  vertical-align: middle;
+  margin:auto;
+}

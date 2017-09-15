@@ -37,7 +37,7 @@
 
         <%= link_to image_tag("glyphicons-203-shopping-cart.png"), cart_path, class: "logout" %>
         <% if logged_in? %>
-        <button class="logout" type="button" name="logout"><%= link_to "Logout", logout_path, method: :delete %></button>
+        <button class="btn btn-link" type="button" name="logout"><%= link_to "Logout", logout_path, method: :delete %></button>
             <span class="navbar-text">Logged in as <%= current_user.first_name %>
           </span>
             <% else %>
@@ -48,7 +48,7 @@
     </nav>
 
     <% flash.each do |name, msg| %>
-      <div class="alert alert-success" role="alert"">
+      <div class="alert alert-success" role="alert">
         <%= content_tag :div, raw(msg), class: name %>
       </div>
     <% end %>
@@ -58,8 +58,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   </body>
+  <br>
   <footer class="footer">
-  <div class="container" class="footer">
+  <div class="container" class="footer fixed-bottom">
     <div class="row" class="footer">
       <div class="col-lg-12 text-center page-titles" class="footer">
         <p class="normal-text">Copyright &copy; Cool Table 2017</p>
