@@ -1,3 +1,36 @@
-<h1> home index </h1>
-
-<%= link_to "Login", login_path %>
+<div class="container-fluid">
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <!-- <img class= src="/images/g" alt="First slide"> -->
+        <%= image_tag("basket_2.jpg", class: "d-block w-80 img-fluid") %>
+        <div class="carousel-caption d-none d-md-block leitbild-text">
+          <h3>Baskets</h3>
+        <p>Here are all the baskets!</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag("snorkel.jpg", class: "d-block w-80 img-fluid") %>
+        <div class="carousel-caption d-none d-md-block leitbild-text">
+          <h3>Snorkel Gear</h3>
+        <p>Snorkel gear</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag("basketguy.jpg", class: "d-block w-80 img-fluid") %>
+        <div class="carousel-caption d-none d-md-block leitbild-text">
+          <h3>Underwater Basket Weaving Products</h3>
+        <p>Some words here</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
