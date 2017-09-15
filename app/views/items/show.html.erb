@@ -1,0 +1,18 @@
+<h1><%= @item.title %></h1>
+
+<p>
+  <%= image_tag(@item.image) %>
+</p>
+<p>
+  <%= @item.description %>
+</p>
+<p>
+  <%= @item.price %>
+</p>
+<% if @item.active? %>
+  <%= button_to "Add to Cart", cart_path(item_id: @item.id) %>
+<% else %>
+  <p>
+    Item Retired
+  </p>
+<% end %>

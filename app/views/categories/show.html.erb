@@ -1,10 +1,23 @@
-<%= link_to "View Cart", cart_path %>
+<div class="container-fluid">
 <h1> Check out my <%= @category.name %></h1>
+<table class="table table-striped text-left table-bordered">
+  <thead>
+    <tr>
+      <th><h3>Item Image</h3></th>
+      <th><h3>Item</h3></th>
+      <th><h3>Description</h3></th>
+      <th><h3>Price</h3></th>
+    </tr>
+  </thead>
+<tbody>
+  <tr><% @category.items.each do |item| %></tr>
+    <td><%= link_to image_tag(item.image), item_path(item) %></td>
+    <td><%= link_to item.title, item_path(item) %></td>
+    <td><%= item.description %></td>
+    <td><%= item.price %></td>
+    <td><%= button_to "Add to cart", cart_path(item_id: item.id) %></td>
+  <% end %>
 
-<% @category.items.each do |item| %>
-  <%= link_to item.title, item_path(item) %>
-  <%= item.description %>
-  <%= item.price %>
-  <%= link_to image_tag(item.image), item_path(item) %>
-  <%= button_to "Add to cart", cart_path(item_id: item.id) %>
-<% end %>
+</tbody>
+</table>
+</div>
