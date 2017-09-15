@@ -5,4 +5,5 @@
   <%= item.description %>
   <%= item.price %>
   <%= image_tag(item.image)%>
+  <%= button_to "Add to cart", cart_path(item_id: item.id) %>
 <% end %>
