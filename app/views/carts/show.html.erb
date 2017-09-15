@@ -27,7 +27,7 @@
       <% end %>
   </tbody>
 </table>
-    <p>Total Cart Price:<%= @cart.cart_total %></p>
+    <p>Total Cart Price:<%= number_to_currency(@cart.cart_total) %></p>
 </div>
 </div>
 
