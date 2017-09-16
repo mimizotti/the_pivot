@@ -1,23 +1,22 @@
-<div class="container-fluid">
-<h1> Check out my <%= @category.name %></h1>
-<table class="table table-striped text-left table-bordered">
-  <thead>
-    <tr>
-      <th><h3>Item Image</h3></th>
-      <th><h3>Item</h3></th>
-      <th><h3>Description</h3></th>
-      <th><h3>Price</h3></th>
-    </tr>
-  </thead>
-<tbody>
-  <tr><% @category.items.each do |item| %></tr>
-    <td><%= link_to image_tag(item.image), item_path(item) %></td>
-    <td><%= link_to item.title, item_path(item) %></td>
-    <td><%= item.description %></td>
-    <td><%= item.price %></td>
-    <td><%= button_to "Add to cart", cart_path(item_id: item.id) %></td>
-  <% end %>
 
-</tbody>
-</table>
+
+<div class="container-fluid">
+  <h1 class="head"> Check out my <%= @category.name %></h1>
+  <div class="row">
+    <% @category.items.each do |item| %>
+    <div class="col-sm-4">
+      <div class="card-group">
+        <div class="card border-0 text-center">
+          <div class="card-body">
+            <h4 class="card-title"><%= link_to item.title, item_path(item) %></h4>
+            <%= link_to image_tag(item.image), item_path(item) %>
+            <p class="card-text"><%= item.description %></p>
+            <p class="card-text"><%= number_to_currency(item.price) %></p>
+            <%= button_to "Add to cart", cart_path(item_id: item.id), class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>

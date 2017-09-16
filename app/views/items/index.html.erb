@@ -1,18 +1,20 @@
 <div class="container-fluid">
-  <h1>Item Index</h1>
-  <table class="table table-striped text-left table-bordered">
-    <thead>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Price</th>
-    </thead>
-    <tbody>
-      <tr><% @items.each do |item| %></tr>
-      <td><%= item.title %></td>
-      <td><%= item.description %></td>
-      <td><%= item.price %></td>
-      <td><%= link_to image_tag(item.image), item_path(item) %></td>
-      <% end %>
-    </tbody>
-  </table>
+  <h1 class="head">All Items</h1>
+  <div class="row">
+    <% @items.each do |item| %>
+    <div class="col-sm-4">
+      <div class="card-group">
+        <div class="card border-0 text-center">
+          <div class="card-body">
+            <h4 class="card-title"><%= link_to item.title, item_path(item) %></h4>
+            <%= link_to image_tag(item.image), item_path(item) %>
+            <p class="card-text"><%= item.description %></p>
+            <p class="card-text"><%= number_to_currency(item.price) %></p>
+            <%= button_to "Add to cart", cart_path(item_id: item.id), class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>
