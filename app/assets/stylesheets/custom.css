@@ -10,3 +10,17 @@
   vertical-align: middle;
   margin:auto;
 }
+
+.head {
+  text-align: center;
+}
+
+.profile {
+  width: 500px;
+  text-align: center;
+  margin-left: 450px;
+}
+
+.round {
+  border-radius: 5px;
+}

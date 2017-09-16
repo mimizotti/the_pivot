@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "As a visitor" do
   it "can view all items in a category" do
     category = Category.create(name: "scuba")
-    category_2 = Category.create(name: "basket")
+    category_2 = Category.create(name: "basketmaking")
 
     item = category.items.create(title: "Mask", description: "Something to put on your face.", price: 49.95, image: "https://slack-imgs.com/?c=1&url=http%3A%2F%2Fwww.scubadivingdreams.com%2Fwp-content%2Fuploads%2F2015%2F11%2Fthe-best-scuba-snorkel-mask-mares-i3-sunrise.jpg")
     item_2 = category.items.create(title: "Fins", description: "Something to put on your feet.", price: 69.95, image: "http://www.scuba-info.com/images/scuba_gear_fins.jpg")
@@ -15,7 +15,7 @@ RSpec.describe "As a visitor" do
     expect(page).to have_content(item.title)
     expect(page).to have_content(item_2.title)
 
-    visit '/basket'
+    visit '/basketmaking'
 
     expect(page).to have_content(item_3.title)
     expect(page).to have_content(item_4.title)

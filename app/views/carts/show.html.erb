@@ -10,6 +10,7 @@
       <th><h3>Price</h3></th>
       <th><h3>Remove Item</h3></th>
       <th><h3>Quantity</h3></th>
+      <th><h3>Subtotal</h3></th>
       </tr>
     </thead>
     <tbody>
@@ -23,6 +24,7 @@
         <td>Quantity: <%= @cart.quantity(item.id) %>
         <%= link_to "+", cart_path(item_to_increase: item.id), method: :patch %>
         <%= link_to "-", cart_path(item_to_decrease: item.id), method: :patch %></td>
+        <td><%= number_to_currency(@cart.quantity(item.id) * item.price) %></td>
       </div>
       <% end %>
   </tbody>
@@ -30,4 +32,3 @@
     <p>Total Cart Price:<%= number_to_currency(@cart.cart_total) %></p>
 </div>
 </div>
-

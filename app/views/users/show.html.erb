@@ -1,2 +1,8 @@
-<h1> <%= current_user.full_name %></h1>
-<%= current_user.address %>
+<div class="profile">
+  <h1>Your Profile</h1>
+  <h2> <%= current_user.full_name %></h2>
+  <p>username: <%= current_user.username %></p>
+  <p> <%= current_user.address %></p>
+  <p> <%= current_user.email %></p>
+  <button class="round"><%= link_to "View past orders", orders_path %></button>
+</div>
