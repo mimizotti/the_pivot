@@ -29,36 +29,12 @@ Suggested browser:
 * Google Chrome
 
 
-### Installing
-
-This was built on rails 5.1.4 
-
-To install, clone down the repo.
-
-`cd` into the project root directory
-
-run `bundle && bundle update`
-
-Next, run `rake db: {create,migrate}` from the project root directory.
-
-## Running the tests
-
-Run `rspec` from the project root directory.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+### Getting Started
 ```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+git clone git@github.com:snayrouz/little-shop.git
+cd little-shop
+bundle install
+rake db: {create,migrate,seed}
 ```
 
 ## Deployment
