@@ -10,7 +10,7 @@
   <%= @item.price %>
 </p>
 <% if @item.active? %>
-  <%= button_to "Add to Cart", cart_path(item_id: @item.id) %>
+  <%= button_to "Add to Cart", cart_path(item_id: @item.id), class: 'add-to-cart' %>
 <% else %>
   <p>
     Item Retired
