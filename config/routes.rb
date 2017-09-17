@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   resource :cart
   get '/:category', to: 'categories#show', param: :slug, as: "category"
 
+  namespace :admin do
+    get "/dashboard", to: "users#show", as: "dashboard"
+  end
 end
