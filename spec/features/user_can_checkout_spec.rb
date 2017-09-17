@@ -49,7 +49,7 @@ RSpec.feature "user can checkout" do
   end
 
   scenario "'checkout' should not display with 0 items in cart'" do
-    User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive")
+    user = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive")
 
     visit items_path
 
@@ -59,7 +59,7 @@ RSpec.feature "user can checkout" do
 
     fill_in "session_username", with: user.username
     fill_in "session_password", with: user.password
-    click_button("login")
+    click_button("Login")
 
     expect(current_path).to eq("/dashboard")
 
