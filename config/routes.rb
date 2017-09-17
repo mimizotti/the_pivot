@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :create]
 
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :edit, :update]
   get "/dashboard", to:'users#show', as: 'dashboard'
 
   delete "/logout", to: 'sessions#destroy', as: 'logout'
