@@ -7,5 +7,5 @@ class User < ApplicationRecord
     "#{first_name} #{last_name}"
   end
 
-  enum status: ["user", "admin"]
+  enum role: ["user", "admin"]
 end
