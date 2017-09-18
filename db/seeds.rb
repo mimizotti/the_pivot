@@ -30,7 +30,7 @@ item_21 = Item.create(title: "Tall Baskets with Lids (set of 3)", description: "
 item_22 = Item.create(title: "Tribal Basket", description: "COLOR! Woven at a depth of 25ft, weaver lost an arm when the colors attracted a barracuda.", price: 249.95, image: "tribalbasket.jpg")
 item_23 = Item.create(title: "Waste Basket", description: "It's a wastebasket.  Woven in the shallow end of the kiddy pool, has been properly sanitized post-weave.", price: 29.95, image: "wastebasket.jpg")
 
-category_3 = Category.create(name: "basketweaving")
+category_3 = Category.create(name: "basketmaking")
 
 item_24 = Item.create(title: "1inch flat Reed", description: "Flat Reed for weaving.  35ft", price: 59.95, image: "1inchflatreed.png")
 item_25 = Item.create(title: "8inch Wood Base", description: "8inch wood base, nothing special.", price: 13.95, image: "8inchwoodbase.jpg")
