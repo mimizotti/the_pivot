@@ -56,4 +56,20 @@ class Cart
     end
   end
 
+  def order_hash
+    items = {}
+    contents.each do |item_id, quantity|
+      items[Item.find(item_id)] = quantity
+    end
+    items
+  end
+
+  def delete_item(id)
+    contents.delete(id)
+  end
+
+  def destroy
+    @contents.clear
+  end
+
 end
