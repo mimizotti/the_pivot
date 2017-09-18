@@ -21,5 +21,7 @@ Rails.application.routes.draw do
     get '/cancelled', to: "orders#show"
     get '/completed', to: "orders#show"
   end
-  
+
+  post 'retire' => 'users#retire_item', as: :retire
+
 end
