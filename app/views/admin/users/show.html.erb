@@ -27,4 +27,20 @@
     <td><%= order.total_price %></td>
     <% end %>
   </tbody>
+  <table class="table table-striped text-left table-bordered">
+    <thead><strong>Orders By Status</strong></thead>
+    <tr>
+      <th><%= link_to 'Ordered', admin_ordered_path %></th>
+      <th><%= link_to 'Paid', admin_paid_path %></th>
+      <th><%= link_to 'Cancelled', admin_cancelled_path %></th>
+      <th><%= link_to 'Completed', admin_completed_path %></th>
+    </tr>
+    <tbody>
+      <tr>
+        <td><%= @orders.ordered_count %></td>
+        <td><%= @orders.paid_count %></td>
+        <td><%= @orders.cancelled_count %></td>
+        <td><%= @orders.completed_count %></td>
+      </tr>
+    </tbody>
 </table>

@@ -32,10 +32,10 @@ RSpec.describe "As an admin" do
       visit admin_dashboard_path
 
       expect(page).to have_content("Bon Jovi")
-      expect(page).to have_content("Ordered")
-      expect(page).to have_content("Sponge Bob")
       expect(page).to have_content("Paid")
-      expect(page).to have_content("Ordered: 1, Paid: 1, Cancelled: 0, Completed: 0")
+      expect(page).to have_content("Sponge Bob")
+      expect(page).to have_content("Cancelled")
+      # expect(page).to have_content("1, Paid: 1, Cancelled: 0, Completed: 0")
     end
 
     it "can be sorted by status" do
