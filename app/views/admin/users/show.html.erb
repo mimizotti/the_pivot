@@ -9,3 +9,22 @@
   <button class="round"><%= link_to "View past orders", orders_path %></button>
   <button class="round"><%= link_to "Edit Account", edit_user_path(current_user)  %>
 </div>
+
+
+<table class="table table-striped text-left table-bordered">
+  <thead><strong>All Orders</strong></thead>
+  <tr>
+    <th>Order ID</th>
+    <th>Full Name</th>
+    <th>Status</th>
+    <th>Total Price</th>
+  </tr>
+  <tbody>
+    <tr><% @orders.each do |order| %></tr>
+    <td><%= link_to order.id, order_path(order) %></td>
+    <td><%= order.user.full_name %></td>
+    <td><%= order.status %></td>
+    <td><%= order.total_price %></td>
+    <% end %>
+  </tbody>
+</table>
