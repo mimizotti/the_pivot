@@ -10,7 +10,11 @@
             <%= link_to image_tag(item.image, class: 'display'), item_path(item) %>
             <p class="card-text"><%= item.description %></p>
             <p class="card-text"><%= number_to_currency(item.price) %></p>
-            <%= button_to "Add to cart", cart_path(item_id: item.id), class: "btn btn-primary add-to-cart" %>
+            <% if item.active? %>
+              <%= button_to "Add to Cart", cart_path(item_id: item.id), class: 'btn btn-primary add-to-cart' %>
+            <% else %>
+              <p>Item Retired</p>
+            <% end %>
           </div>
         </div>
       </div>
