@@ -34,11 +34,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def retire_item
-    @item = Item.find(params[:format])
-    toggle_status(@item)
-    redirect_back fallback_location: @item
-  end
+
 
   private
 
@@ -50,14 +46,6 @@ class UsersController < ApplicationController
     unless session[:logged_in?]
       flash[:error] = "You must be logged in to view this content"
       redirect_to login_path
-    end
-  end
-
-  def toggle_status(item)
-    if item.active?
-      item.retired!
-    else
-      item.active!
     end
   end
 end
