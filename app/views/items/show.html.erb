@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <h1><%= @item.title %></h1>
-    <p><%= image_tag(@item.image) %></p>
+    <p><%= image_tag(@item.image, class: "display") %></p>
     <p><%= @item.description %></p>
     <p><%= @item.price %></p>
   <% if @item.active? %>
