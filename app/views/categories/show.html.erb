@@ -9,7 +9,7 @@
         <div class="card border-0 text-center">
           <div class="card-body">
             <h4 class="card-title"><%= link_to item.title, item_path(item) %></h4>
-            <%= link_to image_tag(item.image), item_path(item) %>
+            <%= link_to image_tag(item.image, class: 'display'), item_path(item) %>
             <p class="card-text"><%= item.description %></p>
             <p class="card-text"><%= number_to_currency(item.price) %></p>
             <%= button_to "Add to cart", cart_path(item_id: item.id), class: "btn btn-primary" %>
