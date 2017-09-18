@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :require_login, except: [:new, :create]
+  before_action :require_login, except: [:new, :create, :edit, :update]
 
   def new
     @user = User.new
@@ -17,6 +17,21 @@ class UsersController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if current_user.save && current_user.admin?
+      current_user.update(user_params)
+      redirect_to admin_dashboard_path
+    elsif current_user.save
+      current_user.update(user_params)
+      redirect_to dashboard_path
+    else
+      render :edit
+    end
   end
 
   private

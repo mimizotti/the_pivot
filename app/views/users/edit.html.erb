@@ -1,0 +1,18 @@
+<h1> Edit Account </h1>
+
+<%= form_for(current_user) do |f| %>
+
+  <%= f.label :first_name, "First Name:"%>
+  <%= f.text_field :first_name%>
+
+  <%= f.label :last_name, "Last Name:" %>
+  <%= f.text_field :last_name %>
+
+  <%= f.label :address, "Address:" %>
+  <%= f.text_field :address %>
+
+  <%= f.label :email, "Email:" %>
+  <%= f.text_field :email %>
+
+  <%= f.submit "Update"%>
+<% end %>

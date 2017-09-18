@@ -34,9 +34,13 @@
         </div>
       </li>
       <% if current_user && current_user.admin? %>
-        <li class="nav-item">
-          <a class="nav-link" href="/admin/dashboard">Dashboard</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/dashboard">Dashboard</a>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard">Dashboard</a>
+          </li>
         <% end %>
         </ul>
 
