@@ -6,6 +6,11 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
     @order_items = @order.order_items
+    unless session[:user_id] == @order.user_id
+      flash[:notice] = "You don't have access to that order!"
+      redirect_to dashboard_path(session[:user_id])
+      return
+    end
   end
 
   def new
