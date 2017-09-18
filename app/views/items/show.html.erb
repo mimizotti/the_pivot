@@ -4,8 +4,12 @@
     <p><%= @item.description %></p>
     <p><%= number_to_currency(@item.price) %></p>
   <% if @item.active? %>
-    <%= button_to "Add to Cart", cart_path(item_id: @item.id), class: 'add-to-cart' %>
+    <%= button_to "Add to Cart", cart_path(item_id: @item.id), class: 'add-to-cart btn btn-success' %>
   <% else %>
     <p>Item Retired</p>
+  <% end %>
+  <% if current_user && current_user.admin? %>
+    <br />
+    <%= button_to "Toggle Retire", retire_path(@item), class: "btn btn-danger" %>
   <% end %>
 </div>
