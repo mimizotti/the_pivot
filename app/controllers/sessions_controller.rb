@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
       session[:logged_in?] = true
       redirect_to dashboard_path
     else
+      flash[:cannot_login] = "You have entered an incorrect username or password."
       redirect_to login_path
     end
   end

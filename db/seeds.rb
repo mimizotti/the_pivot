@@ -1,7 +1,7 @@
 user = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "bonjovirules")
 user_2 = User.create(first_name: "Styx", last_name: "Rules", address: "123 man in the wilderness", email: "renegade@amazing.com", username: "styxrules", password: "styxrules", role: "admin")
 
-category_1 = Category.create(name: "scuba")
+category_1 = Category.create(name: "scuba", title: "Scuba Diving Supplies")
 
 item_1 = Item.create(title: "Yellow Tank", description: "This lovely tank has a tiny scuba diver to accompany you on your weaving adventures.  With him, you're never alone, even if you are totally, utterly deserted.", price: 45.00, image: "yellow_tank.jpg")
 item_2 = Item.create(title: "Basic Mask", description: "This is a basic mask, don't expect much else from it.", price: 29.95, image: "basicmask.jpg")
@@ -17,7 +17,7 @@ item_11 = Item.create(title: "Scuba Vest with Attachments (Blue)", description: 
 item_12 = Item.create(title: "Normal Tank", description: "This tank lets you breathe under water.  Crazy, right?!", price: 149.95, image: "standardtank.jpg")
 item_13 = Item.create(title: "Yellow Tank, Vest, and Hookups", description: "For those of us unconcerned with how we get underwater, and more interested in staying there while not drowning, look no more! This complete set is a ready-to-go setup, just for your type.", price: 550.00, image: "yellowtankwithhookups.png")
 
-category_2 = Category.create(name: "basket")
+category_2 = Category.create(name: "basket", title: "Finished Baskets")
 
 item_14 = Item.create(title: "Basic Basket", description: "Basic Basket for all of your lush supplies.  Woven at a depth of 400ft, while shipwreck diving.", price: 39.95, image: "basicbasket.jpg")
 item_15 = Item.create(title: "Twotone Dream Basket", description: "Basket to hold your dreams.  Woven at a depth of 1200ft, in an old diving suit. while fighting hammerheads.", price: 129.95, image: "barrelbasketmultitone.jpg")
@@ -30,7 +30,7 @@ item_21 = Item.create(title: "Tall Baskets with Lids (set of 3)", description: "
 item_22 = Item.create(title: "Tribal Basket", description: "COLOR! Woven at a depth of 25ft, weaver lost an arm when the colors attracted a barracuda.", price: 249.95, image: "tribalbasket.jpg")
 item_23 = Item.create(title: "Waste Basket", description: "It's a wastebasket.  Woven in the shallow end of the kiddy pool, has been properly sanitized post-weave.", price: 29.95, image: "wastebasket.jpg")
 
-category_3 = Category.create(name: "basketmaking")
+category_3 = Category.create(name: "basketmaking", title: "Basket Making Supplies")
 
 item_24 = Item.create(title: "1inch flat Reed", description: "Flat Reed for weaving.  35ft", price: 59.95, image: "1inchflatreed.png")
 item_25 = Item.create(title: "8inch Wood Base", description: "8inch wood base, nothing special.", price: 13.95, image: "8inchwoodbase.jpg")
@@ -48,7 +48,7 @@ item_36 = Item.create(title: "Round Palm Frond (set of 6)", description: "Reconn
 item_37 = Item.create(title: "Twine", description: "You could leave your basket plain, but then you'd be boring.  Buy this twine for weaving beautiful details! Don't be boring...", price: 45.95, image: "twineforaccents.jpg")
 item_38 = Item.create(title: "Extra Thick Reed", description: "Building a framework for an industrial basket? Present and accounted for, this is your reed!  Can stand up to a Category 5 hurricane (tested)!  Unfortunately, our tester was not so lucky.", price: 67.96, image: "xtrathickreed.jpg")
 
-category_4 = Category.create(name: "snorkel")
+category_4 = Category.create(name: "snorkel", title: "Snorkeling Gear")
 
 item_39 = Item.create(title: "Black Snorkel", description: "It's a snorkel, it's black, you should purchase this one if you don't have much of a personality.", price: 19.95, image:"blacksnorkel.jpg")
 item_40 = Item.create(title: "Blue Snorkel", description: "It's a snorkel, it's blue, you should purchase this one if you have a little bit of a personality.", price: 21.95, image: "bluesnorkel.jpg")
