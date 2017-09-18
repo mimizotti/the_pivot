@@ -16,5 +16,10 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get "/dashboard", to: "users#show", as: "dashboard"
+    get '/ordered', to: "orders#show"
+    get '/paid', to: "orders#show"
+    get '/cancelled', to: "orders#show"
+    get '/completed', to: "orders#show"
   end
+  
 end
