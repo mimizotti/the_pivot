@@ -8,7 +8,7 @@ RSpec.describe "Visitor Can Add Items To Cart" do
 
       visit '/scuba'
 
-      click_button "Add to cart"
+      click_button "Add to Cart"
 
       visit '/cart'
 

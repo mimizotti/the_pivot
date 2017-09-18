@@ -7,10 +7,11 @@ RSpec.describe "Visitor Can Add Items To Cart" do
       item = category.items.create!(title: "Mask", description: "This is for your face", price: 10.00, image: "https://slack-imgs.com/?c=1&url=http%3A%2F%2Fwww.scubadivingdreams.com%2Fwp-content%2Fuploads%2F2015%2F11%2Fthe-best-scuba-snorkel-mask-mares-i3-sunrise.jpg")
 
       visit '/scuba'
-      expect(page).to have_button("Add to cart")
 
-      click_button "Add to cart"
-      click_button "Add to cart"
+      expect(page).to have_button("Add to Cart")
+
+      click_button "Add to Cart"
+      click_button "Add to Cart"
 
       find(:css, '.cart').click
 
