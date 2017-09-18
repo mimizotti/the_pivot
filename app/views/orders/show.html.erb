@@ -13,7 +13,7 @@
     </tr>
   <% @order_items.each do |order_item| %>
     <tr>
-      <td><%= image_tag(order_item.item.image) %></td>
+      <td><%= image_tag(order_item.item.image, class: 'thumbs') %></td>
       <td><%= order_item.item.title %></td>
       <td><%= order_item.quantity %></td>
       <td><%= number_to_currency(order_item.line_item_total) %></td>
