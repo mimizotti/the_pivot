@@ -2,15 +2,24 @@
   <br>
   <h1><strong><%= "Order #{@order.id}" %></strong></h1>
   <br>
+      <p>Placed on: <%= @order.created_at %></p>
+      <p>Order Status: <%= @order.status %></p>
       <p>Total cost: <%= number_to_currency(@order.total_price) %></p>
-      <p>Purchased on: <%= @order.created_at %></p>
   <table class="table table-striped table-bordered text-left">
-  <% @order.items.each do |item| %>
     <tr>
-      <td><%= item.title %></td>
-      <td><%= item.price %></td>
-      <td><%= image_tag(item.image) %></td>
-      <td>Quantity: </td>
+      <th></th>
+      <th>Item</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Subtotal</th>
+    </tr>
+  <% @order_items.each do |order_item| %>
+    <tr>
+      <td><%= image_tag(order_item.item.image, class: 'thumbs') %></td>
+      <td><%= link_to order_item.item.title, item_path(order_item.item) %></td>
+      <td><%= number_to_currency(order_item.item.price) %></td>
+      <td><%= order_item.quantity %></td>
+      <td><%= number_to_currency(order_item.line_item_total) %></td>
     </tr>
   <% end %>
 </table>

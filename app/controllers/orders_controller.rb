@@ -5,10 +5,11 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    @order_items = @order.order_items
   end
 
   def new
-		order = Order.create(status: "ordered", user_id: current_user.id, total_price: @cart.cart_total)
+		order = Order.create(status: 0, user_id: current_user.id, total_price: @cart.cart_total)
 		item_hash = @cart.order_hash
 		order.add(item_hash)
 		@cart.destroy
