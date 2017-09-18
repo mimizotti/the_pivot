@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   namespace :admin do
     get "/dashboard", to: "users#show", as: "dashboard"
   end
+
+  post 'retire' => 'users#retire_item', as: :retire
 end
