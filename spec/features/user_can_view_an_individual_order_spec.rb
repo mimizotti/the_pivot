@@ -35,6 +35,8 @@ RSpec.describe "User can see past order" do
       expect(page).to_not have_content("order 2")
 
       click_on "order 1"
+      save_and_open_page
+    
 
       expect(current_path).to eq("/orders/1")
       expect(page).to have_content("order 1")

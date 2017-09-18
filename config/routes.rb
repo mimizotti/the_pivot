@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
-  resources :orders, only: [:index, :show, :create]
+  resources :orders, only: [:index, :show, :create, :new]
 
   resources :users, only: [:new, :create]
   get "/dashboard", to:'users#show', as: 'dashboard'
