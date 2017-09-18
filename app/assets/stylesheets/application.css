@@ -14,9 +14,6 @@
  *= require_self
  */
 
-html, body {
-  background-color: #ddd;
-}
 
  .display {
   width:  250px;
