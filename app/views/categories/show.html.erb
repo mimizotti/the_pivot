@@ -4,13 +4,17 @@
     <meta charset="utf-8">
     <title></title>
 
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Quicksand|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Oswald|Quicksand" rel="stylesheet">
 
     <style>
-    h4{
+    h1 {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 75px;
+    }
+    h4 {
       font-family: 'Oswald', sans-serif;
     }
-    p{
+    p {
       font-family: 'Quicksand', sans-serif;
     }
     </style>
@@ -21,7 +25,7 @@
 </html>
 
 <div class="container-fluid">
-  <h1 class="head"><%= @category.name %></h1>
+  <h1 class="head"><%= @category.name %></h1><br/><br/>
   <div class="row">
     <% @category.items.each do |item| %>
     <div class="col-sm-4">
