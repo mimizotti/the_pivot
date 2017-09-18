@@ -30,11 +30,11 @@ RSpec.feature "user can checkout" do
 
     find(:css, ".cart").click
 
-    click_button "Checkout"
+    click_link "Checkout"
 
     expect(current_path).to eq(orders_path)
     expect(page).to have_content("Order was successfully placed")
-    expect(page).to have_content("Order #{user.orders.last.id}")
+    expect(page).to have_content("order #{user.orders.last.id}")
 
     find(:css, ".cart").click
 
