@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
 		item_hash = @cart.order_hash
 		order.add(item_hash)
 		@cart.destroy
-		flash[:success] = "Congratulations on your successful underwater basketweaving purchase!"
+		flash[:success] = "Order was successfully placed"
 		redirect_to orders_path
 	end
 end
