@@ -34,16 +34,13 @@ RSpec.describe "User can see past order" do
 
       expect(page).to_not have_content("order 2")
 
-      click_on "order 1"
-      save_and_open_page
-    
+      click_on "order 1"    
 
       expect(current_path).to eq("/orders/1")
       expect(page).to have_content("order 1")
       expect(page).to_not have_content("order 2")
       expect(page).to have_content("Mask")
       expect(page).to have_content("154.85")
-      # expect(page).to have_content("3")
       expect(page).to have_css("img[src*='http://www.scuba-info.com/images/scuba_gear_fins.jpg']")
       expect(page).to have_content("69.95")
     end
