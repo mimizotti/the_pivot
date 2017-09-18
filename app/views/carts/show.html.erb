@@ -15,7 +15,7 @@
     </thead>
     <tbody>
 <tr><% @items.each do |item| %></tr>
-      <td><img class="img-thumbnail" <%= image_tag item.image %></td>
+      <td><%= image_tag(item.image, class: 'thumbs') %></td>
       <td><%= item.title %></td>
       <td><%= item.description %></td>
       <td><%= item.price %></td>
