@@ -1,0 +1,11 @@
+<%= form_for([:admin, @user]) do |f| %>
+  <div class="form_group">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+  <div class="form_group">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <%= f.submit class: 'btn btn-success' %>
+<% end %>
