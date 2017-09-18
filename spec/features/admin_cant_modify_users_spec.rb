@@ -12,7 +12,6 @@ RSpec.feature "Admin edits the user" do
     fill_in "user[address]", with: "123 UnderSea Way"
     fill_in "user[first_name]", with: "James"
     fill_in "user[last_name]", with: "Smith"
-    fill_in "user[password]", with: "newpass"
     click_button "Update"
 
     expect(current_path).to eq(admin_dashboard_path)
