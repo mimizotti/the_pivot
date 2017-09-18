@@ -1,7 +1,6 @@
 class OrdersController < ApplicationController
   def index
     @orders = current_user.orders
-    # @user.orders.preload(:items)
   end
 
   def show
@@ -9,11 +8,12 @@ class OrdersController < ApplicationController
   end
 
   def new
-		order = Order.create(status: "ordered", user_id: current_user.id)
+		order = Order.create(status: "ordered", user_id: current_user.id, total_price: @cart.cart_total)
 		item_hash = @cart.order_hash
 		order.add(item_hash)
 		@cart.destroy
 		flash[:success] = "Order was successfully placed"
 		redirect_to orders_path
 	end
+
 end
