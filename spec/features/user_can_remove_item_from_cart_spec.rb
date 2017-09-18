@@ -15,7 +15,6 @@ RSpec.describe "Visitor Can Add Items To Cart" do
       click_link "Remove"
 
       expect(current_path).to eq(cart_path)
-      # And I should see a message styled in green
       expect(page).to have_content("Successfully removed Mask from your cart.")
       expect(page).to_not have_css("img[src*='https://slack-imgs.com/?c=1&url=http%3A%2F%2Fwww.scubadivingdreams.com%2Fwp-content%2Fuploads%2F2015%2F11%2Fthe-best-scuba-snorkel-mask-mares-i3-sunrise.jpg']")
       expect(page).to_not have_content(item.description)
