@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
   end
 
   def new
-		order = Order.create(status: "ordered", user_id: current_user.id, total_price: @cart.cart_total)
+		order = Order.create(status: 1, user_id: current_user.id, total_price: @cart.cart_total)
 		item_hash = @cart.order_hash
 		order.add(item_hash)
 		@cart.destroy
