@@ -33,7 +33,7 @@ RSpec.describe "User can see past order" do
 
       visit "/orders"
 
-      click_on "Order 1"
+      click_on "order 1"
 
       expect(current_path).to eq("/orders/1")
       expect(page).to have_content("Order 1")
