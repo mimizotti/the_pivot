@@ -22,4 +22,15 @@ class OrdersController < ApplicationController
 		redirect_to orders_path
 	end
 
+  def cancelled
+    binding.pry
+    @order = Order.find(params)
+  end
+
+  def paid
+  end
+
+  def completed
+  end
+
 end

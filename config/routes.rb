@@ -24,4 +24,7 @@ Rails.application.routes.draw do
 
   post 'retire' => 'users#retire_item', as: :retire
 
+  post '/cancel', to: "orders#cancel", as: "cancel"
+  post '/paid', to: "orders#paid", as: "paid"
+  post '/completed', to: "orders#completed", as: "completed"
 end
