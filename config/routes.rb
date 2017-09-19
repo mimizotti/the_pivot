@@ -16,10 +16,10 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get "/dashboard", to: "users#show", as: "dashboard"
-    get '/ordered', to: "orders#show"
-    get '/paid', to: "orders#show"
-    get '/cancelled', to: "orders#show"
-    get '/completed', to: "orders#show"
+    get '/ordered', to: "orders#ordered"
+    get '/paid', to: "orders#paid"
+    get '/cancelled', to: "orders#cancelled"
+    get '/completed', to: "orders#completed"
     get '/items', to: 'items#index', as: 'items'
     resources :items, only: [:edit]
   end
