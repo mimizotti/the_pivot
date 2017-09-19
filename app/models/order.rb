@@ -4,7 +4,7 @@ class Order < ApplicationRecord
   has_many :order_items
   has_many :items, through: :order_items
 
-  enum status: ["Ordered", "Paid", "Cancelled", "Completed"]
+  enum status: [:ordered, :paid, :cancelled, :completed]
 
   def add(item_hash)
     item_hash.each do |item, item_quantity|

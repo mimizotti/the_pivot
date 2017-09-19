@@ -26,4 +26,8 @@ Rails.application.routes.draw do
 
   post 'retire' => 'items#retire_item', as: :retire
 
+  post 'paid' => 'orders#change_to_paid', as: :paid
+  post 'cancelled' => 'orders#change_to_cancelled', as: :cancelled
+  post 'completed' => 'orders#change_to_completed', as: :completed
+
 end
