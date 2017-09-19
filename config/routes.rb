@@ -20,6 +20,8 @@ Rails.application.routes.draw do
     get '/paid', to: "orders#show"
     get '/cancelled', to: "orders#show"
     get '/completed', to: "orders#show"
+    get '/items', to: 'items#index', as: 'items'
+    resources :items, only: [:edit]
   end
 
   post 'retire' => 'items#retire_item', as: :retire

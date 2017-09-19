@@ -7,9 +7,9 @@
   <p> <%= current_user.address %></p>
   <p> <%= current_user.email %></p>
   <button class="round"><%= link_to "View past orders", orders_path %></button>
-  <button class="round"><%= link_to "Edit Account", edit_user_path(current_user)  %>
+  <button class="round"><%= link_to "Edit Account", edit_user_path(current_user) %></button>
+  <button class="round all-items"><%= link_to "View all items", admin_items_path %></button>
 </div>
-
 
 <table class="table table-striped text-left table-bordered">
   <thead><strong>All Orders</strong></thead>
