@@ -66,6 +66,7 @@ RSpec.describe "As an admin" do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit admin_dashboard_path
+      
 
       click_on "Ordered"
       expect(page).to have_content("Bon Jovi")

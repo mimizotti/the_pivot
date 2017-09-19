@@ -28,3 +28,21 @@
     <% end %>
   </tbody>
 </table>
+
+<table class="table table-striped text-left table-bordered">
+  <thead><strong>Order Count By Category</strong></thead>
+  <tr>
+    <th>Ordered</th>
+    <th>Paid</th>
+    <th>Cancelled</th>
+    <th>Completed</th>
+  </tr>
+  <tbody>
+    <tr>
+    <td><%= @orders.ordered_count%></td>
+    <td><%= @orders.paid_count %></td>
+    <td><%= @orders.cancelled_count %></td>
+    <td><%= @orders.completed_count %></td>
+    </tr>
+  </tbody>
+</table>

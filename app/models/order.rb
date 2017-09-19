@@ -15,6 +15,20 @@ class Order < ApplicationRecord
     end
   end
 
+  def self.ordered_count
+    where(status: 0).count
+  end
 
+  def self.paid_count
+    where(status: 1).count
+  end
+
+  def self.cancelled_count
+    where(status: 2).count
+  end
+
+  def self.completed_count
+    where(status: 3).count
+  end
 
 end
