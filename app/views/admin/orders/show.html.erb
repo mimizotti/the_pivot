@@ -1,9 +1,13 @@
+<div class="container-fluid">
+<%= link_to "Paid", admin_paid_path %>
+<%= link_to "Cancelled", admin_cancelled_path %>
+<%= link_to "Completed", admin_cancelled_path %>
+
 <table class="table table-striped text-left table-bordered">
   <thead><strong>Ordered</strong></thead>
   <tr>
     <th>Order ID</th>
     <th>Full Name</th>
-
     <th>Total Price</th>
   </tr>
   <tbody>
@@ -14,3 +18,4 @@
     <% end %>
   </tbody>
 </table>
+</div>
