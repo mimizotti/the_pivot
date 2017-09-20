@@ -101,10 +101,10 @@ RSpec.describe "As an admin" do
 
       visit admin_dashboard_path
 
-      select('mark as paid', :from => 'Select Box')
+      choose("Paid")
 
       click_on "1"
-      expect(page).to have_content("Paid")
+      expect(page).to have_content("Bon Jovi")
 
       click_on "Dashboard"
       select('mark as completed', :from => 'Select Box')
