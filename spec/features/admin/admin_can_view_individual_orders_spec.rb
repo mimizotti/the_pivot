@@ -39,7 +39,7 @@ RSpec.describe "As an admin" do
       expect(page).to have_content("2")
       expect(page).to have_content("$10.00")
       expect(page).to have_content("$30.00")
-      expect(page).to have_content("Ordered")
+      expect(page).to have_content("ordered")
       expect(page).to have_content("20.00")
     end
   end
