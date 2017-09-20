@@ -25,14 +25,9 @@ RSpec.describe "User can see past order" do
 
       find(:css, ".cart").click
 
-      visit "/dashboard"
-
-      find(:css, ".cart").click
-
       click_button "Checkout"
 
-      visit "/orders"
-      click_on "Order 1"
+      visit "/orders/1"
 
       expect(current_path).to eq("/orders/1")
       expect(page).to have_content("Order 1")
