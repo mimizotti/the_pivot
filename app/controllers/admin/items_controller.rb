@@ -6,7 +6,6 @@ class Admin::ItemsController < ApplicationController
   end
 
   def show
-
   end
 
   def edit
@@ -35,6 +34,9 @@ class Admin::ItemsController < ApplicationController
 
   private
 
+  def set_item
+    @item = Item.find(params[:id])
+  end
 
   def item_attributes
     params.require(:item).permit(:title, :description, :price, :image, :role, category_ids: [])
