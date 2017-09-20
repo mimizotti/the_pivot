@@ -1,9 +1,28 @@
-<div class="text-center" style="margin: auto;">
-  <h1>Your Profile</h1>
-  <h2><strong><%= current_user.full_name %></strong></h2>
-  <h5><strong>Username: </strong><%= current_user.username %></h5>
-  <h5><strong>Address: </strong> <%= current_user.address %></h5>
-  <h5><strong>Email: </strong><%= current_user.email %></h5>
-  <button class="round"><%= link_to "View past orders", orders_path %></button>
-  <button class="round"><%= link_to "Edit Account", edit_user_path(current_user)  %>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+    </title>
+  </head>
+  <body>
+    <div class="text-center">
+      <h1> Your Profile </h1>
+    </div>
+    <div class="card text-center" style="width: 20rem; margin: auto;">
+      <%= image_tag("15010-American-Cockapoo-puppies-in-a-basket-white-background.jpg", class: "card-img-top") %>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <h2><strong><%= current_user.full_name %></strong></h2>
+          <h5><strong>Username: </strong><%= current_user.username %></h5>
+          <h5><strong>Address: </strong> <%= current_user.address %></h5>
+          <h5><strong>Email: </strong><%= current_user.email %></h5>
+        </li>
+      </ul>
+      <div class="card-block">
+        <button class="round"><%= link_to "View past orders", orders_path %></button>
+        <button class="round"><%= link_to "Edit Account", edit_user_path(current_user) %></button>
+      </div>
+    </div>
+  </body>
+</html>

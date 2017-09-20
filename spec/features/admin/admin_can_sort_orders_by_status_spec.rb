@@ -68,8 +68,6 @@ RSpec.describe "As an admin" do
 
       click_on "Ordered"
 
-      click_on "Paid"
-
       expect(page).to have_content("Bon Jovi")
       expect(page).to have_no_content("Sponge Bob")
       expect(page).to have_content("Paid")
@@ -105,13 +103,13 @@ RSpec.describe "As an admin" do
 
       select('mark as paid', :from => 'Select Box')
 
-      click_on "Order 1"
+      click_on "1"
       expect(page).to have_content("Paid")
 
       click_on "Dashboard"
       select('mark as completed', :from => 'Select Box')
 
-      click_on "Order 1"
+      click_on "1"
       expect(page).to have_content("Completed")
     end
 
