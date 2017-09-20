@@ -14,16 +14,25 @@
 
   </head>
   <body>
-    <div class="container">
-      <%= form_for(:session, url: login_path) do |f| %>
-        <p><%= f.label :username, "Username:" %>
-        <%= f.text_field :username %></p><br/>
-        <p><%= f.label :password, "Password:" %>
-        <%= f.password_field :password %></p><br/>
-        <%= f.submit "Login", class: 'btn btn-success' %>
-      <% end %><br/><br/>
-
-      <p><%= link_to "Create Account", new_user_path %></p>
-  </div>
+    <div class="card text-center" style="width: 20rem; margin: auto;">
+      <%= image_tag("bluebasket.jpg", class: "card-img-top") %>
+      <div class="card-block">
+        <h4 class="card-title"></h4>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <%= form_for(:session, url: login_path) do |f| %>
+            <p><%= f.label :username, "Username:" %>
+            <%= f.text_field :username %></p><br/>
+            <p><%= f.label :password, "Password:" %>
+            <%= f.password_field :password %></p><br/>
+            <%= f.submit "Login", class: 'btn btn-success' %>
+          <% end %>
+        </li>
+      </ul>
+      <div class="card-block">
+        <%= link_to "Create Account", new_user_path %>
+      </div>
+    </div>
   </body>
 </html>
