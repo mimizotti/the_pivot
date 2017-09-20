@@ -11,16 +11,15 @@ RSpec.describe "An admin is logged in and clicks edit from their dashboard list"
     click_on "Edit"
 
     expect(current_path).to eq('/admin/items/1/edit')
-
     fill_in "item[title]", with: "Edited Item"
     fill_in "item[description]", with: "Test"
-    fill_in "item[image]", with: "img[src*='http://via.placeholder.com/75']"
-    choose 'Retired'
+    fill_in "item[image]", with: "http://via.placeholder.com/75"
+    choose('retire', visible: false)
     click_on "Update"
 
     expect(current_path).to eq('/admin/items')
 
-    visit 'items/1'
+    visit item_path(item_1)
 
     expect(page).to have_content("Edited Item")
     expect(page).to have_content("Test")

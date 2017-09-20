@@ -13,10 +13,10 @@
   </div>
   <div class="form_group">
     <%= f.label :status %><br />
-    <%= f.label :status, "Active", :value => true  %>
-    <%= f.radio_button :status, @item.active! %>
-    <%= f.label :status, "Retired", :value => false %>
-    <%= f.radio_button :status, @item.retired! %>
+    <%= f.label :status, "Active" %>
+    <%= f.radio_button :status, "active", id: "activate" %>
+    <%= f.label :status, "Retired" %>
+    <%= f.radio_button :status, "retired", id: "retire" %>
   </div>
 
   <%= f.submit class: "btn btn-success" %>
