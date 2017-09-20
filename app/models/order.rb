@@ -15,6 +15,14 @@ class Order < ApplicationRecord
     end
   end
 
+  def user_full_name
+    user.full_name
+  end
+
+  def user_address
+    user.address
+  end
+
   def self.ordered_count
     where(status: 0).count
   end
