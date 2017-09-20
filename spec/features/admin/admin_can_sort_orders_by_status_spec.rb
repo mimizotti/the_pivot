@@ -68,8 +68,6 @@ RSpec.describe "As an admin" do
 
       click_on "Ordered"
 
-      click_on "Paid"
-
       expect(page).to have_content("Bon Jovi")
       expect(page).to have_no_content("Sponge Bob")
       expect(page).to have_content("Paid")

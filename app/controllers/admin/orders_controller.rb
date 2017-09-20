@@ -3,6 +3,7 @@ class Admin::OrdersController < ApplicationController
 
   def show
     @orders = Order.all
+  end
 
   def ordered
     @orders = Order.ordered
