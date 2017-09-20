@@ -1,4 +1,6 @@
-RSpec.feature "User tried to go to admin dashboard" do
+require 'rails_helper'
+
+RSpec.describe "User tried to go to admin dashboard" do
   scenario "gets a 404 error" do
 
     user = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive")

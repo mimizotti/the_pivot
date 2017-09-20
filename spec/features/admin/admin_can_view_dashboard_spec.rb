@@ -1,5 +1,7 @@
-RSpec.feature "Admin visits dashboard" do
-  scenario "admin sees dashboard" do
+require 'rails_helper'
+
+RSpec.describe "Admin visits dashboard" do
+  it "admin sees dashboard" do
 
     user = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive", role: "admin")
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
@@ -9,7 +11,7 @@ RSpec.feature "Admin visits dashboard" do
     expect(page).to have_content("Admin Dashboard")
   end
 
-  scenario "admin visits dashbaord from root" do
+  it "admin visits dashbaord from root" do
     user = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive", role: "admin")
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
