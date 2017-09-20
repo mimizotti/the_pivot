@@ -31,9 +31,11 @@ RSpec.describe "User can see past order" do
       visit "/orders"
 
       expect(current_path).to eq("/orders")
-      expect(page).to have_content("past orders")
-      expect(page).to have_content("order 1")
-      expect(page).to have_content("order 2")
+      # save_and_open_page
+
+      expect(page).to have_content("Past Orders")
+      expect(page).to have_content("Order 1")
+      expect(page).to have_content("Order 2")
     end
   end
 end
