@@ -19,14 +19,19 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get "/dashboard", to: "users#show", as: "dashboard"
-    get '/ordered', to: "orders#show"
-    get '/paid', to: "orders#show"
-    get '/cancelled', to: "orders#show"
-    get '/completed', to: "orders#show"
-    resources :items, only: [:new]
+    get '/ordered', to: "orders#ordered"
+    get '/paid', to: "orders#paid"
+    get '/cancelled', to: "orders#cancelled"
+    get '/completed', to: "orders#completed"
+    get '/items', to: 'items#index', as: 'items'
+    resources :items, only: [:edit]
   end
 
-  post 'retire' => 'users#retire_item', as: :retire
+  post 'retire' => 'items#retire_item', as: :retire
+
+  post 'paid' => 'orders#change_to_paid', as: :paid
+  post 'cancelled' => 'orders#change_to_cancelled', as: :cancelled
+  post 'completed' => 'orders#change_to_completed', as: :completed
 
   post '/cancel', to: "orders#cancel", as: "cancel"
   post '/paid', to: "orders#paid", as: "paid"

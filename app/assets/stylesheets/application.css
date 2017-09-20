@@ -14,9 +14,6 @@
  *= require_self
  */
 
-html, body {
-  background-color: #ddd;
-}
 
  .display {
   width:  250px;
@@ -47,8 +44,4 @@ h1 {
 }
 p{
   font-family: 'Caveat Brush', cursive;
-}
-
-.buffer {
-  padding-top: 5%;
 }

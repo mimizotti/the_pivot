@@ -4,7 +4,7 @@ class Order < ApplicationRecord
   has_many :order_items
   has_many :items, through: :order_items
 
-  enum status: ["Ordered", "Paid", "Cancelled", "Completed"]
+  enum status: [:ordered, :paid, :cancelled, :completed]
 
   def add(item_hash)
     item_hash.each do |item, item_quantity|
@@ -16,35 +16,35 @@ class Order < ApplicationRecord
   end
 
   def self.ordered_count
-    where(status: "Ordered").count
+    where(status: 0).count
   end
 
   def self.paid_count
-    where(status: "Paid").count
+    where(status: 1).count
   end
 
   def self.cancelled_count
-    where(status: "Cancelled").count
+    where(status: 2).count
   end
 
   def self.completed_count
-    where(status: "Completed").count
+    where(status: 3).count
   end
 
   def self.ordered
-    where(status: "Ordered")
+    where(status: 0)
   end
 
   def self.paid
-    where(status: "Paid")
+    where(status: 1)
   end
 
   def self.cancelled
-    where(status: "Cancelled")
+    where(status: 2)
   end
 
   def self.completed
-    where(status: "Completed")
+    where(status: 3)
   end
 
 end

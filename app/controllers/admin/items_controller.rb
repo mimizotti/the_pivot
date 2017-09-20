@@ -1,5 +1,6 @@
 class Admin::ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update]
+  before_action :require_admin
 
   def index
     @items = Item.all
@@ -9,7 +10,6 @@ class Admin::ItemsController < ApplicationController
   end
 
   def edit
-
   end
 
   def new
