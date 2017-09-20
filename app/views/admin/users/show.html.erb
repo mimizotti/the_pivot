@@ -17,83 +17,71 @@
           <button class="round all-items"><%= link_to "View all items", admin_items_path %></button>
       </div>
 
-<div class="container">
-  <div class="profile">
-    <h1>Your Profile</h1>
-    <h2> <%= current_user.full_name %></h2>
-    <p>username: <%= current_user.username %></p>
-    <p> <%= current_user.address %></p>
-    <p> <%= current_user.email %></p>
-    <button class="round"><%= link_to "View past orders", orders_path %></button>
-    <button class="round"><%= link_to "Edit Account", edit_user_path(current_user) %></button>
-    <button class="round all-items"><%= link_to "View all items", admin_items_path %></button>
-    <button class="round all-items"><%= link_to "Create New Item", new_admin_item_path %></button>
-  </div>
-</div>
-
-<table class="table table-striped text-left table-bordered">
-  <thead><strong>All Orders</strong></thead>
-  <tr>
-    <th>Order ID</th>
-    <th>Full Name</th>
-    <th>Status</th>
-    <th>Total Price</th>
-    <th>Change to Paid/Completed</th>
-    <th>Cancel Order</th>
-  </tr>
-  <tbody>
-    <tr><% @orders.each do |order| %></tr>
-    <td><%= link_to order.id, order_path(order) %></td>
-    <td><%= order.user.full_name %></td>
-    <td><%= order.status %></td>
-    <td><%= order.total_price %></td>
-    <% @order = order %>
-    <td><% if order.ordered? %>
-          <%= button_to "Paid", paid_path(@order), class: "btn btn-primary" %>
-        <% end %>
-        <% if order.paid? %>
-          <%= button_to "Completed", completed_path(@order), class: "btn btn-primary" %>
-        <% end %>
-    </td>
-    <td>
-      <% if order.ordered? || order.paid? %>
-        <%= button_to "Cancel", cancelled_path(@order), class: "btn btn-danger" %>
-      <% end %>
-    </td>
-    <% end %>
-  </tbody>
-  <table class="table table-striped text-left table-bordered">
-    <thead><strong>Orders By Status</strong></thead>
-    <tr>
-      <th><%= link_to 'Ordered', admin_ordered_path %></th>
-      <th><%= link_to 'Paid', admin_paid_path %></th>
-      <th><%= link_to 'Cancelled', admin_cancelled_path %></th>
-      <th><%= link_to 'Completed', admin_completed_path %></th>
-    </tr>
-    <tbody>
+    <table class="table table-striped text-left table-bordered">
+      <thead><strong>All Orders</strong></thead>
       <tr>
-        <td><%= @orders.ordered_count %></td>
+        <th>Order ID</th>
+        <th>Full Name</th>
+        <th>Status</th>
+        <th>Total Price</th>
+        <th>Change to Paid/Completed</th>
+        <th>Cancel Order</th>
+      </tr>
+      <tbody>
+        <tr><% @orders.each do |order| %></tr>
+        <td><%= link_to order.id, order_path(order) %></td>
+        <td><%= order.user.full_name %></td>
+        <td><%= order.status %></td>
+        <td><%= order.total_price %></td>
+        <% @order = order %>
+        <td><% if order.ordered? %>
+              <%= button_to "Paid", paid_path(@order), class: "btn btn-primary" %>
+            <% end %>
+            <% if order.paid? %>
+              <%= button_to "Completed", completed_path(@order), class: "btn btn-primary" %>
+            <% end %>
+        </td>
+        <td>
+          <% if order.ordered? || order.paid? %>
+            <%= button_to "Cancel", cancelled_path(@order), class: "btn btn-danger" %>
+          <% end %>
+        </td>
+        <% end %>
+      </tbody>
+      <table class="table table-striped text-left table-bordered">
+        <thead><strong>Orders By Status</strong></thead>
+        <tr>
+          <th><%= link_to 'Ordered', admin_ordered_path %></th>
+          <th><%= link_to 'Paid', admin_paid_path %></th>
+          <th><%= link_to 'Cancelled', admin_cancelled_path %></th>
+          <th><%= link_to 'Completed', admin_completed_path %></th>
+        </tr>
+        <tbody>
+          <tr>
+            <td><%= @orders.ordered_count %></td>
+            <td><%= @orders.paid_count %></td>
+            <td><%= @orders.cancelled_count %></td>
+            <td><%= @orders.completed_count %></td>
+          </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-striped text-left table-bordered">
+      <thead><strong>Order Count By Category</strong></thead>
+      <tr>
+        <th><%= link_to "Ordered", admin_ordered_path %></th>
+        <th><%= link_to "Paid", admin_paid_path %></th>
+        <th><%= link_to "Cancelled", admin_cancelled_path %></th>
+        <th><%= link_to "Completed", admin_completed_path %></th>
+      </tr>
+      <tbody>
+        <tr>
+        <td><%= @orders.ordered_count%></td>
         <td><%= @orders.paid_count %></td>
         <td><%= @orders.cancelled_count %></td>
         <td><%= @orders.completed_count %></td>
-      </tr>
-    </tbody>
-</table>
-
-<table class="table table-striped text-left table-bordered">
-  <thead><strong>Order Count By Category</strong></thead>
-  <tr>
-    <th><%= link_to "Ordered", admin_ordered_path %></th>
-    <th><%= link_to "Paid", admin_paid_path %></th>
-    <th><%= link_to "Cancelled", admin_cancelled_path %></th>
-    <th><%= link_to "Completed", admin_completed_path %></th>
-  </tr>
-  <tbody>
-    <tr>
-    <td><%= @orders.ordered_count%></td>
-    <td><%= @orders.paid_count %></td>
-    <td><%= @orders.cancelled_count %></td>
-    <td><%= @orders.completed_count %></td>
-    </tr>
-  </tbody>
-</table>
+        </tr>
+      </tbody>
+    </table>
+</body>
+</html>
