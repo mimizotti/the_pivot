@@ -24,7 +24,7 @@ Rails.application.routes.draw do
     get '/cancelled', to: "orders#cancelled"
     get '/completed', to: "orders#completed"
     get '/items', to: 'items#index', as: 'items'
-    resources :items, only: [:edit, :update]
+    resources :items, only: [:new, :edit, :update]
   end
 
   post 'retire' => 'items#retire_item', as: :retire
@@ -32,8 +32,4 @@ Rails.application.routes.draw do
   post 'paid' => 'orders#change_to_paid', as: :paid
   post 'cancelled' => 'orders#change_to_cancelled', as: :cancelled
   post 'completed' => 'orders#change_to_completed', as: :completed
-
-  post '/cancel', to: "orders#cancel", as: "cancel"
-  post '/paid', to: "orders#paid", as: "paid"
-  post '/completed', to: "orders#completed", as: "completed"
 end

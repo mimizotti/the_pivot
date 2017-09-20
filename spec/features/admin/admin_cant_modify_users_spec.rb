@@ -1,5 +1,7 @@
-RSpec.feature "Admin edits the user" do
-  scenario "Admin can edit their own account" do
+require 'rails_helper'
+
+RSpec.describe "Admin edits the user" do
+  it "Admin can edit their own account" do
 
     user = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive", role: "admin")
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
@@ -20,7 +22,7 @@ RSpec.feature "Admin edits the user" do
     expect(page).to have_content("James Smith")
   end
 
-  scenario "Cannot modify any other users account" do
+  it "Cannot modify any other users account" do
 
     user = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive", role: "admin")
     user_2 = User.create(first_name: "Sponge", last_name: "Bob", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive")

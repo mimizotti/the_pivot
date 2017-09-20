@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.feature "Unauthenticated user tries to go to admin dashboard" do
   scenario "gets a 404 error" do
     visit admin_dashboard_path

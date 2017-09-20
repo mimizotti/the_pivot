@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-# As an authenticated Admin: I can create an item.
 describe 'Admin can create an item' do
   scenario 'from link on admin dashboard' do
     admin = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive", role: 1)
