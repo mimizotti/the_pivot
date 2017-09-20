@@ -1,6 +1,8 @@
 class Admin::OrdersController < ApplicationController
-
   before_action :require_admin
+
+  def show
+    @orders = Order.all
 
   def ordered
     @orders = Order.ordered
@@ -17,5 +19,4 @@ class Admin::OrdersController < ApplicationController
   def cancelled
     @orders = Order.cancelled
   end
-
 end

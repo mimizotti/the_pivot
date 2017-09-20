@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :orders, only: [:index, :show, :create, :new]
 
   resources :users, only: [:new, :create, :edit, :update]
+
   get "/dashboard", to:'users#show', as: 'dashboard'
 
   delete "/logout", to: 'sessions#destroy', as: 'logout'
@@ -11,7 +12,9 @@ Rails.application.routes.draw do
   post "/login", to: 'sessions#create'
 
   resources :items, only:[:new, :create, :index, :show]
+
   resource :cart
+
   get '/:category', to: 'categories#show', param: :slug, as: "category"
 
   namespace :admin do
@@ -30,4 +33,7 @@ Rails.application.routes.draw do
   post 'cancelled' => 'orders#change_to_cancelled', as: :cancelled
   post 'completed' => 'orders#change_to_completed', as: :completed
 
+  post '/cancel', to: "orders#cancel", as: "cancel"
+  post '/paid', to: "orders#paid", as: "paid"
+  post '/completed', to: "orders#completed", as: "completed"
 end

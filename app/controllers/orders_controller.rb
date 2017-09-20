@@ -65,5 +65,4 @@ class OrdersController < ApplicationController
       nil
     end
   end
-
 end
