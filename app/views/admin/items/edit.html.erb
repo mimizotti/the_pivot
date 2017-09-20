@@ -1,0 +1,23 @@
+<%= form_for([:admin, @item]) do |f| %>
+  <div class="form_group">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="form_group">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="form_group">
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </div>
+  <div class="form_group">
+    <%= f.label :status %><br />
+    <%= f.label :status, "Active" %>
+    <%= f.radio_button :status, "active", id: "activate" %>
+    <%= f.label :status, "Retired" %>
+    <%= f.radio_button :status, "retired", id: "retire" %>
+  </div>
+
+  <%= f.submit class: "btn btn-success" %>
+<% end %>

@@ -24,7 +24,7 @@ Rails.application.routes.draw do
     get '/cancelled', to: "orders#cancelled"
     get '/completed', to: "orders#completed"
     get '/items', to: 'items#index', as: 'items'
-    resources :items, only: [:edit]
+    resources :items, only: [:edit, :update]
   end
 
   post 'retire' => 'items#retire_item', as: :retire
