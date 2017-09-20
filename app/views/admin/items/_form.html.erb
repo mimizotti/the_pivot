@@ -1,24 +1,36 @@
-<div class="opaque-back">
-  <%= form_for [:admin, @item] do |f| %>
+<div class="container-fluid">
+  <%= form_for [:admin, @item], html: { multipart: true } do |f| %>
+
+    <div class="form-group">
       <%= f.label :title %>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
 
+    <div class="form-group">
       <%= f.label :description %>
-      <%= f.text_area :description %>
+      <%= f.text_area :description, class: 'form-control' %>
+    </div>
 
-
+    <div class="form-group">
       <%= f.label :price %>
-      <%= f.text_field :price %>
+      <%= f.text_field :price, class: 'form-control' %>
+    </div>
 
     <%= collection_check_boxes(:item, :category_ids, Category.all, :id, :name) do |c| %>
+      <div class="checkbox" style="height: 10%; width: 33%; display: inline-block;">
         <%= c.label {c.check_box(type: 'checkbox') + c.text} %>
+      </div>
     <% end %>
 
+    <div class="form-group">
       <%= f.label :image %>
       <%= f.file_field :image %>
+    </div>
 
+    <div class="form-group">
       <%= f.label :status %>
       <%= f.select :role, Item.roles.keys %>
+    </div>
 
     <%= f.submit class: 'btn btn-primary'%>
   <% end %>
