@@ -1,23 +1,44 @@
-<h1> Create a New Account </h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+    </title>
 
-<%= form_for(@user) do |f| %>
-  <%= f.label :username, "Username:" %>
-  <%= f.text_field :username %>
+  </head>
+  <body>
+    <div class="text-center">
+      <h1> Create an Account </h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <%= image_tag("bunnybasket.jpg", class: "display") %>
+        </div>
+        <div class="col">
+          <%= form_for(@user) do |f| %>
+            <%= f.label :username, "Username:" %>
+            <%= f.text_field :username %><br/>
 
-  <%= f.label :first_name, "First Name:"%>
-  <%= f.text_field :first_name%>
+            <%= f.label :first_name, "First Name:"%>
+            <%= f.text_field :first_name%><br/>
 
-  <%= f.label :last_name, "Last Name:" %>
-  <%= f.text_field :last_name %>
+            <%= f.label :last_name, "Last Name:" %>
+            <%= f.text_field :last_name %><br/>
 
-  <%= f.label :address, "Address:" %>
-  <%= f.text_field :address %>
+            <%= f.label :address, "Address:" %>
+            <%= f.text_field :address %><br/>
 
-  <%= f.label :email, "Email:" %>
-  <%= f.text_field :email %>
+            <%= f.label :email, "Email:" %>
+            <%= f.text_field :email %><br/>
 
-  <%= f.label :password, "Password:" %>
-  <%= f.password_field :password %>
+            <%= f.label :password, "Password:" %>
+            <%= f.password_field :password %><br/>
 
-  <%= f.submit %>
-<% end %>
+            <%= f.submit %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
