@@ -35,7 +35,8 @@ RSpec.describe "As an admin" do
       expect(page).to have_content("Ordered")
       expect(page).to have_content("Sponge Bob")
       expect(page).to have_content("Paid")
-      expect(page).to have_content("Ordered: 1, Paid: 1, Cancelled: 0, Completed: 0")
+      expect(page).to have_content("Ordered")
+      expect(page).to have_content("1")
     end
 
     it "can be sorted by status" do
@@ -55,7 +56,7 @@ RSpec.describe "As an admin" do
       ItemCategory.create(item_id: item_3, category_id: category_2)
       ItemCategory.create(item_id: item_4, category_id: category_2)
 
-      order_1 = Order.create(user_id: 1, status: 1, total_price: 154.85)
+      order_1 = Order.create(user_id: 1, status: "Paid", total_price: 154.85)
       order_2 = Order.create(user_id: 2, status: 2, total_price: 149.89)
 
       OrderItem.create(order_id: order_1, item_id: item_1, quantity: 3)
@@ -63,11 +64,14 @@ RSpec.describe "As an admin" do
       OrderItem.create(order_id: order_2, item_id: item_2, quantity: 2)
       OrderItem.create(order_id: order_2, item_id: item_4, quantity: 1)
 
+
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit admin_dashboard_path
 
-      click_on "Ordered"
+
+      click_on "Paid"
+
       expect(page).to have_content("Bon Jovi")
       expect(page).to have_content("Ordered")
       expect(page).to have_no_content("Sponge Bob")

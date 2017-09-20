@@ -135,4 +135,32 @@ ItemCategory.create(item: item_52, category: category_4)
 ItemCategory.create(item: item_53, category: category_4)
 ItemCategory.create(item: item_54, category: category_4)
 
+order_1 = Order.create(user_id: 1, status: 0, total_price: 154.85)
+order_2 = Order.create(user_id: 2, status: 0, total_price: 149.89)
+OrderItem.create(order: order_1, item: item_1, quantity: 3)
+OrderItem.create(order: order_1, item: item_3, quantity: 1)
+OrderItem.create(order: order_2, item: item_2, quantity: 2)
+OrderItem.create(order: order_2, item: item_4, quantity: 1)
+
+order_3 = Order.create(user_id: 2, status: 1, total_price: 349.85)
+order_4 = Order.create(user_id: 2, status: 1, total_price: 193.85)
+OrderItem.create(order: order_3, item: item_45, quantity: 1)
+OrderItem.create(order: order_3, item: item_7, quantity: 2)
+OrderItem.create(order: order_4, item: item_40, quantity: 2)
+OrderItem.create(order: order_4, item: item_12, quantity: 1)
+
+order_5 = Order.create(user_id: 2, status: 2, total_price: 141.85)
+order_6 = Order.create(user_id: 2, status: 2, total_price: 129.95)
+OrderItem.create(order: order_5, item: item_17, quantity: 2)
+OrderItem.create(order: order_5, item: item_23, quantity: 1)
+OrderItem.create(order: order_6, item: item_1, quantity: 2)
+OrderItem.create(order: order_6, item: item_14, quantity: 1)
+
+order_7 = Order.create(user_id: 2, status: 3, total_price: 94.85)
+order_8 = Order.create(user_id: 2, status: 3, total_price: 165.87)
+OrderItem.create(order: order_7, item: item_30, quantity: 2)
+OrderItem.create(order: order_7, item: item_54, quantity: 1)
+OrderItem.create(order: order_8, item: item_38, quantity: 2)
+OrderItem.create(order: order_8, item: item_23, quantity: 1)
+
 puts "seeded"

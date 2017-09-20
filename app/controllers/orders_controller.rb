@@ -22,4 +22,48 @@ class OrdersController < ApplicationController
 		redirect_to orders_path
 	end
 
+  def change_to_paid
+    @order = Order.find(params[:format])
+    toggle_paid(@order)
+    redirect_back fallback_location: @order
+  end
+
+  def change_to_cancelled
+    @order = Order.find(params[:format])
+    toggle_cancelled(@order)
+    redirect_back fallback_location: @order
+  end
+
+  def change_to_completed
+    @order = Order.find(params[:format])
+    toggle_completed(@order)
+    redirect_back fallback_location: @order
+  end
+
+  private
+
+  def toggle_paid(order)
+    if order.ordered?
+      order.paid!
+    else
+      nil
+    end
+  end
+
+  def toggle_cancelled(order)
+    if order.paid? || order.ordered?
+      order.cancelled!
+    else
+      nil
+    end
+  end
+
+  def toggle_completed(order)
+    if order.paid?
+      order.completed!
+    else
+      nil
+    end
+  end
+
 end
