@@ -1,5 +1,5 @@
 <div class="opaque-back">
-  <%= form_for [:admin, @item], html: { multipart: true } do |f| %>
+  <%= form_for [:admin, @item] do |f| %>
       <%= f.label :title %>
       <%= f.text_field :title %>
 
