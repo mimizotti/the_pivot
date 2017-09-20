@@ -9,6 +9,7 @@ describe 'Admin can create an item' do
 
     visit admin_dashboard_path(admin)
 
+    save_and_open_page
     expect(page).to have_link 'Create New Item'
     click_link 'Create New Item'
 
