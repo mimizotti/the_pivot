@@ -27,14 +27,9 @@ RSpec.describe "User can see past order" do
 
       click_button "Checkout"
 
-      visit "/orders/1"
-
-      expect(current_path).to eq("/orders/1")
+      visit "/orders"
       expect(page).to have_content("Order 1")
-      expect(page).to have_content("Mask")
-      expect(page).to have_content("$20.00")
       expect(page).to have_content("$30.00")
-      expect(page).to have_css("img[src*='https://slack-imgs.com/?c=1&url=http%3A%2F%2Fwww.scubadivingdreams.com%2Fwp-content%2Fuploads%2F2015%2F11%2Fthe-best-scuba-snorkel-mask-mares-i3-sunrise.jpg']")
     end
   end
 end
