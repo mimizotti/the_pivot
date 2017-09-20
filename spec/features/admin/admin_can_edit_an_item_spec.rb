@@ -16,6 +16,7 @@ RSpec.describe "An admin is logged in and clicks edit from their dashboard list"
     fill_in "item[description]", with: "Test"
     fill_in "item[image]", with: "img[src*='http://via.placeholder.com/75']"
     choose 'Retired'
+    click_on "Update"
 
     expect(current_path).to eq('/admin/items')
 
