@@ -30,6 +30,7 @@ RSpec.describe "User can see past order" do
       visit "/orders"
       expect(page).to have_content("Order 1")
       expect(page).to have_content("$30.00")
+      save_and_open_page
       expect(page).to have_content("Bon Jovi")
       expect(page).to have_content("123 Crazy Street")
     end
