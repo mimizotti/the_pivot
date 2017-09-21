@@ -4,6 +4,8 @@ class Order < ApplicationRecord
   has_many :order_items
   has_many :items, through: :order_items
 
+  validates :user_id, :total_price, :status, presence: true
+
   enum status: [:ordered, :paid, :cancelled, :completed]
 
   def add(item_hash)
