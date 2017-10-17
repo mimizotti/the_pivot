@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       session[:logged_in?] = true
       redirect_to dashboard_path
     else
-      redirect_to login_path
+      render :new
     end
   end
 
