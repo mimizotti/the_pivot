@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       session[:logged_in?] = true
       redirect_to dashboard_path
     else
-      render :new
+      redirect_to login_path
     end
   end
 
@@ -24,17 +24,15 @@ class UsersController < ApplicationController
 
   def update
     if current_user.save && current_user.admin?
-      current_user.update(user_params)
+      current_user.update!(user_params)
       redirect_to admin_dashboard_path
     elsif current_user.save
-      current_user.update(user_params)
+      current_user.update!(user_params)
       redirect_to dashboard_path
     else
-      render :edit
+      redirect_to edit_user_path
     end
   end
-
-
 
   private
 
