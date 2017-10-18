@@ -144,52 +144,6 @@
         null,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/items_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        null,
-        1,
-        0,
-        0,
-        null,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/little-shop/app/models/item.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null
-      ],
-      "/Users/Mimi/turing/3module/projects/little-shop/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
       "/Users/Mimi/turing/3module/projects/little-shop/app/channels/application_cable/channel.rb": [
         0,
         0,
@@ -342,6 +296,33 @@
         0,
         0,
         null,
+        0
+      ],
+      "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/items_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0
       ],
       "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/orders_controller.rb": [
@@ -505,6 +486,11 @@
         0,
         0
       ],
+      "/Users/Mimi/turing/3module/projects/little-shop/app/models/application_record.rb": [
+        0,
+        0,
+        0
+      ],
       "/Users/Mimi/turing/3module/projects/little-shop/app/models/category.rb": [
         0,
         0,
@@ -514,6 +500,20 @@
         0,
         0,
         null,
+        0
+      ],
+      "/Users/Mimi/turing/3module/projects/little-shop/app/models/item.rb": [
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
         0
       ],
       "/Users/Mimi/turing/3module/projects/little-shop/app/models/item_category.rb": [
@@ -607,6 +607,6 @@
         0
       ]
     },
-    "timestamp": 1508359835
+    "timestamp": 1508360332
   }
 }
