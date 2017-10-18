@@ -30,9 +30,12 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'friendly_id', '~> 5.1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
 gem 'faker'
 gem 'betterlorem'
 gem 'image_suckr'
+gem 'rubycritic'
+gem 'brakeman'
 
 
 group :development, :test do
@@ -45,6 +48,7 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
+  gem 'simplecov'
 end
 
 group :development do
