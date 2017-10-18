@@ -33,6 +33,10 @@
         1,
         null,
         1,
+        null,
+        null,
+        null,
+        1,
         11,
         null,
         null,
@@ -48,15 +52,15 @@
         1,
         null,
         1,
-        146,
+        164,
         null,
         null,
         1,
-        124,
+        130,
         null,
         null,
         1,
-        92,
+        98,
         null,
         null,
         1,
@@ -232,7 +236,7 @@
         1,
         null,
         1,
-        147,
+        153,
         null,
         null,
         1,
@@ -244,7 +248,7 @@
         null,
         null,
         1,
-        93,
+        99,
         null,
         null,
         1,
@@ -492,7 +496,7 @@
       "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/items_controller.rb": [
         1,
         1,
-        15,
+        16,
         null,
         null,
         1,
@@ -584,6 +588,15 @@
         null,
         null
       ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/stores_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/channels/application_cable/channel.rb": [
         0,
         0,
@@ -607,6 +620,6 @@
         0
       ]
     },
-    "timestamp": 1508186824
+    "timestamp": 1508362311
   }
 }
