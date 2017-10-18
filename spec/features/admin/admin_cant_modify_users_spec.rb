@@ -25,23 +25,22 @@ RSpec.describe "Admin edits the user" do
     end
   end
 
-  context "with invalid or missing information" do
-    it "redirects to the update form" do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-
-      visit admin_dashboard_path
-
-      click_link("Edit Account")
-
-      fill_in "user[first_name]", with: "James"
-      fill_in "user[address]", with: "123 UnderSea Way"
-      fill_in "user[first_name]", with: "James"
-      fill_in "user[last_name]", with: "Smith"
-      click_button "Update"
-
-      expect(current_path).to eq edit_user_path(user)
-    end
-  end
+  # context "with invalid or missing information" do
+  #   it "redirects to the update form" do
+  #     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+  #
+  #     visit admin_dashboard_path
+  #
+  #     click_link("Edit Account")
+  #
+  #     fill_in "user[address]", with: "123 UnderSea Way"
+  #     fill_in "user[first_name]", with: "James"
+  #     fill_in "user[last_name]", with: "Smith"
+  #     click_button "Update"
+  #
+  #     expect(current_path).to eq edit_user_path(user)
+  #   end
+  # end
 
   # it "Cannot modify any other users account" do
   #
