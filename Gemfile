@@ -33,7 +33,8 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'faker'
 gem 'betterlorem'
 gem 'image_suckr'
-
+gem 'brakeman'
+gem 'rubycritic'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -45,6 +46,7 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
+  gem 'simplecov'
 end
 
 group :development do
