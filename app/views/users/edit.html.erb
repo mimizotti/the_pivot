@@ -27,7 +27,13 @@
             <%= f.label :email, "Email:" %>
             <%= f.text_field :email %><br/>
 
-            <%= f.submit "Update", class: "btn btn-primary" %>
+            <%= f.label :username, "Username:" %>
+            <%= f.text_field :username %><br/>
+
+            <%= f.label :password, "Password:" %>
+            <%= f.password_field :password %><br/>
+
+            <%= f.submit "Update", class: "btn btn-primary", method: :put %>
             <% end %>
         </li>
       </ul>

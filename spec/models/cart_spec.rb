@@ -5,7 +5,7 @@ RSpec.describe Cart, type: :model do
   describe "instance methods" do
     describe "#add_item" do
       it 'can add an item to the cart' do
-        subject.add_item(1)
+          subject.add_item(1)
         subject.add_item(2)
         subject.add_item(3)
 
