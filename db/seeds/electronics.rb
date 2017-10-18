@@ -3,7 +3,7 @@ class SeedElectronics
   def self.seed
     category = Category.create(name: "Electronics")
     suckr = ImageSuckr::GoogleSuckr.new
-    items = 60.times do
+    category.items = 60.times do
       title = "#{Faker::Hacker.adjective} #{Faker::Hacker.ingverb} #{Faker::Hacker.verb} #{Faker::Hacker.noun}"
       Item.create(title: title,
                   description: Faker::Hacker.say_something_smart,
