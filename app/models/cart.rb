@@ -45,17 +45,6 @@ class Cart
     @contents.delete(item_id.to_s)
   end
 
-  # def parse_for_orders
-  #   @contents.map do |item_id, quantity|
-  #     price = Item.find(item_id).price
-  #     {
-  #       item_id: id.to_i,
-  #       quantity: quantity,
-  #       line_item_total: quantity * price
-  #     }
-  #   end
-  # end
-
   def order_hash
     items = {}
     contents.each do |item_id, quantity|
