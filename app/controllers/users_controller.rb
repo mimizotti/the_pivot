@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_login, except: [:new, :create, :edit, :update]
+  # before_action :verify_info, only: [:update]
 
   def new
     @user = User.new
@@ -24,28 +25,30 @@ class UsersController < ApplicationController
 
   def update
     if current_user.save && current_user.admin?
-      current_user.update(user_params)
+      current_user.update!(user_params)
       redirect_to admin_dashboard_path
     elsif current_user.save
-      current_user.update(user_params)
+      current_user.update!(user_params)
       redirect_to dashboard_path
     else
-      render :edit
+      redirect_to edit_user_path
     end
   end
-
-
 
   private
 
-  def user_params
-    params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :address)
-  end
-
-  def require_login
-    unless session[:logged_in?]
-      flash[:error] = "You must be logged in to view this content"
-      redirect_to login_path
+    def user_params
+      params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :address)
     end
-  end
+
+    def require_login
+      unless session[:logged_in?]
+        flash[:error] = "You must be logged in to view this content"
+        redirect_to login_path
+      end
+    end
+
+    # def verify_info
+    #   require "pry"; binding.pry
+    # end
 end
