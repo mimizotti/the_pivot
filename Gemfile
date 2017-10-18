@@ -15,6 +15,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'friendly_id', '~> 5.1.0'
+gem 'brakeman'
+gem 'rubycritic'
 # gem 'capistrano-rails', group: :development
 # gem 'therubyracer', platforms: :ruby
 # gem 'redis', '~> 3.0'
