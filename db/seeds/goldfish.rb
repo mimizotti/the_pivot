@@ -1,4 +1,4 @@
-class SeedGoldFish
+class SeedGoldfish
 
   def self.seed
     category = Category.create(name: "Underwater")
