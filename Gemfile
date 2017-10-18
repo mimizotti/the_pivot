@@ -32,6 +32,7 @@ gem 'friendly_id', '~> 5.1.0'
 # gem 'capistrano-rails', group: :development
 gem 'faker'
 gem 'betterlorem'
+gem 'image_suckr'
 
 
 group :development, :test do
