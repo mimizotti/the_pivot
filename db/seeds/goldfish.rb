@@ -1,15 +1,15 @@
 class SeedGoldfish
 
   def self.seed
+    store = Store.create(name: "Goldfish Pals", description: "Fishy friends on demand", image: "gold_fish")
     category = Category.create(name: "Underwater Supply")
-    category.items = 60.times do
+    60.times do
       title = Faker::HitchhikersGuideToTheGalaxy.character
-      Item.create(title: title,
+      category.items.create(title: title,
                   description: BetterLorem.w,
-                  price: rand(0.10..140.00))
+                  price: rand(0.10..140.00), store: store)
     end
-    puts "tricked out fish whips seeded"; return nil
-
+    puts "tricked out fish whips seeded"
   end
 
 end

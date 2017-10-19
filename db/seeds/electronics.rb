@@ -1,14 +1,15 @@
 class SeedElectronics
 
   def self.seed
+    store = Store.create(name: "Hipster Electronics", description: "All the gadjets you didn't know you needed, for all the problems you didn't know you had", image: "hipster_electronics")
     category = Category.create(name: "Electronics")
-    category.items = 60.times do
+    60.times do
       title = "#{Faker::Hacker.adjective} #{Faker::Hacker.ingverb} #{Faker::Hacker.verb} #{Faker::Hacker.noun}"
-      Item.create(title: title,
+      category.items.create(title: title,
                   description: Faker::Hacker.say_something_smart,
-                  price: rand(100.00..1000.00))
-      puts "fancy computer gadjet seeded"
-    end; return nil
+                  price: rand(100.00..1000.00), store: store)
+    end
+    puts "fancy computer gadjets seeded"
   end
 
 end
