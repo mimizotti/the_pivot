@@ -12,4 +12,21 @@ class SeedElectronics
     puts "fancy computer gadjets seeded"
   end
 
+  def self.reset
+    store = Store.find_by(name: "Hipster Electronics")
+    category = Category.find_by(name: "Electronics")
+    if store
+      store.items.destroy_all
+      puts "electronic items deleted"
+      store.destroy
+      puts "Hipster Electronics deleted"
+    end
+    items = category.items
+    category.destroy
+    puts "Electronics category deleted"
+    seed
+    category = Category.find_by(name: "Electronics")
+    category.items << items
+  end
+
 end
