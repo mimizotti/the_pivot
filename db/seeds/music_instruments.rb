@@ -2,13 +2,17 @@ class SeedInstruments
 
   def self.seed
     category = Category.create(name: "Musical Instruments")
-    category.items = 60.times do
+    store = Store.create(name: "Musical Instruments", description: "For all your music needs")
+    items = []
+    60.times do
       title = Faker::Music.instrument
-      Item.create(title: title,
+      items << Item.create(title: title,
                   description: BetterLorem.w,
                   price: rand(0.10..140.00))
     end
-    puts "musical instrument seeded"; return nil
+    category.items = items
+    store.items = items
+    puts "musical instrument seeded"
    end
 
 end
