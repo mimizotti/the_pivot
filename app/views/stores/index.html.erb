@@ -3,7 +3,7 @@
 <% @stores.each do |store| %>
 <div class="store">
   <li class="store_image-#{store.id}"> <%= image_tag store.image %> </li>
-  <li class="store-#{store.id}"> <%= store.name %> </li>
+  <li class="store-#{store.id}"> <%= link_to "#{store.name}", store_path(store) %> </li>
 </div>
-   <% end  %>
+   <% end %>
  </ul>
