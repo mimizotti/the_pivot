@@ -1,6 +1,9 @@
 FactoryGirl.define do
   factory :store do
-    name "MyString"
+    sequence :name do |i|
+      "MyString#{i}"
+    end
+    "MyString"
     description "MyString"
     image "MyString"
   end

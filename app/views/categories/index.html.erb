@@ -1,1 +1,11 @@
 
+<div class="container">
+  <div class="row">
+<% @categories.each do |category| %>
+    <div class="thumb">
+      <a class="thumb_image"><%= image_tag category.items.first.image %></a>
+      <a class="thumb_name"><%= category.name %></a>
+    </div>
+<% end %>
+  </div>
+</div>

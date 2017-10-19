@@ -1,23 +1,36 @@
 require 'rails_helper'
 
 RSpec.describe "user visits categories index path" do
-  before(:each) do
+
+  it "and will see categories sorted by popularity" do
     category1, category2 = create_list(:category, 2)
-    item1, item2, item3 = create_list(:item, 3)
+    store1, store2 = create_list(:store, 2)
+    item1, item3 = create_list(:item, 2, store: store1)
+    item2 = create(:item, store: store2)
+
     category1.items << item1
     category1.items << item2
     category2.items << item3
     visit("/categories")
-  end
 
-  it "and will see categories sorted by popularity" do
     expect(page).to have_content(category1.name)
     expect(page).to have_content(category2.name)
-    expect()
-
+    expect(page.first('.thumb_name').text).to eq(category1.name)
   end
 
   it "and will see images of first item in each category" do
+    category1, category2 = create_list(:category, 2)
+    store1, store2 = create_list(:store, 2)
+    item1, item3 = create_list(:item, 2, store: store1)
+    item2 = create(:item, store: store2)
 
+    category1.items << item1
+    category1.items << item2
+    category2.items << item3
+    visit("/categories")
+
+    expect(page).to have_css("img[src*='#{category1.items.first.image}']")
+    expect(page).to have_css("img[src*='#{category2.items.first.image}']")
   end
+
 end
