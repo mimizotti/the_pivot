@@ -1,7 +1,7 @@
 class SeedGoldfish
 
   def self.seed
-    store = Store.create(name: "Goldfish Pals", description: "Fishy friends on demand", image: "gold_fish")
+    store = Store.create(name: "Goldfish Pals", description: "Fishy friends on demand", image: "logos/goldfish_pals_logo")
     category = Category.create(name: "Underwater Supply")
     60.times do
       title = Faker::HitchhikersGuideToTheGalaxy.character

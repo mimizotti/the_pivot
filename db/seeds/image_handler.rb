@@ -1,5 +1,0 @@
-class ImageHandler
-
-
-
-end

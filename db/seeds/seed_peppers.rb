@@ -2,13 +2,11 @@ class SeedPeppers
 
   def self.seed
     category = Category.create(name: "Peppers")
-    store = Store.create(name: "Fuko", description: "Feast your eyes on the spiciest peppers the world has to offer", image: "http://teriacha.com/wp-content/uploads/2016/09/Pepper.png")
-    32.times do |i|
-      28.times do |i|
-        category.items.create(title: titles[i].upcase, description: BetterLorem.w, price: rand(100..250), store: store)
-      end
-      store.items.create(title: "Black Pepper#{i}", description: "The most peppery", price: 999)
+    store = Store.create(name: "Fuko", description: "Feast your eyes on the spiciest peppers the world has to offer", image: "logos/fuko_logo")
+    titles.each do |title|
+      category.items.create(title: title.upcase, description: BetterLorem.w, price: rand(100..250), store: store)
     end
+    store.items.create(title: "Black Pepper#{i}", description: "The most peppery", price: 999)
     puts "peppers planted"
   end
 
@@ -41,7 +39,13 @@ class SeedPeppers
      "chocolate habanero",
      "devil's tongue",
      "white bullet",
-     "guyana pepper"]
+     "guyana pepper",
+     "infinity pepper",
+     "red savina habanero",
+     "wiri wiri pepper",
+     "chiltepin pepper",
+     "charleston hot pepper",
+     "byadgi chilli"]
   end
 
   def self.reset

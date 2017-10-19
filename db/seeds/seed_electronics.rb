@@ -1,7 +1,7 @@
 class SeedElectronics
 
   def self.seed
-    store = Store.create(name: "Hipster Electronics", description: "All the gadjets you didn't know you needed, for all the problems you didn't know you had", image: "hipster_electronics")
+    store = Store.create(name: "Hipster Electronics", description: "All the gadjets you didn't know you needed, for all the problems you didn't know you had", image: "logos/hipster_electronics_logo")
     category = Category.create(name: "Electronics")
     60.times do
       title = "#{Faker::Hacker.adjective} #{Faker::Hacker.ingverb} #{Faker::Hacker.verb} #{Faker::Hacker.noun}"
