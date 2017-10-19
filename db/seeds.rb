@@ -290,7 +290,7 @@ Item.create(title: "Sandy Honey 5 Piece Square Dining Set", description: "Offeri
 Item.create(title: "Carson II 5 Piece Dining Set", description: "What could be more appetizing than an entire dining set offered at an outstanding deal? With its incomparable price and versatile design, this is one of the most popular selections in our menu of collections. The slat back chairs and tapered leg table boast hardwood and veneer construction and a dark brown finish that fits numerous styles and settings", price: 195.99, image: "carson.png", store: dt)]
 
 furnitures.map do |f|
-  ItemCategory.create(item: f)
+  ItemCategory.create(item: f, category: furniture)
 end
 
 toys = Category.create(name: "Toys", title: "Toy Stores")
