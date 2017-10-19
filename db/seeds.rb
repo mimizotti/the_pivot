@@ -500,18 +500,17 @@ ants = Store.create!(name: "Ants in My Eyes Johnson's", description: "Our prices
       puts "Adding #{item[:name]} to the Home Appliances category"
     end
 
-    store_a = Store.create!(name: "Francesca's", description: "Clothing and Jewelry", image: "francescas.png"),
-    store_2 = Store.create!(name: "Trunkt Club", description: "Men's Clothing", image: "trunkt-club.png"),
-    store_3 = Store.create!(name: "Zippo's", description: "Jewelry", image: "zippos.png"),
-    store_4 = Store.create!(name: "Smacy's", description: "Jewelry", image: "smacys.png"),
+    store_a = Store.create!(name: "Francesca's", description: "Clothing and Jewelry", image: "francescas.png")
+    store_2 = Store.create!(name: "Trunkt Club", description: "Men's Clothing", image: "trunkt-club.png")
+    store_3 = Store.create!(name: "Zippo's", description: "Jewelry", image: "zippos.png")
+    store_4 = Store.create!(name: "Smacy's", description: "Jewelry", image: "smacys.png")
     store_5 = Store.create!(name: "J. Peterman", description: "Distinctive Lifestyle Merchandise", image: "j-peterman.png")
 
     jewelry = Category.create!(name: "jewelry", title: "Jewelry")
     clothes = Category.create!(name: "clothes", title: "Clothes")
 
 
-    clothes_items = [
-      Item.create(store: store_a, title: "White Dress", description: "With cool designs", price: Faker::Commerce.price),
+    clothes_items = [Item.create(store: store_a, title: "White Dress", description: "With cool designs", price: Faker::Commerce.price),
       Item.create(store: store_a, title: "Blue Dress", description: "Plain blue dress", price: Faker::Commerce.price),
       Item.create(store: store_a, title: "Black Dress", description: "Plain black dress", price: Faker::Commerce.price),
       Item.create(store: store_a, title: "Red Dress", description: "Plain red dress", price: Faker::Commerce.price),
@@ -560,8 +559,7 @@ ants = Store.create!(name: "Ants in My Eyes Johnson's", description: "Our prices
       Item.create(store: store_5, title: "The Last Frontier Boot", description: "The Last Frontier Boot (No. 5548). Full-grain leather boot with laser-etched western pattern on foot and upper. Hand-nailed, scoured and distressed leather outsole. Stonewash finishing. Goodyear leather welt and Ariat’s Advanced Torque Stability (ATS) technology for all-day comfort. 1 3/4” heel height, 13” shaft height.  Imported.", price: 239.00),
       Item.create(store: store_5, title: "Black Bowtie Cape", description: "Black Bowtie Cape (No. 2460). Found in a little boutique in Orleans. Made of 100% pure cashmere. Trimmed to waist length with a 9-inch wide collar, three-quarter length bell sleeves and tie front. A definite attention-getter.  ", price: 279.00).
       Item.create(store: store_5, title: "The Tuxedo-Front Dress", description: "Who needs a power suit when you’ve got a dress like this? The navy color is rich, classic, and bold. You’re not suffering fools in this dress and the board knows this.", price: 229.00),
-      Item.create(store: store_5, title: "The Quarter-Zip Cashmere Sweater", description: "This 100% cashmere quarter-zip sweater (or pullover if you prefer) is a light 306 grams, exceedingly soft and supple, yet warm enough to do the job.", price: 298.00)
-      ]
+      Item.create(store: store_5, title: "The Quarter-Zip Cashmere Sweater", description: "This 100% cashmere quarter-zip sweater (or pullover if you prefer) is a light 306 grams, exceedingly soft and supple, yet warm enough to do the job.", price: 298.00)]
 
     jewelry_items = [
       Item.create(store: store_1, title: "Gold Necklace", description: "Pretty chill necklace", price: Faker::Commerce.price),
