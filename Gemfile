@@ -23,7 +23,6 @@ gem 'betterlorem'
 gem 'image_suckr'
 gem 'rubycritic'
 gem 'brakeman'
-gem 'rubycritic'
 # gem 'capistrano-rails', group: :development
 # gem 'therubyracer', platforms: :ruby
 # gem 'redis', '~> 3.0'
