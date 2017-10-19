@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
+  resources :stores, only: [:index]
+
+  resources :categories, only: [:index]
+
+
   resources :orders, only: [:index, :show, :create, :new]
 
   resources :users, only: [:new, :create, :edit, :update]
@@ -16,6 +21,7 @@ Rails.application.routes.draw do
   resource :cart
 
   get '/:category', to: 'categories#show', param: :slug, as: "category"
+
 
   namespace :admin do
     get "/dashboard", to: "users#show", as: "dashboard"
