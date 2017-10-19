@@ -1,0 +1,9 @@
+<ul>
+
+<% @stores.each do |store| %>
+<div class="store">
+  <li class="store_image-#{store.id}"> <%= image_tag store.image %> </li>
+  <li class="store-#{store.id}"> <%= store.name %> </li>
+</div>
+   <% end  %>
+ </ul>

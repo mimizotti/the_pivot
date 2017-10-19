@@ -1,7 +1,9 @@
 FactoryGirl.define do
   factory :store do
-    name "MyString"
-    description "MyString"
-    image "MyString"
+    sequence(:name) do |n|
+      "Store#{n}"
+    end
+    description "store description"
+    image "smacys.png"
   end
 end
