@@ -6,7 +6,7 @@ class SeedPeppers
     titles.each do |title|
       category.items.create(title: title.upcase, description: BetterLorem.w, price: rand(100..250), store: store)
     end
-    store.items.create(title: "Black Pepper#{i}", description: "The most peppery", price: 999)
+    store.items.create(title: "Black Pepper", description: "The most peppery", price: 999)
     puts "peppers planted"
   end
 
