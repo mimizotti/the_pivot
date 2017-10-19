@@ -227,7 +227,7 @@ Item.create(title: "Cross the Line", description: "By James Patterson. In all of
 Item.create(title: "The Husband's Secret", description: "By Liane Moriarty. Imagine your husband wrote you a letter, to be opened after his death. Imagine, too, that the letter contains his deepest, darkest secret--something with the potential to destroy not only the life you built together, but the lives of others as well. And then imagine that you stumble across that letter while your husband is still very much alive", price: 9.99, image: "the-husbands-secret.jpg", store: indiecovers)]
 
 book_collection.map do |book|
-  ItemCategory(item: book)
+  ItemCategory.create(item: book, category: books)
 end
 
 livecomfy = Store.create(name: "Live Comfy", description: "The best type of life is a comfortable life", image: "live-comfy.png")
