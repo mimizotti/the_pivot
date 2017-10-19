@@ -4,7 +4,7 @@ class SeedPeppers
     category = Category.create(name: "Peppers")
     store = Store.create(name: "Fuko", description: "Feast your eyes on the spiciest peppers the world has to offer", image: "logos/fuko_logo")
     titles.keys.each do |title|
-      category.items.create(title: title.upcase, description: BetterLorem.w, price: rand(100..250), image: titles[title] store: store)
+      category.items.create(title: title.upcase, description: BetterLorem.w, price: rand(100..250), image: titles[title], store: store)
     end
     store.items.create(title: "Black Pepper", description: "The most peppery", price: 999)
     puts "peppers planted"

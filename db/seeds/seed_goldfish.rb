@@ -8,7 +8,8 @@ class SeedGoldfish
       category.items.create(title: title,
                   description: BetterLorem.w,
                   price: rand(0.10..140.00),
-                  image: fish[rand(0..11)] store: store)
+                  image: fish[rand(0..11)],
+                  store: store)
     end
     puts "tricked out fish whips seeded"
   end

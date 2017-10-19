@@ -3,7 +3,7 @@ class SeedInstruments
   def self.seed
     category = Category.create(name: "Musical Instruments")
     store = Store.create(name: "Jamming Base", description: "For all your music needs", image: "logos/jamming_base_logo")
-    60.times do
+    50.times do
       title = Faker::Music.instrument
       category.items.create(title: title,
                   description: BetterLorem.w,

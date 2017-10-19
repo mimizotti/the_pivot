@@ -4,7 +4,7 @@ class SeedTowels
     category = Category.create(name: "Towels")
     store = Store.create(name: "Dri", description: "Bring a towel for every occasion", image: "logos/dri_logo")
     titles.keys.each do |title|
-      category.items.create(title: title, description: BetterLorem.w, price: rand(100..250), image: titles[title] store: store)
+      category.items.create(title: title, description: BetterLorem.w, price: rand(100..250), image: titles[title], store: store)
     end
     puts "towels draped"
   end
