@@ -617,14 +617,14 @@ ants = Store.create!(name: "Ants in My Eyes Johnson's", description: "Our prices
     ]
 
 
-    clothes_items.each do |item|
+    clothes_items.map do |item|
       ItemCategory.create(item: item, category: clothes)
       puts "Adding #{item[:name]} to the Clothes category"
     end
 
     puts "Clothes seeded"
 
-    jewelry_items.each do |item|
+    jewelry_items.map do |item|
       ItemCategory.create(item: item, category: jewelry)
       puts "Adding #{item[:name]} to the Jewelry category"
     end
