@@ -16,6 +16,9 @@ class SeedElectronics
     store = Store.find_by(name: "Hipster Electronics")
     category = Category.find_by(name: "Electronics")
     if store
+      store.items.each do |item|
+        item.item_categories.destroy_all
+      end
       store.items.destroy_all
       puts "electronic items deleted"
       store.destroy

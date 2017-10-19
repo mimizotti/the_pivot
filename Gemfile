@@ -20,7 +20,6 @@ gem 'friendly_id', '~> 5.1.0'
 
 gem 'faker'
 gem 'betterlorem'
-gem 'google-api-client', '~> 0.11'
 gem 'rubycritic'
 gem 'brakeman'
 # gem 'capistrano-rails', group: :development

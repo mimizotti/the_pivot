@@ -1,4 +1,4 @@
-class SeedPepper
+class SeedPeppers
 
   def self.seed
     category = Category.create(name: "Peppers")
@@ -44,7 +44,24 @@ class SeedPepper
      "guyana pepper"]
   end
 
-
-
+  def self.reset
+    store = Store.find_by(name: "Fuko")
+    category = Category.find_by(name: "Peppers")
+    if store
+      store.items.each do |item|
+        item.item_categories.destroy_all
+      end
+      store.items.destroy_all
+      puts "electronic items deleted"
+      store.destroy
+      puts "Fuko deleted"
+    end
+    items = category.items
+    category.destroy
+    puts "Peppers category deleted"
+    seed
+    category = Category.find_by(name: "Peppers")
+    category.items << items
+  end
 
 end

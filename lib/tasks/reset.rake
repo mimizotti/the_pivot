@@ -1,3 +1,5 @@
+Dir['./db/seeds/*.rb'].each {|file| require file }
+
 namespace :reset do
 
   task :fish => :environment do
