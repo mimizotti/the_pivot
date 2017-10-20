@@ -8,14 +8,14 @@ class SeedInstruments
       category.items.create(title: title,
                   description: BetterLorem.w,
                   price: rand(0.10..140.00),
-                  image: title[key],
+                  image: values[title],
                   store: store)
     end
     puts "musical instrument seeded"
    end
 
    def self.values
-     ["Electric Guitar": "https://i.ebayimg.com/thumbs/images/g/2kUAAOSwRUhY-GhO/s-l225.jpg",
+     {"Electric Guitar": "https://i.ebayimg.com/thumbs/images/g/2kUAAOSwRUhY-GhO/s-l225.jpg",
       "Grand Piano": "https://www.steinway.com/.imaging/mte/steinway-us-theme/Small-Square/dam/pianos/Essex/Grands/Square/EGP_173C_black_square-1-.jpg/jcr:content/EGP_173C_black_square.jpg",
       "Saxophone": "https://images-na.ssl-images-amazon.com/images/I/71acsKKEUGL._SY355_.jpg",
       "C Trumpet": "https://media.wwbw.com/is/image/MMGS7/Philadelphia-Series-Stradivarius-C-Trumpet-C180SL229PC-Silver/464028000232000-00-500x500.jpg",
@@ -65,7 +65,7 @@ class SeedInstruments
       "Cowhide Violin Strings": "https://ae01.alicdn.com/kf/HTB1nblsIXXXXXXuXXXXq6xXFXXX1/STRADPET-Violin-Neckguard-set-Guarneri-Style-Chinrest-with-Titanium-Chinrest-Clamps-for-4-4-violin-Genuine.jpg",
       "Steel Cello Strings": "https://reverb-res.cloudinary.com/image/upload/v1452705672/cello-663563_1280_gmabal.jpg",
       "Cowhide Cello Strings": "https://images-na.ssl-images-amazon.com/images/I/61nKXadWq9L._SL1001_.jpg"
-      ]
+    }
    end
 
    def self.reset
