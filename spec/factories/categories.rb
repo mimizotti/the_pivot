@@ -1,5 +1,7 @@
 FactoryGirl.define do
   factory :category do
-    name "Scuba"
+    sequence :name do |i|
+      "Scuba#{i}"
+    end
   end
 end

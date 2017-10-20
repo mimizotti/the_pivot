@@ -6,4 +6,11 @@ class Category < ApplicationRecord
   include FriendlyId
   friendly_id :name, use: :slugged
 
+  def self.by_popularity
+    select("categories.*, count(items) AS item_count")
+    .joins(:items)
+    .group("categories.id")
+    .order("item_count DESC")
+  end
+
 end
