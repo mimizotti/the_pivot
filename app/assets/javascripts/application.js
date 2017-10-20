@@ -12,4 +12,4 @@
 //
 //= require rails-ujs
 //= require_tree .
-//= require_directory categories
+//= require_directory ./categories
