@@ -1,5 +1,9 @@
 user = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "bonjovirules")
-user_2 = User.create(first_name: "Styx", last_name: "Rules", address: "123 man in the wilderness", email: "renegade@amazing.com", username: "styxrules", password: "styxrules", role: "admin")
+user_2 = User.create(first_name: "Styx", last_name: "Rules", address: "123 man in the wilderness", email: "renegade@amazing.com", username: "styxrules", password: "styxrules")
+jim = User.create(first_name: "Jim", last_name: "Sad Path", address: "The road to success requires a sad path", email: "sadpath@littleshop.com", username: "sadpath", password: "saddestpath", platform_admin: true)
+ash = User.create(first_name: "Ash", last_name: "Whatever", address: "I am as dry as my code", email: "ash@littleshop.com", username: "ash", password: "ash", platform_admin: true)
+mimi = User.create(first_name: "Mimi", last_name: "Le", address: "18th & Market is where it's at", email: "mimi@littleshop.com", username: "mimi", password: "mimi", platform_admin: true)
+liam = User.create(first_name: "Liam", last_name: "Barstad", address: "The same as above", email: "liam@littleshop.com", username: "Liam", password: "LOGIN", platform_admin: true)
 store_1 = Store.create(name: "Knautical Knots", description: "Underwater basket weaving supplies, not just for lazy millenials!", image: "knotical-knots.png")
 category_1 = Category.create(name: "scuba", title: "Scuba Diving Supplies")
 
