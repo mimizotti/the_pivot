@@ -44,6 +44,7 @@ RSpec.describe "user visits categories index path" do
     category2.items << item3
     visit("/categories")
     click_link(category1.name)
+    save_and_open_page
 
     expect(current_path).to eq("/#{category1.name.downcase}")
     expect(page).to have_content(category1.name)

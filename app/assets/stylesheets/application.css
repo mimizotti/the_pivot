@@ -15,7 +15,9 @@
  *= require_directory ./categories
  */
 
-
+ nav>h5 {
+   text-align: center;
+ }
  .display {
   width:  250px;
   height: 250px;

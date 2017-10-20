@@ -8,11 +8,8 @@
     <%= javascript_include_tag 'application' %>
     <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Fredericka+the+Great|Monoton" rel="stylesheet">
   </head>
-  <style>
-  nav>h5 {
-    text-align: center;
-  }
-  </style>
+
+  <%= yield :head %>
 
   <body>
 
