@@ -22,6 +22,9 @@ gem 'faker'
 gem 'betterlorem'
 gem 'rubycritic'
 gem 'brakeman'
+
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 # gem 'capistrano-rails', group: :development
 # gem 'therubyracer', platforms: :ruby
 # gem 'redis', '~> 3.0'

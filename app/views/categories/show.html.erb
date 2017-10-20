@@ -2,8 +2,6 @@
   <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Oswald|Quicksand" rel="stylesheet">
 <% end %>
 
-
-  <body>
     <div class="container-fluid"><br/>
       <div class="card card-inverse">
         <%= image_tag("Water-Ocean-l.jpg", class: "card-img") %>
@@ -17,10 +15,10 @@
           <div class="card-group">
             <div class="card border-0 text-center">
               <div class="card-body">
-                <h4 class="card-title"><%= link_to item.title, item_path(item) %></h4>
-                <%= link_to image_tag(item.image, class: 'display'), item_path(item) %>
-                <p class="card-text"><%= item.description %></p>
-                <p class="card-text"><%= number_to_currency(item.price) %></p>
+                <h4 class="card-title categories-card-title"><%= link_to item.title, item_path(item) %></h4>
+                <%= link_to image_tag(item.image, class: 'display'), item_path(item), class: "category-card-link" %>
+                <p class="card-text category-card-text"><%= item.description %></p>
+                <p class="card-text category-card-text"><%= number_to_currency(item.price) %></p>
                 <% if item.active? %>
                     <%= button_to "Add to Cart", cart_path(item_id: item.id), class: 'btn btn-secondary add-to-cart' %>
                 <% else %>
@@ -33,5 +31,3 @@
         <% end %>
       </div>
     </div>
-  </body>
-</html>

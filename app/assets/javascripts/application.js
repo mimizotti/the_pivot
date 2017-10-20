@@ -12,4 +12,6 @@
 //
 //= require rails-ujs
 //= require_tree .
-//= require_directory ./categories
+//= require jquery
+//= require jquery_ujs
+//= require jquery-ui
