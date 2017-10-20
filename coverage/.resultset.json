@@ -405,7 +405,18 @@
         null,
         null
       ],
+      "/Users/Mimi/turing/3module/projects/little-shop/app/models/role.rb": [
+        1,
+        null
+      ],
       "/Users/Mimi/turing/3module/projects/little-shop/app/models/store.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Mimi/turing/3module/projects/little-shop/app/models/user_role.rb": [
         1,
         1,
         1,
@@ -620,6 +631,6 @@
         0
       ]
     },
-    "timestamp": 1508537393
+    "timestamp": 1508538361
   }
 }
