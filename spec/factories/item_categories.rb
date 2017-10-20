@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :item_category do
-    item nil
-    category nil
+    item
+    category 
   end
 end
