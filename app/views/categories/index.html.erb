@@ -1,15 +1,12 @@
-
-<div class="container">
-  <div class="row">
+<div class="row">
 <% @categories.each do |category| %>
-    <div class="col-md-3">
-      <div class="thumb">
-      <a class="thumb_image"><%= image_tag category.items.first.image, size: '100' %></a>
-      <%= link_to category.name, category_path(category), class: "thumb_name" %>
-      </div>
+  <div class="col-md-3">
+    <div class="thumb">
+    <a class="thumb_image"><%= image_tag category.items.first.image, size: '100' %></a>
+    <%= link_to category.name, category_path(category), class: "thumb_name" %>
     </div>
-<% end %>
   </div>
-  <button id="cycle_backwards">Back</button>
-  <button id="cycle_forwards">Forward</button>
+<% end %>
 </div>
+<button id="cycle_backwards">Back</button>
+<button id="cycle_forwards">Forward</button>
