@@ -12,4 +12,8 @@ class User < ApplicationRecord
     "#{first_name} #{last_name}"
   end
 
+  def is_admin?
+    platform_admin == true || self.roles == "Business Admin" || self.roles == "Business Manager"
+  end
+
 end
