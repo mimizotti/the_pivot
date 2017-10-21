@@ -1,4 +1,6 @@
-RSpec.feature "user can checkout" do
+require 'rails_helper'
+
+feature "user can checkout" do
 
   let(:store) { Store.create(name: "Knautical Knots", description: "Underwater basket weaving supplies, not just for lazy millenials!", image: "knotical-knots.png") }
 
@@ -72,7 +74,7 @@ RSpec.feature "user can checkout" do
     category = create(:category)
     visit "/#{category.name}"
 
-    expect(current_path).to eq(Category.first.name)
+    expect(current_path).to eq("/#{Category.first.name}")
 
     category.items.each do |item|
       expect(page).to have_content(item.title)
