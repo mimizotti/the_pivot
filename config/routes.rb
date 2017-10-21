@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'home#index'
+  get '/password-reset', to: 'password#edit'
 
   resources :stores, only: [:index, :show] do
     resources :items, only: [:index, :show]
@@ -40,4 +41,5 @@ Rails.application.routes.draw do
   post 'paid' => 'orders#change_to_paid', as: :paid
   post 'cancelled' => 'orders#change_to_cancelled', as: :cancelled
   post 'completed' => 'orders#change_to_completed', as: :completed
+
 end
