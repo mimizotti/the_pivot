@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    if current_user.save && current_user.admin?
+    if current_user.save && current_user.is_admin?
       current_user.update!(user_params)
       redirect_to admin_dashboard_path
     elsif current_user.save
