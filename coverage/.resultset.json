@@ -1,44 +1,60 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Mimi/turing/3module/projects/little-shop/app/helpers/application_helper.rb": [
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/little-shop/app/helpers/categories_helper.rb": [
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/helpers/categories_helper.rb": [
         1,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/little-shop/app/helpers/dashboard_helper.rb": [
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/helpers/dashboard_helper.rb": [
         1,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/little-shop/app/helpers/home_helper.rb": [
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/little-shop/app/helpers/orders_helper.rb": [
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/helpers/orders_helper.rb": [
         1,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/little-shop/app/helpers/sessions_helper.rb": [
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/helpers/sessions_helper.rb": [
         1,
         null
       ],
-      "/Users/Mimi/turing/3module/projects/little-shop/app/helpers/users_helper.rb": [
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/helpers/users_helper.rb": [
         1,
         null
       ],
+<<<<<<< HEAD
       "/Users/Mimi/turing/3module/projects/little-shop/app/models/user.rb": [
+=======
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/categories_controller.rb": [
+        1,
+        null,
+>>>>>>> master
+        1,
+        1,
+        null,
+<<<<<<< HEAD
+=======
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/application_controller.rb": [
+        1,
+        1,
+        1,
+>>>>>>> master
         1,
         1,
         null,
         1,
         1,
-        null,
         1,
-        1,
-        1,
+<<<<<<< HEAD
         1,
         null,
         1,
@@ -52,11 +68,38 @@
         null
       ],
       "/Users/Mimi/turing/3module/projects/little-shop/app/models/application_record.rb": [
+=======
+        217,
+        null,
+        null,
+        1,
+        145,
+        null,
+        null,
+        1,
+        109,
+        null,
+        null,
+        1,
+        23,
+        null,
+        null,
+        1,
+        26,
+        null,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/home_controller.rb": [
+>>>>>>> master
         1,
         1,
         null
       ],
+<<<<<<< HEAD
       "/Users/Mimi/turing/3module/projects/little-shop/app/models/store.rb": [
+=======
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/orders_controller.rb": [
+>>>>>>> master
         1,
         1,
         1,
@@ -147,6 +190,7 @@
         0,
         0
       ],
+<<<<<<< HEAD
       "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/admin/orders_controller.rb": [
         0,
         0,
@@ -158,6 +202,27 @@
         0,
         0,
         0,
+=======
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/sessions_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        4,
+        4,
+        1,
+        1,
+        1,
+        3,
+        2,
+        2,
+        2,
+        null,
+        1,
+        1,
+>>>>>>> master
         null,
         0,
         0,
@@ -172,8 +237,15 @@
         0,
         0
       ],
+<<<<<<< HEAD
       "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/admin/users_controller.rb": [
         0,
+=======
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+>>>>>>> master
         null,
         0,
         null,
@@ -257,24 +329,47 @@
         null,
         0
       ],
+<<<<<<< HEAD
       "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/categories_controller.rb": [
         0,
         null,
         0,
+=======
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/cart.rb": [
+        1,
+        1,
+        null,
+        1,
+        169,
+        null,
+        null,
+        1,
+        20,
+>>>>>>> master
         null,
         0,
         null,
+<<<<<<< HEAD
         0,
         0,
         0,
+=======
+        1,
+        19,
+>>>>>>> master
         null,
         0
       ],
       "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/home_controller.rb": [
         0,
         null,
+<<<<<<< HEAD
         0,
         0,
+=======
+        1,
+        110,
+>>>>>>> master
         null,
         0
       ],
@@ -284,6 +379,7 @@
         0,
         0,
         null,
+<<<<<<< HEAD
         0,
         0,
         0,
@@ -293,9 +389,19 @@
         0,
         0,
         0,
+=======
+        1,
+        18,
+        18,
+        25,
+        25,
+        null,
+        18,
+>>>>>>> master
         null,
         0,
         null,
+<<<<<<< HEAD
         0,
         0,
         0,
@@ -310,6 +416,31 @@
         0,
         0,
         0,
+=======
+        1,
+        39,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        null,
+        1,
+        3,
+        null,
+        null,
+        1,
+        3,
+        3,
+        6,
+>>>>>>> master
         null,
         0,
         0,
@@ -350,6 +481,7 @@
         null,
         0,
         null,
+<<<<<<< HEAD
         0,
         0,
         0,
@@ -357,6 +489,15 @@
         0,
         0,
         0,
+=======
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/category.rb": [
+        1,
+        1,
+        1,
+        1,
+>>>>>>> master
         null,
         0,
         0,
@@ -366,6 +507,7 @@
         0,
         0,
         null,
+<<<<<<< HEAD
         0,
         0,
         0,
@@ -377,6 +519,25 @@
       ],
       "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/sessions_controller.rb": [
         0,
+=======
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/item_category.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/item.rb": [
+        1,
+        1,
+        1,
+>>>>>>> master
         null,
         0,
         0,
@@ -397,6 +558,7 @@
         0,
         0,
         null,
+<<<<<<< HEAD
         0,
         0,
         0,
@@ -405,10 +567,57 @@
       ],
       "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/stores_controller.rb": [
         0,
+=======
+        1,
+        1,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/order_item.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/order.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        3,
+        6,
+        6,
+        6,
+        6,
+        null,
+        null,
+        null,
+        1,
+        3,
+        null,
+        null,
+        1,
+        3,
+        null,
+        null,
+        1,
+        17,
+>>>>>>> master
         null,
         0,
         null,
+<<<<<<< HEAD
         0,
+=======
+        1,
+        13,
+>>>>>>> master
         null,
         0
       ],
@@ -416,11 +625,17 @@
         0,
         0,
         null,
+<<<<<<< HEAD
+=======
+        1,
+        13,
+>>>>>>> master
         null,
         0,
         0,
         0,
         null,
+<<<<<<< HEAD
         0,
         0,
         0,
@@ -431,6 +646,10 @@
         0,
         0,
         0,
+=======
+        1,
+        13,
+>>>>>>> master
         null,
         0,
         0,
@@ -468,6 +687,7 @@
         null,
         0
       ],
+<<<<<<< HEAD
       "/Users/Mimi/turing/3module/projects/little-shop/app/jobs/application_job.rb": [
         0,
         0
@@ -480,6 +700,41 @@
       ],
       "/Users/Mimi/turing/3module/projects/little-shop/app/models/cart.rb": [
         0,
+=======
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/store.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/user.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        30,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/admin/items_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+>>>>>>> master
         0,
         null,
         0,
@@ -490,6 +745,55 @@
         0,
         0,
         null,
+<<<<<<< HEAD
+        0,
+        0,
+        0,
+=======
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/items_controller.rb": [
+        1,
+        1,
+        16,
+>>>>>>> master
+        null,
+        0,
+        0,
+        0,
+        null,
+<<<<<<< HEAD
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+=======
+        1,
+        3,
+>>>>>>> master
+        null,
+        0,
+        0,
+        0,
+        null,
+<<<<<<< HEAD
+        0,
+        0,
+        0,
+=======
+        1,
+        1,
+        1,
+        1,
+>>>>>>> master
+        null,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -498,6 +802,7 @@
         0,
         0,
         null,
+<<<<<<< HEAD
         0,
         0,
         0,
@@ -505,34 +810,11 @@
         0,
         0,
         0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+=======
+        1,
+        1,
+        1,
+>>>>>>> master
         null,
         0,
         0,
@@ -544,6 +826,7 @@
         null,
         0
       ],
+<<<<<<< HEAD
       "/Users/Mimi/turing/3module/projects/little-shop/app/models/category.rb": [
         0,
         0,
@@ -552,9 +835,19 @@
         null,
         0,
         0,
+=======
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/admin/users_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        13,
+>>>>>>> master
         null,
         0
       ],
+<<<<<<< HEAD
       "/Users/Mimi/turing/3module/projects/little-shop/app/models/item_category.rb": [
         0,
         0,
@@ -564,6 +857,54 @@
       "/Users/Mimi/turing/3module/projects/little-shop/app/models/order.rb": [
         0,
         0,
+=======
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/carts_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        17,
+        null,
+        17,
+        17,
+        null,
+        17,
+        17,
+        null,
+        null,
+        1,
+        15,
+        15,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        2,
+        1,
+        1,
+        1,
+        null,
+        2,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/admin/orders_controller.rb": [
+        1,
+        1,
+>>>>>>> master
         null,
         0,
         0,
@@ -601,6 +942,7 @@
         0,
         0,
         null,
+<<<<<<< HEAD
         0,
         0,
         0,
@@ -608,27 +950,51 @@
         0,
         0,
         0,
+=======
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/stores_controller.rb": [
+        1,
+        null,
+        1,
+        4,
+>>>>>>> master
         null,
         0,
         0,
         0,
         null,
+<<<<<<< HEAD
         0,
         0,
         0,
         null,
+=======
+        1,
+        4,
+        null,
+        null,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/channels/application_cable/channel.rb": [
+>>>>>>> master
         0,
         0,
         0,
         null,
         0
       ],
+<<<<<<< HEAD
       "/Users/Mimi/turing/3module/projects/little-shop/app/models/order_item.rb": [
+=======
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/channels/application_cable/connection.rb": [
+>>>>>>> master
         0,
         0,
         0,
         0
       ],
+<<<<<<< HEAD
       "/Users/Mimi/turing/3module/projects/little-shop/app/models/role.rb": [
         0,
         0,
@@ -637,12 +1003,23 @@
       ],
       "/Users/Mimi/turing/3module/projects/little-shop/app/models/user_role.rb": [
         0,
+=======
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/mailers/application_mailer.rb": [
+>>>>>>> master
         0,
         0,
         0,
         0
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1508614631
+=======
+    "timestamp": 1508538783
+>>>>>>> master
   }
 }
