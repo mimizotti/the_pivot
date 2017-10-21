@@ -10,5 +10,9 @@ class User < ApplicationRecord
     "#{first_name} #{last_name}"
   end
 
+  def create_reset_digest
+    rand(100000...999999).to_s
+  end
+
   enum role: ["user", "admin"]
 end

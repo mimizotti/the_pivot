@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root to: 'home#index'
-  get '/password-reset', to: 'password#edit'
+
+  get '/password-reset', to: 'password#new'
+  post '/password-confirmation', to: 'password#create'
+  get '/password-verification', to: 'password#edit'
 
   resources :stores, only: [:index, :show] do
     resources :items, only: [:index, :show]
