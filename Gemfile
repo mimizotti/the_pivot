@@ -19,6 +19,7 @@ gem 'brakeman'
 gem 'rubycritic'
 gem 'faker'
 gem 'omniauth-twitter'
+gem 'figaro'
 # gem 'capistrano-rails', group: :development
 # gem 'therubyracer', platforms: :ruby
 # gem 'redis', '~> 3.0'
