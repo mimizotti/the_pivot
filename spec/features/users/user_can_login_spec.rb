@@ -46,7 +46,7 @@ RSpec.feature "Visitor Logs in" do
 
   context "as any user" do
     it "with invalid information" do
-      User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive")
+      User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive", platform_admin: true)
 
       visit "/"
       expect(page).to have_content("Login")

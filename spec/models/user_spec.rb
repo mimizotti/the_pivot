@@ -12,19 +12,24 @@ describe User do
     it { should have_many(:orders) }
   end
 
-  describe "methods" do
+  describe ".instance_methods" do
+    let(:user) { User.create(first_name: "Jim", last_name: "Szalewski", address: "526 Kalamath St.", email: "jim.szalewski@gmail.com", username: "sadlypath", password: "takethesadpath", platform_admin: true) }
     context ".full_name" do
       it "can generate a full name for a user" do
-        user = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive", platform_admin: true)
-        expect(user.full_name).to eq("Bon Jovi")
+        expect(user.full_name).to eq("Jim Szalewski")
       end
     end
 
     context ".create_reset_digest" do
       it "generates a random 6 digit number and stores it on the user" do
-        user = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive", platform_admin: true)
         expect(user.create_reset_digest.length).to eq 6
         expect(user.create_reset_digest).to be_a String
+      end
+    end
+
+    context ".reset_password" do
+      it "generates a code, sends it to the users phone and stores it on the user" do
+        expect(user.reset_password).to_not be nil
       end
     end
   end
