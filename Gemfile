@@ -18,8 +18,9 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'brakeman'
 gem 'rubycritic'
 gem 'faker'
-gem 'figaro'
+gem 'twilio-ruby'
 gem 'faraday'
+gem 'figaro'
 # gem 'capistrano-rails', group: :development
 # gem 'therubyracer', platforms: :ruby
 # gem 'redis', '~> 3.0'
