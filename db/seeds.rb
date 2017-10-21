@@ -646,7 +646,21 @@ stores = Store.all
 
 orders.each do |order|
   OrderItem.create(item: items.sample, order: order, quantity: rand(1..9))
-  puts "OrderItem #{i+1} created!"
+  puts "OrderItem #{order.id} created!"
+end
+
+order_items = OrderItem.all
+
+order_items.map do |oi|
+  total = Item.find(oi.item_id).price * oi.quantity
+  oi.update_columns(line_item_total: total)
+  puts "OrderItem #{oi.id} line_item_total is #{total}"
+end
+
+orders.map do |order|
+  total = OrderItem.where(order: order).sum(:line_item_total)
+  order.update_columns(total_price: total)
+  puts "Order #{order.id} total_price is #{total}"
 end
 
 business_managers = []

@@ -4,9 +4,7 @@ class Order < ApplicationRecord
   has_many :order_items
   has_many :items, through: :order_items
 
-  before_validation :add_total_price
-
-  validates :user_id, :total_price, :status, presence: true
+  validates :user_id, :status, presence: true
 
   enum status: [:ordered, :paid, :cancelled, :completed]
 
@@ -59,8 +57,4 @@ class Order < ApplicationRecord
     where(status: 3)
   end
 
-  private
-  def add_total_price
-    self.total_price = OrderItem.where(order: self).sum("quantity * line_item_total")
-  end
 end
