@@ -14,5 +14,11 @@ class User < ApplicationRecord
     rand(100000...999999).to_s
   end
 
+  def reset_password
+    create_reset_digest
+    @client = Twilio::REST::Client.new ENV['twilio_sid'], ENV['twilio_token']
+    @client.messages.create(from: ENV['twilio_phone'], to: self.phone, body: "Your confirmation code is #{create_reset_digest}")
+  end
+
   enum role: ["user", "admin"]
 end

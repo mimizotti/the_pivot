@@ -2,7 +2,7 @@
 #
 # describe 'Admin creates an item from link on admin dashboard' do
 #   let(:store) { Store.create(name: "Knautical Knots", description: "Underwater basket weaving supplies, not just for lazy millenials!", image: "knotical-knots.png") }
-#   let(:admin) { create(:user, role: 1) }
+#   let(:admin) { create(:user, platform_admin: true) }
 #   scenario 'with valid attributes and sees the item' do
 #     category = Category.create(name: "Scuba")
 #

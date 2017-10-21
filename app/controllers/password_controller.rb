@@ -1,4 +1,5 @@
 class PasswordController < ApplicationController
+  before_action :authenticated?, only: [:update]
   def new
     @user = User.new
   end
@@ -7,10 +8,7 @@ class PasswordController < ApplicationController
     @user = User.find_by(email: params[:user][:email])
     if @user
       @user.reset_password
-      code = rand(100000...999999).to_s
-      @client = Twilio::REST::Client.new ENV['twilio_sid'], ENV['twilio_token']
-      @client.messages.create(from: ENV['twilio_phone'], to: user[:phone], body: "Your confirmation code is #{code}")
-      redirect_to controller: :password, action: :edit, params: {phone: user[:phone]}
+      redirect_to controller: :password, action: :edit, params: {phone: @user[:phone]}
     else
       flash.now[:danger] = 'Email address not found'
       render 'new'
