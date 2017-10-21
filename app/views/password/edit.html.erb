@@ -1,0 +1,12 @@
+<h2>A confirmation code has been sent to 7203616510</h2>
+<div class="container-fluid">
+  <%= form_for @user do |f| %>
+    <%= f.label 'Enter your confirmation code' %>
+    <%= f.text_field :reset %>
+    <%= f.label 'Enter your new password' %>
+    <%= f.password_field :password %>
+    <%= f.label 'Confirm you new password' %>
+    <%= f.password_field :password_confirmation %>
+    <%= f.submit %>
+  <% end %>
+</div>

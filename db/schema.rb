@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20171020221942) do
-=======
-ActiveRecord::Schema.define(version: 20171021134136) do
->>>>>>> create migration for phone column on users table, schema updated with migration
+ActiveRecord::Schema.define(version: 20171021172645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -103,6 +99,7 @@ ActiveRecord::Schema.define(version: 20171021134136) do
     t.datetime "updated_at", null: false
     t.boolean "platform_admin", default: false
     t.string "phone"
+    t.string "reset_digest"
   end
 
   add_foreign_key "item_categories", "categories"

@@ -13,8 +13,16 @@ class User < ApplicationRecord
     "#{first_name} #{last_name}"
   end
 
+<<<<<<< HEAD
   def is_admin?
     platform_admin == true || self.roles == "Business Admin" || self.roles == "Business Manager"
   end
 
+=======
+  def create_reset_digest
+    rand(100000...999999).to_s
+  end
+
+  enum role: ["user", "admin"]
+>>>>>>> reset digest added to users
 end
