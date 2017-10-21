@@ -1,10 +1,11 @@
 FactoryGirl.define do
   factory :item do
-    sequence :title do |i|
-      "MyString#{i}"
+    sequence(:title) do |n|
+      "Useless Product#{n}"
     end
-    description "MyText"
+    description "This product is totatlly useless"
     price "9.99"
-    image "https://memegenerator.net/img/images/600x600/9214447/ruh-roh-dog.jpg"
+    image "smacys.png"
+    store
   end
 end
