@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
-  resources :stores, only: [:index]
+  resources :stores, only: [:index, :show] do
+    resources :items, only: [:index, :show]
+  end
 
   resources :categories, only: [:index]
 
