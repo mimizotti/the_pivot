@@ -70,8 +70,11 @@ feature "user can checkout" do
 
   scenario "visitor can checkout after they log in" do
     user = create(:user)
-
     category = create(:category)
+    item = create(:item)
+
+    category.items << item
+
     visit "/#{category.name}"
 
     expect(current_path).to eq("/#{Category.first.name}")
