@@ -50,9 +50,10 @@
         1,
         1,
         1,
+        1,
         null,
         1,
-        170,
+        167,
         null,
         null,
         1,
@@ -60,15 +61,16 @@
         null,
         null,
         1,
-        55,
+        54,
+        null,
+        null,
+        1,
+        0,
         null,
         null,
         1,
         2,
         null,
-        null,
-        1,
-        2,
         null,
         null
       ],
@@ -251,7 +253,7 @@
         null,
         null,
         1,
-        56,
+        55,
         null,
         null,
         1,
@@ -355,6 +357,8 @@
         1,
         null,
         1,
+        null,
+        1,
         1,
         2,
         2,
@@ -403,13 +407,21 @@
         1,
         null,
         null,
+        1,
+        1,
+        28,
+        null,
         null
       ],
       "/Users/Mimi/turing/3module/projects/little-shop/app/models/role.rb": [
         1,
+        1,
+        1,
         null
       ],
       "/Users/Mimi/turing/3module/projects/little-shop/app/models/store.rb": [
+        1,
+        1,
         1,
         1,
         1,
@@ -431,12 +443,18 @@
         1,
         null,
         1,
+        1,
+        1,
+        1,
         null,
         1,
         4,
         null,
         null,
         1,
+        18,
+        null,
+        null,
         null
       ],
       "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/admin/users_controller.rb": [
@@ -631,6 +649,6 @@
         0
       ]
     },
-    "timestamp": 1508538361
+    "timestamp": 1508564507
   }
 }
