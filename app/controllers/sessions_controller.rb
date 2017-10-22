@@ -39,7 +39,7 @@ class SessionsController < ApplicationController
     if @user
       session[:user_id] = @user.id
       session[:logged_in?] = true
-      redirect_to dashboard_path
+      redirect_to items_path
     end
   end
 
