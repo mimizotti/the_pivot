@@ -28,10 +28,11 @@
         </li>
       </ul>
       <div class="card-block">
-        <%= link_to "Create Account", new_user_path %>
+        <%= link_to "Create Account", new_user_path %><br><br>
+        <h6> Or </h6>
       </div>
       <div class="card-block">
-        <%= link_to "Sign in with Twitter", twitter_login_path %>
+        <button class='loginBtn  loginBtn--twitter '><%= link_to "Sign in with Twitter", twitter_login_path, id: "sign_in_twitter" %></button><br><br
       </div>
     </div>
   </body>
