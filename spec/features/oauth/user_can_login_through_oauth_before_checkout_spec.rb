@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe "user can login through oauth" do
   scenario "and then checkout items in cart" do
+    stub_omniauth
     category = create(:category)
     item = create(:item)
 
@@ -25,13 +26,27 @@ describe "user can login through oauth" do
 
     click_on "Login or Register to checkout"
     click_on "Sign in with Twitter"
-    
-    click_on "Login"
 
     find(:css, ".cart").click
     click_button "Checkout"
 
     expect(page).to have_content("Order was successfully placed")
-    expect(page).to have_content("Order #{user.orders.last.id}")
   end
 end
+
+  def stub_omniauth
+      OmniAuth.config.test_mode = true
+
+      OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
+        provider: 'twitter',
+          info: {
+            uid: "1234",
+            name: "Ash McCash",
+            nickname: "IamtheWalrus",
+        },
+        credentials: {
+          token: "pizza",
+          secret: "secretpizza"
+        }
+      })
+  end

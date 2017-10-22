@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-    # binding.pry
     if request.env['omniauth.auth']['provider'].present?
       @user = User.find_or_create_from_auth(request.env['omniauth.auth'])
       set_session_id
