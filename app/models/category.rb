@@ -13,4 +13,8 @@ class Category < ApplicationRecord
     .order("item_count DESC")
   end
 
+  def best_image
+    items.by_popularity.first.image
+  end
+
 end

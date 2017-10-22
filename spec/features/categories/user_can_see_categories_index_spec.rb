@@ -28,6 +28,8 @@ RSpec.describe "user visits categories index path" do
     category1.items << item2
     category2.items << item3
     visit("/categories")
+    save_and_open_page
+    binding.pry
 
     expect(page).to have_css("img[src*='#{category1.items.first.image}']")
     expect(page).to have_css("img[src*='#{category2.items.first.image}']")
@@ -44,7 +46,6 @@ RSpec.describe "user visits categories index path" do
     category2.items << item3
     visit("/categories")
     click_link(category1.name)
-    save_and_open_page
 
     expect(current_path).to eq("/#{category1.name.downcase}")
     expect(page).to have_content(category1.name)
