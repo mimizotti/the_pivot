@@ -14,7 +14,7 @@ class Category < ApplicationRecord
   end
 
   def best_image
-    items.by_popularity.first.image
+    items.by_revenue.first.image
   end
 
 end
