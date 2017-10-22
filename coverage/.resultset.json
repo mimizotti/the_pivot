@@ -37,7 +37,7 @@
         null,
         null,
         1,
-        12,
+        11,
         null,
         null,
         null
@@ -52,15 +52,15 @@
         1,
         null,
         1,
-        229,
+        217,
         null,
         null,
         1,
-        149,
+        148,
         null,
         null,
         1,
-        113,
+        109,
         null,
         null,
         1,
@@ -239,7 +239,7 @@
         1,
         null,
         1,
-        173,
+        172,
         null,
         null,
         1,
@@ -251,7 +251,7 @@
         null,
         null,
         1,
-        114,
+        110,
         null,
         null,
         1,
@@ -316,6 +316,10 @@
         4,
         null,
         null,
+        1,
+        5,
+        null,
+        null,
         null
       ],
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/application_record.rb": [
@@ -342,9 +346,18 @@
         null,
         1,
         1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        5,
+        null,
+        null,
         null
       ],
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/order_item.rb": [
+        1,
         1,
         1,
         1,
@@ -631,6 +644,6 @@
         0
       ]
     },
-    "timestamp": 1508631116
+    "timestamp": 1508633682
   }
 }
