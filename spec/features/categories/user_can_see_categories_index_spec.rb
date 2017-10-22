@@ -27,14 +27,14 @@ RSpec.describe "user visits categories index path" do
     order_item1 = create(:order_item, order: order1, item: item1, line_item_total: 5.00)
     order_item2 = create(:order_item, order: order2, item: item1, line_item_total: 5.00)
     order_item3 = create(:order_item, order: order2, item: item2, line_item_total: 5.00)
-
     category1.items << item1
     category1.items << item2
     category2.items << item3
+    
     visit("/categories")
 
-    expect(page).to have_css("img[src*='#{category1.items.first.image}']")
-    expect(page).to have_css("img[src*='#{category2.items.first.image}']")
+    expect(page).to have_css("img[src*='#{item1.image}']")
+    expect(page).to have_css("img[src*='#{item3.image}']")
   end
 
   it "and will be able to navigate to show page by clicking on the icons" do

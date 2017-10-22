@@ -52,4 +52,20 @@ describe Item do
       expect(item).to respond_to(:categories)
     end
   end
+
+  describe "class methods" do
+    it "can sort by revenue" do
+      item1, item2, item3 = create_list(:item, 3)
+      order = create(:order)
+      order_item1 = create(:order_item, item: item1, order: order, line_item_total: 16.00)
+      order_item2 = create(:order_item, item: item2, order: order, line_item_total: 4.00)
+      order_item3 = create(:order_item, item: item2, order: order, line_item_total: 6.00)
+
+      top = Item.by_revenue.first
+      bottom = Item.by_revenue.last
+
+      expect(top).to eq(item1)
+      expect(bottom).to eq(item2)
+    end
+  end
 end
