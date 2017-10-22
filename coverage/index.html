@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-21T20:01:13-06:00">2017-10-21T20:01:13-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-21T20:02:45-06:00">2017-10-21T20:02:45-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.95
+         5.03
        </span>
     </span> hits/line)
   </h2>
@@ -107,7 +107,7 @@
         <td>17</td>
         <td>17</td>
         <td>0</td>
-        <td>31.2</td>
+        <td>32.2</td>
       </tr>
       
       <tr>
@@ -297,7 +297,7 @@
         <td>35</td>
         <td>35</td>
         <td>0</td>
-        <td>14.5</td>
+        <td>14.6</td>
       </tr>
       
       <tr>
@@ -307,7 +307,7 @@
         <td>10</td>
         <td>10</td>
         <td>0</td>
-        <td>1.3</td>
+        <td>1.5</td>
       </tr>
       
       <tr>
@@ -317,7 +317,7 @@
         <td>11</td>
         <td>11</td>
         <td>0</td>
-        <td>1.2</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
@@ -383,7 +383,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.64
+         4.73
        </span>
     </span> hits/line)
   </h2>
@@ -445,7 +445,7 @@
         <td>17</td>
         <td>17</td>
         <td>0</td>
-        <td>31.2</td>
+        <td>32.2</td>
       </tr>
       
       <tr>
@@ -540,7 +540,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         6.43
+         6.5
        </span>
     </span> hits/line)
   </h2>
@@ -582,7 +582,7 @@
         <td>35</td>
         <td>35</td>
         <td>0</td>
-        <td>14.5</td>
+        <td>14.6</td>
       </tr>
       
       <tr>
@@ -592,7 +592,7 @@
         <td>10</td>
         <td>10</td>
         <td>0</td>
-        <td>1.3</td>
+        <td>1.5</td>
       </tr>
       
       <tr>
@@ -602,7 +602,7 @@
         <td>11</td>
         <td>11</td>
         <td>0</td>
-        <td>1.2</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
@@ -1680,8 +1680,8 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="214" data-linenumber="10">
-          <span class="hits">214</span>
+        <li class="covered" data-hits="226" data-linenumber="10">
+          <span class="hits">226</span>
           
           <code class="ruby">    @current_user ||= User.find(session[:user_id]) if session[:user_id]</code>
         </li>
@@ -1728,8 +1728,8 @@
           <code class="ruby">  def logged_in?</code>
         </li>
       
-        <li class="covered" data-hits="108" data-linenumber="18">
-          <span class="hits">108</span>
+        <li class="covered" data-hits="112" data-linenumber="18">
+          <span class="hits">112</span>
           
           <code class="ruby">    current_user != nil</code>
         </li>
@@ -3841,8 +3841,8 @@
           <code class="ruby">  def total_count</code>
         </li>
       
-        <li class="covered" data-hits="109" data-linenumber="17">
-          <span class="hits">109</span>
+        <li class="covered" data-hits="113" data-linenumber="17">
+          <span class="hits">113</span>
           
           <code class="ruby">    contents.values.sum</code>
         </li>
@@ -4211,7 +4211,7 @@
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">    .joins(:items, :order_items)</code>
+          <code class="ruby">    .joins(items: :order_items)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -4244,8 +4244,8 @@
           <code class="ruby">  def best_image</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="17">
+          <span class="hits">3</span>
           
           <code class="ruby">    items.by_revenue.first.image</code>
         </li>
@@ -4389,8 +4389,8 @@
           <code class="ruby">    .group(&quot;items.id&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="18">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="18">
+          <span class="hits">5</span>
           
           <code class="ruby">    .order(&quot;revenue DESC&quot;)</code>
         </li>

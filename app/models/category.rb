@@ -8,7 +8,7 @@ class Category < ApplicationRecord
 
   def self.by_popularity
     select("categories.*, sum(order_items.quantity) AS sales")
-    .joins(:items, :order_items)
+    .joins(items: :order_items)
     .group("categories.id", "items.id")
     .order("sales DESC")
   end
