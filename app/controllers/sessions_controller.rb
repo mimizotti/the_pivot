@@ -5,8 +5,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    
-    if params[:provider].present?
+    # binding.pry
+    if request.env['omniauth.auth']['provider'].present?
       @user = User.find_or_create_from_auth(request.env['omniauth.auth'])
       set_session_id
     else
@@ -39,7 +39,7 @@ class SessionsController < ApplicationController
     if @user
       session[:user_id] = @user.id
       session[:logged_in?] = true
-      redirect_to root_path
+      redirect_to dashboard_path
     end
   end
 

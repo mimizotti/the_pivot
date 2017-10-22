@@ -18,12 +18,12 @@ class User < ApplicationRecord
   end
 
   def self.find_or_create_from_auth(auth)
+    binding.pry 
     find_or_create_by(provider: auth["provider"], uid: auth["uid"]) do |user|
       user.uid = auth["uid"]
       user.provider = auth["provider"]
-      user.name = auth["info"]["name"]
-      # user.first_name = auth["info"]["name"].split(" ")[0]
-      # user.last_name  = auth["info"]["name"].split(" ")[1]
+      user.first_name = auth["info"]["name"].split(" ")[0]
+      user.last_name  = auth["info"]["name"].split(" ")[1]
         # if auth["info"]["username"]
         #   user.username  = auth["info"]["username"]
         # else
