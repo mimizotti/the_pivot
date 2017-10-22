@@ -5,6 +5,7 @@ feature "As a business manager" do
     bus_man = User.create(first_name: "Josh", last_name: "Mejia", username: "josh@turing.io", password: "password", address: "1331 17th St ll100, Denver, CO 80202", email: "josh@turing.io")
     store = create(:store)
     items = create_list(:item, 10, store: store)
+    UserRole.create(user: bus_man, role: Role.create(name: "Business Manager"), store: store)
   end
   scenario "I can create items" do
     visit '/'
@@ -15,7 +16,8 @@ feature "As a business manager" do
     fill_in "Password", with: "password"
     click_on "Login"
 
-    expect(current_path).to eq('admin/dashboard')
+    expect(current_path).to eq('/admin/dashboard')
+    save_and_open_page
 
     expect(page).to have_content("You are a Business Admin for the following store:")
 

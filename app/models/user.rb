@@ -14,7 +14,7 @@ class User < ApplicationRecord
   end
 
   def is_admin?
-    platform_admin == true || self.roles == "Business Admin" || self.roles == "Business Manager"
+    platform_admin == true || self.roles.where(name: "Business Manager").any? || self.roles.where(name: "Business Admin").any?
   end
 
 end
