@@ -11,6 +11,8 @@ class Item < ApplicationRecord
   belongs_to :store
   enum status: ["active", "retired"]
 
+  scope :unordered, -> { includes(:order_items).where("order_items.item_id", nil) }
+
   def self.by_revenue
     select("items.*, sum(order_items.line_item_total) AS revenue")
     .joins(:order_items)

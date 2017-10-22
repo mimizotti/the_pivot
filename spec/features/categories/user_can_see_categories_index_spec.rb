@@ -30,7 +30,7 @@ RSpec.describe "user visits categories index path" do
     category1.items << item1
     category1.items << item2
     category2.items << item3
-    
+
     visit("/categories")
 
     expect(page).to have_css("img[src*='#{item1.image}']")
