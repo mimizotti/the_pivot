@@ -25,6 +25,7 @@ gem 'brakeman'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'jwt'
 # gem 'capistrano-rails', group: :development
 # gem 'therubyracer', platforms: :ruby
 # gem 'redis', '~> 3.0'
