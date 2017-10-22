@@ -18,15 +18,15 @@ RSpec.describe "user visits categories index path" do
     expect(page.first('.thumb_name').text).to eq(category1.name)
   end
 
-  it "and will see images of first item in each category" do
+  it "and will see images of most popular item in each category" do
     category1, category2 = create_list(:category, 2)
     store1, store2 = create_list(:store, 2)
     item1, item3 = create_list(:item, 2, store: store1)
     item2 = create(:item, store: store2)
     order1, order2 = create_list(:order, 2)
-    order_item3 = create(:order_item, order: order1, item: item1)
-    order_item3 = create(:order_item, order: order2, item: item1)
-    order_item3 = create(:order_item, order: order2, item: item2)
+    order_item1 = create(:order_item, order: order1, item: item1, line_item_total: 5.00)
+    order_item2 = create(:order_item, order: order2, item: item1, line_item_total: 5.00)
+    order_item3 = create(:order_item, order: order2, item: item2, line_item_total: 5.00)
 
     category1.items << item1
     category1.items << item2

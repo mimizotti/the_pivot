@@ -508,7 +508,7 @@ ants = Store.create!(name: "Ants in My Eyes Johnson's", description: "Our prices
       puts "Adding #{item[:name]} to the Home Appliances category"
     end
 
-    store_a = Store.create!(name: "Francesca's", description: "Clothing and Jewelry", image: "francescas.png")
+    store_1 = Store.create!(name: "Francesca's", description: "Clothing and Jewelry", image: "francescas.png")
     store_2 = Store.create!(name: "Trunkt Club", description: "Men's Clothing", image: "trunkt-club.png")
     store_3 = Store.create!(name: "Zippo's", description: "Jewelry", image: "zippos.png")
     store_4 = Store.create!(name: "Smacy's", description: "Jewelry", image: "smacys.png")
@@ -518,16 +518,16 @@ ants = Store.create!(name: "Ants in My Eyes Johnson's", description: "Our prices
     clothes = Category.create!(name: "clothes", title: "Clothes")
 
 
-    clothes_items = [Item.create(store: store_a, title: "White Dress", description: "With cool designs", price: Faker::Commerce.price),
-      Item.create(store: store_a, title: "Blue Dress", description: "Plain blue dress", price: Faker::Commerce.price),
-      Item.create(store: store_a, title: "Black Dress", description: "Plain black dress", price: Faker::Commerce.price),
-      Item.create(store: store_a, title: "Red Dress", description: "Plain red dress", price: Faker::Commerce.price),
-      Item.create(store: store_a, title: "Green Dress", description: "Leafs and stuff", price: Faker::Commerce.price),
-      Item.create(store: store_a, title: "White Skirt", description: "Who wears white skirts?", price: Faker::Commerce.price),
-      Item.create(store: store_a, title: "Blue Skirt", description: "Just a blue skirt", price: Faker::Commerce.price),
-      Item.create(store: store_a, title: "Black Skirt", description: "Goes with everything", price: Faker::Commerce.price),
-      Item.create(store: store_a, title: "Red Skirt", description: "Doesn't go with as many outfits as the black skirt", price: Faker::Commerce.price),
-      Item.create(store: store_a, title: "Green Skirt", description: "Goes with even less outfits", price: Faker::Commerce.price),
+    clothes_items = [Item.create(store: store_1, title: "White Dress", description: "With cool designs", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Blue Dress", description: "Plain blue dress", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Black Dress", description: "Plain black dress", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Red Dress", description: "Plain red dress", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Green Dress", description: "Leafs and stuff", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "White Skirt", description: "Who wears white skirts?", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Blue Skirt", description: "Just a blue skirt", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Black Skirt", description: "Goes with everything", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Red Skirt", description: "Doesn't go with as many outfits as the black skirt", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Green Skirt", description: "Goes with even less outfits", price: Faker::Commerce.price),
       Item.create(store: store_2, title: "Searsucker Suit Jacket", description: "Classic pattern for classy dudes", price: Faker::Commerce.price),
       Item.create(store: store_2, title: "White Pinstripe Suit Jacket", description: "Pinstripes are slimming", price: Faker::Commerce.price),
       Item.create(store: store_2, title: "Dark Blue Suit Jacket", description: "Versatile, for cocktails or job interviews. Why not both on the same day?", price: Faker::Commerce.price),

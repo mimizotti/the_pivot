@@ -45,8 +45,7 @@ describe Category do
       item1 = create(:item)
       item2 = create(:item, image: "http://cdn.innovativelanguage.com/wordlists/media/thumb/8221_fit512.jpg")
       item3 = create(:item, image: "https://www.dollartree.com/assets/product_images_2016/styles/xlarge/125436.jpg")
-      item1.orders = create_list(:order, 3)
-      item2.orders = create_list(:order, 1)
+      category.items << [item1, item2, item3]
 
       image = category.best_image
       expect(image).to eq(category.best_image)
