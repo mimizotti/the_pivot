@@ -8,12 +8,6 @@ describe Order do
         expect(order).to be_invalid
       end
 
-      it "is invalid without a total_price" do
-        user = create(:user)
-        order = Order.create(user_id: user.id, status: 1)
-        expect(order).to be_invalid
-      end
-
       it "is invalid without a status" do
         order = Order.create(user_id: 1, total_price: 154.85)
         expect(order).to be_invalid
