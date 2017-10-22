@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(username: params[:session][:username])
-    if user && user.authenticate(params[:session][:password]) && user.admin?
+    if user && user.authenticate(params[:session][:password]) && user.is_admin?
       session[:user_id] = user.id
       session[:logged_in?] = true
       redirect_to admin_dashboard_path

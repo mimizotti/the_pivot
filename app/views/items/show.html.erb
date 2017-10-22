@@ -41,7 +41,7 @@
               <% else %>
                 <p>Item Retired</p>
               <% end %>
-              <% if current_user && current_user.admin? %>
+              <% if current_user && current_user.is_admin? %>
                 <br />
                 <%= button_to "Toggle Retire", retire_path(@item), class: "btn btn-danger" %>
               <% end %>

@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user
+  helper_method :is_admin?
   helper_method :logged_in?
   before_action :set_cart
   helper_method :require_admin
@@ -18,11 +19,12 @@ class ApplicationController < ActionController::Base
     current_user != nil
   end
 
-  def require_admin
-    render file: "/public/404" unless current_admin?
+  def is_admin?
+    current_user.platform_admin == true || current_user.roles == "Business Admin" || current_user.roles == "Business Manager"
   end
 
-  def current_admin?
-    current_user && current_user.admin?
+  def require_admin
+    render file: "/public/404" unless current_user && current_user.is_admin?
   end
+
 end
