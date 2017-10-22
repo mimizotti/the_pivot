@@ -25,10 +25,12 @@ describe "user can login through oauth" do
     expect(page).to_not have_content("Checkout")
 
     click_on "Login or Register to checkout"
-    click_on "Sign in with Twitter"
+    within(".loginBtn") do
+      click_on "Sign in with Twitter"
+    end
 
     find(:css, ".cart").click
-    click_button "Checkout"
+    click_on "Checkout"
 
     expect(page).to have_content("Order was successfully placed")
   end
