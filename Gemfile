@@ -20,6 +20,7 @@ gem 'rubycritic'
 gem 'faker'
 gem 'omniauth-twitter'
 gem 'figaro'
+gem 'faraday'
 # gem 'capistrano-rails', group: :development
 # gem 'therubyracer', platforms: :ruby
 # gem 'redis', '~> 3.0'

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Admin edits the user" do
 
-  let(:user) { create(:user, role: 1) }
+  let(:user) { create(:user, platform_admin: true) }
 
   context "with valid information" do
     it "and sees their dashboard with updated information" do
