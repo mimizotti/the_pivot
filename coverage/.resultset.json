@@ -190,6 +190,17 @@
         2,
         null,
         null,
+        1,
+        null,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/channels/application_cable/channel.rb": [
@@ -668,6 +679,6 @@
         0
       ]
     },
-    "timestamp": 1508713275
+    "timestamp": 1508716116
   }
 }
