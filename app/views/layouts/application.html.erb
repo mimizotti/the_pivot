@@ -8,29 +8,20 @@
   <%= javascript_include_tag 'application' %>
   <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Fredericka+the+Great|Monoton" rel="stylesheet">
 
-  <%= yield :head %>
+      <% if current_user && current_user.is_admin? %>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/dashboard">Dashboard</a>
+          </li>
+        <% elsif current_user %>
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard">Dashboard</a>
+          </li>
+        <% end %>
+        </ul>
 
-</head>
-
-<body>
-
-  <nav>
-    <div>
-      <ul>
-      <% if current_user && current_user.admin? %>
-        <li class="nav-item">
-          <a class="nav-link" href="/admin/dashboard">Dashboard</a>
-        </li>
-      <% elsif current_user %>
-        <li class="nav-item">
-          <a class="nav-link" href="/dashboard">Dashboard</a>
-        </li>
-      <% end %>
-      </ul>
-
-      <%= link_to image_tag("glyphicons-203-shopping-cart.png"), cart_path, class: "cart logout" %>
-      <%=  @cart.total_count %>
-      <% if logged_in? %>
+        <%= link_to image_tag("glyphicons-203-shopping-cart.png"), cart_path, class: "cart logout" %>
+        <%=  @cart.total_count %>
+        <% if logged_in? %>
         <button class="btn btn-link" type="button" name="logout"><%= link_to "Logout", logout_path, method: :delete %></button>
           <span class="navbar-text">Logged in as <%= current_user.username %></span>
       <% else %>

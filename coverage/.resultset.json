@@ -1,6 +1,7 @@
 {
   "RSpec": {
     "coverage": {
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/helpers/application_helper.rb": [
         1,
         null
@@ -30,6 +31,37 @@
         null
       ],
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/categories_controller.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/helpers/categories_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/helpers/dashboard_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/helpers/home_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/helpers/orders_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/helpers/sessions_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/controllers/categories_controller.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         null,
         1,
@@ -42,7 +74,12 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/application_controller.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/controllers/application_controller.rb": [
+        1,
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         1,
@@ -64,15 +101,20 @@
         null,
         null,
         1,
+        0,
+        null,
+        null,
+        1,
         23,
         null,
         null,
-        1,
-        26,
-        null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/home_controller.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/controllers/home_controller.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         null,
         1,
@@ -80,7 +122,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/orders_controller.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/controllers/orders_controller.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         5,
@@ -150,7 +196,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/sessions_controller.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/controllers/sessions_controller.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         null,
         1,
@@ -178,7 +228,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/users_controller.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/controllers/users_controller.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         null,
@@ -234,7 +288,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/cart.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/models/cart.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         null,
@@ -300,8 +358,12 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/category.rb": [
         1,
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/models/category.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         1,
@@ -322,18 +384,30 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/application_record.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/models/application_record.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/item_category.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/models/item_category.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         1,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/item.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/models/item.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         1,
@@ -356,13 +430,21 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/order_item.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/models/order_item.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         1,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/order.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/models/order.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         null,
@@ -423,20 +505,46 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/store.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/models/role.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/models/store.rb": [
+        1,
+        1,
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         1,
         1,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/user.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/models/user_role.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/models/user.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         null,
         1,
         1,
         null,
+        1,
+        1,
+        1,
         1,
         null,
         1,
@@ -444,9 +552,16 @@
         null,
         null,
         1,
+        89,
+        null,
+        null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/admin/items_controller.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/controllers/admin/items_controller.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         1,
@@ -501,7 +616,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/items_controller.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/controllers/items_controller.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         16,
@@ -528,7 +647,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/admin/users_controller.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/controllers/admin/users_controller.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         null,
         1,
@@ -538,7 +661,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/carts_controller.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/controllers/carts_controller.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         null,
@@ -570,7 +697,7 @@
         1,
         2,
         1,
-        1,
+        null,
         1,
         null,
         2,
@@ -581,7 +708,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/admin/orders_controller.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/controllers/admin/orders_controller.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         1,
         null,
@@ -606,7 +737,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/stores_controller.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/controllers/stores_controller.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         1,
         null,
         1,
@@ -619,29 +754,49 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/channels/application_cable/channel.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/channels/application_cable/channel.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         0,
         0,
         0,
         0
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/channels/application_cable/connection.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/channels/application_cable/connection.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         0,
         0,
         0,
         0
       ],
+<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/jobs/application_job.rb": [
         0,
         0
       ],
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/mailers/application_mailer.rb": [
+=======
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/jimszalewski/turing/final_module/projects/little_shop_of_useless_items/app/mailers/application_mailer.rb": [
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
         0,
         0,
         0,
         0
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1508718377
+=======
+    "timestamp": 1508616731
+>>>>>>> efd58c8e01c9d455382da5df9fc53dd6a73c58d2
   }
 }
