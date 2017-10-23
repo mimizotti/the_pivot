@@ -17,11 +17,11 @@ RSpec.describe "An API call can be made" do
       jth = JsonTokenHandler.new(user_id: user.id, password: "GETMEIN")
       token = jth.get_token
 
-      conn = Faraday.new("https://localhost:3000/api/v1") do |f|
+      conn = Faraday.new("https://localhost:3000") do |f|
         f.headers['X-Token']     = token
         f.params                 = { store: store.name }
       end
-      response = conn.get("/stores/popular_categories")
+      response = conn.get("/api/v1/stores/popular_categories")
       result = JSON.parse(response.body)
 
       expect(result.count).to eq(3)
