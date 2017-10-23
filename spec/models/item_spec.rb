@@ -65,7 +65,7 @@ describe Item do
       bottom = Item.by_revenue.last
 
       expect(top).to eq(item1)
-      expect(bottom).to eq(item2)
+      expect(bottom).to eq(item3)
     end
   end
 end

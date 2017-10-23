@@ -7,10 +7,9 @@ class Category < ApplicationRecord
   friendly_id :name, use: :slugged
 
   def self.by_popularity
-    select("categories.*, sum(order_items.quantity) AS sales")
-    .left_joins(items: :order_items)
+    left_joins(items: :order_items)
     .group("categories.id", "items.id")
-    .order("sales DESC")
+    .order("sum(order_items.quantity) DESC")
   end
 
   def best_image

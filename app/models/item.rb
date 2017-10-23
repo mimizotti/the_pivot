@@ -12,10 +12,9 @@ class Item < ApplicationRecord
   enum status: ["active", "retired"]
 
   def self.by_revenue
-    select("items.*, sum(order_items.line_item_total) AS revenue")
-    .left_joins(:order_items)
-    .group("items.id")
-    .order("revenue DESC")
+    left_joins(:order_items)
+    .group(:id)
+    .order("sum(order_items.line_item_total) DESC")
   end
 
 end
