@@ -16,6 +16,7 @@
     <th>Order ID</th>
     <th>Full Name</th>
     <th>Address</th>
+    <th>Item</th>
     <th>Quantity</th>
     <th>Total Price</th>
     <th>Status</th>
@@ -27,10 +28,11 @@
     <td><%= store_order.order.id %></td>
     <td><%= store_order.order.user.full_name %></td>
     <td><%= store_order.order.user.address %></td>
+    <td><%= store_order.item.title %>
     <td><%= store_order.quantity %></td>
-    <td><%= store_order.line_item_total %></td>
+    <td>$<%= store_order.line_item_total %></td>
     <td><%= store_order.order.status %></td>
-    <% @order = store_order.order %>
+    <% @order = store_order %>
     <td><% if @order.ordered? %>
           <%= button_to "Paid", paid_path(@order), class: "btn btn-primary" %>
         <% end %>
