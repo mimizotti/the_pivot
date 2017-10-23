@@ -19,9 +19,9 @@ gem 'friendly_id', '~> 5.1.0'
 # gem 'capistrano-rails', group: :development
 
 gem 'faker'
-gem 'betterlorem'
-gem 'rubycritic'
-gem 'brakeman'
+gem 'omniauth-twitter'
+gem 'figaro'
+gem 'faraday'
 # gem 'capistrano-rails', group: :development
 # gem 'therubyracer', platforms: :ruby
 # gem 'redis', '~> 3.0'

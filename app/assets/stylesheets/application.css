@@ -45,3 +45,17 @@ h1 {
 p{
   font-family: 'Caveat Brush', cursive;
 }
+
+
+.loginBtn--twitter {
+  position: relative;
+  text-align: center;
+  }
+
+
+.loginBtn--twitter:before {
+  background: url('https://s.gr-assets.com/assets/icons/twitter_icon-2289166aec1c47ee68cfb5716142273f.jpg') 6px 6px no-repeat;
+}
+.loginBtn--twitter:focus {
+  background: #66ccff;
+}

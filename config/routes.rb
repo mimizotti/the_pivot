@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
-  resources :stores, only: [:index]
+  resources :stores, only: [:index, :show] do
+    resources :items, only: [:index, :show]
+  end
 
   resources :categories, only: [:index]
 
@@ -15,6 +17,10 @@ Rails.application.routes.draw do
   delete "/logout", to: 'sessions#destroy', as: 'logout'
   get "/login", to: 'sessions#new', as: 'login'
   post "/login", to: 'sessions#create'
+
+  get '/auth/twitter',  as: :twitter_login
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
 
   resources :items, only:[:new, :create, :index, :show]
 
