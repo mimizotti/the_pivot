@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_action :require_login, except: [:new, :create, :edit, :update]
-  # before_action :verify_info, only: [:update]
 
   def new
     @user = User.new
@@ -47,8 +46,4 @@ class UsersController < ApplicationController
         redirect_to login_path
       end
     end
-
-    # def verify_info
-    #   require "pry"; binding.pry
-    # end
 end
