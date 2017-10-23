@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
 
-  validates_presence_of :first_name, :last_name, :username, :password, :address #, :email
+  validates_presence_of :first_name, :last_name, :username, :password, :address, :email
   validates_uniqueness_of :username
 
   has_many :orders
@@ -24,7 +24,7 @@ class User < ApplicationRecord
       user.first_name = auth["info"]["name"].split(" ")[0]
       user.last_name  = auth["info"]["name"].split(" ")[1]
       user.username = auth["info"]["nickname"]
-
+      user.email = "fakeemail@emailand.com"
       user.address = "default"
       user.password = "n/a"
       user.oauth_token = auth["credentials"]["token"]
