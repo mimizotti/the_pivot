@@ -15,7 +15,7 @@
       <li><a href="/items">Items</a></li>
       <li><a href="/categories">Categories</a></li>
       <li><a href="/stores">Stores</a></li>
-      <% if current_user && current_user.admin? %>
+      <% if current_user && current_user.is_admin? %>
         <li style="float:right"><a class="active" href="/admin/dashboard">Dashboard</a></li>
       <% elsif current_user %>
         <li style="float:right"><a class="active" href="/dashboard">Dashboard</a></li>

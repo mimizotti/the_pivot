@@ -1,0 +1,67 @@
+<div class="text-center" style="margin: auto;">
+      <h1>Admin Dashboard</h1>
+      <h2><strong><%= current_user.full_name %></strong></h2>
+      <h5><strong>Username: </strong><%= current_user.username %></h5>
+      <h5><strong>Address: </strong><%= current_user.address %></h5>
+      <h5><strong>Email: </strong><%= current_user.email %></h5>
+      <button class="round"><%= link_to "View My Stores", admin_dashboard_path %></button>
+      <button class="round"><%= link_to "Edit Account", edit_user_path(current_user) %></button>
+      <button class="round all-items"><%= link_to "View all items", admin_store_items_path(@store) %></button>
+      <button class="round"><%= link_to "Create New Item", new_admin_store_item_path(@store) %></button>
+  </div>
+
+<table class="table table-striped text-left table-bordered">
+  <thead><strong>All Orders</strong></thead>
+  <tr>
+    <th>Order ID</th>
+    <th>Full Name</th>
+    <th>Address</th>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th>Total Price</th>
+    <th>Status</th>
+    <th>Change to Paid/Completed</th>
+    <th>Cancel Order</th>
+  </tr>
+  <tbody>
+    <tr><% @store_orders.each do |store_order| %></tr>
+    <td><%= store_order.order.id %></td>
+    <td><%= store_order.order.user.full_name %></td>
+    <td><%= store_order.order.user.address %></td>
+    <td><%= store_order.item.title %>
+    <td><%= store_order.quantity %></td>
+    <td>$<%= store_order.line_item_total %></td>
+    <td><%= store_order.order.status %></td>
+    <% @order = store_order %>
+    <td><% if @order.ordered? %>
+          <%= button_to "Paid", paid_path(@order), class: "btn btn-primary" %>
+        <% end %>
+        <% if @order.paid? %>
+          <%= button_to "Completed", completed_path(@order), class: "btn btn-primary" %>
+        <% end %>
+    </td>
+    <td>
+      <% if store_order.order.ordered? || store_order.order.paid? %>
+        <%= button_to "Cancel", cancelled_path(@order), class: "btn btn-danger" %>
+      <% end %>
+    </td>
+    <% end %>
+  </tbody>
+</table>
+
+<table class="table table-striped text-left table-bordered">
+  <thead><strong>Orders By Status</strong></thead>
+  <tr>
+    <th><%= link_to 'Ordered', admin_ordered_path %></th>
+    <th><%= link_to 'Paid', admin_paid_path %></th>
+    <th><%= link_to 'Cancelled', admin_cancelled_path %></th>
+    <th><%= link_to 'Completed', admin_completed_path %></th>
+  </tr>
+  <tbody>
+    <tr>
+      <td><%= Order.ordered_count %></td>
+      <td><%= Order.paid_count %></td>
+      <td><%= Order.cancelled_count %></td>
+      <td><%= Order.completed_count %></td>
+    </tr>
+  </tbody>

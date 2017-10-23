@@ -3,6 +3,6 @@ class Admin::UsersController < ApplicationController
   before_action :require_admin
 
   def show
-    @orders = Order.all 
+    @stores = current_user.stores
   end
 end
