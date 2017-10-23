@@ -71,4 +71,19 @@ feature "As a business manager" do
 
     expect(page).to have_content("This item is no longer useless")
   end
+  scenario "I can retire items in my store" do
+
+    find(".#{Store.first.name}").click
+
+    click_link "View all items"
+
+    first('.edit').click_button('Edit')
+
+    choose('retire', visible: false)
+
+    click_on "Update Item"
+
+    expect(current_path).to eq(admin_store_items_path(@store))
+    expect(page).to have_content("retired")
+  end
 end

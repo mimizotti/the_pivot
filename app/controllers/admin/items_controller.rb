@@ -40,8 +40,6 @@ class Admin::ItemsController < ApplicationController
     redirect_to admin_store_items_path(@store)
   end
 
-  private
-
 
   private
 
