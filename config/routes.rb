@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/password-reset', to: 'password#new'
   post '/password-confirmation', to: 'password#create'
   get '/password-verification', to: 'password#edit'
-  patch '/password-update', to: 'password#update'
+  get '/password-update', to: 'password#update'
 
   resources :stores, only: [:index, :show] do
     resources :items, only: [:index, :show]
@@ -45,5 +45,5 @@ Rails.application.routes.draw do
   post 'cancelled' => 'orders#change_to_cancelled', as: :cancelled
   post 'completed' => 'orders#change_to_completed', as: :completed
 
-  get '/:category', to: 'categories#show', param: :slug, as: "category"
+  # get '/:category', to: 'categories#show', param: :slug, as: "category"
 end
