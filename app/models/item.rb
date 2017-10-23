@@ -11,10 +11,12 @@ class Item < ApplicationRecord
   belongs_to :store
   enum status: ["active", "retired"]
 
-  def self.by_revenue
-    left_joins(:order_items)
+  def self.by_popularity
+    select("items.*, count(order_items.id) as sales")
+    .left_joins(:order_items)
     .group(:id)
-    .order("sum(order_items.line_item_total) DESC")
+    .distinct
+    .order("sales DESC")
   end
 
 end

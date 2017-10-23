@@ -6,6 +6,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.friendly.find(params[:category])
+    @items = @category.items.by_popularity
   end
 
 end
