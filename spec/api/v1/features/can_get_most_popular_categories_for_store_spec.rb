@@ -14,7 +14,7 @@ RSpec.describe "An API call can be made" do
       create_list(:order_item, 3, line_item_total: 5.00, item: item1, order: order)
       create_list(:order_item, 1, line_item_total: 7.50, item: item2, order: order)
 
-      jth = JsonTokenHandler.new(username: user.username, password: "GETMEIN")
+      jth = JsonTokenHandler.new(user_id: user.id, password: "GETMEIN")
       token = jth.get_token
 
       conn = Faraday.new("https://localhost:3000/api/v1") do |f|
