@@ -18,7 +18,11 @@ Rails.application.routes.draw do
   get "/login", to: 'sessions#new', as: 'login'
   post "/login", to: 'sessions#create'
 
-  resources :items, only:[:index, :show]
+  get '/auth/twitter',  as: :twitter_login
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+
+  resources :items, only:[:new, :create, :index, :show]
 
   resource :cart
 
