@@ -1,8 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/helpers/application_helper.rb": [
         1,
         null
@@ -32,44 +30,6 @@
         null
       ],
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/categories_controller.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/helpers/application_helper.rb": [
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/helpers/application_helper.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
-        1,
-        null
-      ],
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/helpers/categories_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/helpers/dashboard_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/helpers/home_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/helpers/orders_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/helpers/sessions_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/helpers/users_helper.rb": [
-        1,
-        null
-      ],
-<<<<<<< HEAD
-      "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/categories_controller.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/categories_controller.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         null,
         1,
@@ -82,16 +42,8 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/application_controller.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/application_controller.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/application_controller.rb": [
         1,
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         1,
@@ -122,15 +74,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/home_controller.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/home_controller.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/home_controller.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         null,
         1,
@@ -138,15 +82,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/orders_controller.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/orders_controller.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/orders_controller.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         7,
@@ -216,15 +152,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/sessions_controller.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/sessions_controller.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/sessions_controller.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         null,
         1,
@@ -272,15 +200,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/users_controller.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/users_controller.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/users_controller.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         null,
@@ -336,15 +256,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/cart.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/models/cart.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/cart.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         null,
@@ -410,15 +322,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/category.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/models/category.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/category.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         1,
@@ -429,42 +333,18 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/application_record.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/models/application_record.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/application_record.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/item_category.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/models/item_category.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/item_category.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         1,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/item.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/models/item.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/item.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         1,
@@ -479,29 +359,13 @@
         1,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/order_item.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/models/order_item.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/order_item.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         1,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/order.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/models/order.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/order.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         null,
@@ -563,48 +427,32 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
+      "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/role.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/store.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/models/store.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/role.rb": [
         1,
         1,
-        1,
-        null
-      ],
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/store.rb": [
-        1,
-        1,
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         1,
         1,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
+      "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/user_role.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/user.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/models/user.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/user_role.rb": [
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/models/user.rb": [
         1,
         1,
         null,
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         null,
@@ -638,15 +486,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/admin/items_controller.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/admin/items_controller.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/admin/items_controller.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         1,
@@ -701,15 +541,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/items_controller.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/items_controller.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/items_controller.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         17,
@@ -736,15 +568,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/admin/users_controller.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/admin/users_controller.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/admin/users_controller.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         null,
         1,
@@ -754,15 +578,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/carts_controller.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/carts_controller.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/carts_controller.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         null,
@@ -805,15 +621,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/admin/orders_controller.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/admin/orders_controller.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/admin/orders_controller.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         1,
         null,
@@ -838,15 +646,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/stores_controller.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/controllers/stores_controller.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/controllers/stores_controller.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         1,
         null,
         1,
@@ -859,69 +659,29 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/channels/application_cable/channel.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/channels/application_cable/channel.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/channels/application_cable/channel.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         0,
         0,
         0,
         0
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/channels/application_cable/connection.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/channels/application_cable/connection.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/channels/application_cable/connection.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         0,
         0,
         0,
         0
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/jobs/application_job.rb": [
         0,
         0
       ],
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/mailers/application_mailer.rb": [
-=======
-      "/Users/Mimi/turing/3module/projects/little-shop/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/Mimi/turing/3module/projects/little-shop/app/mailers/application_mailer.rb": [
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/vaidashi/turing/3module/projects/little_shop_of_useless_items/app/mailers/application_mailer.rb": [
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
         0,
         0,
         0,
         0
       ]
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "timestamp": 1508434729
-=======
-    "timestamp": 1508446771
->>>>>>> 3b8ad4fad6e90e03266feeddf84a7d009482145b
-=======
-    "timestamp": 1508787343
->>>>>>> 9a77b907a86c4ae4b5004c44bc7cb8bf887d26f9
+    "timestamp": 1508789756
   }
 }
