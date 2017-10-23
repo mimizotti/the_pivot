@@ -14,31 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-<<<<<<< HEAD
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-22T22:50:25-06:00">2017-10-22T22:50:25-06:00</abbr></div>
-=======
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-22T22:59:10-06:00">2017-10-22T22:59:10-06:00</abbr></div>
->>>>>>> 384ddefc16c0ec922272058cad22de79d1b28f75
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-23T08:49:04-06:00">2017-10-23T08:49:04-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">85.47%</span></span>
+    (<span class="covered_percent"><span class="yellow">82.93%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.88
+         4.73
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>36</b> files in total.
-    <b>358</b> relevant lines. 
+    <b>369</b> relevant lines. 
     <span class="green"><b>306</b> lines covered</span> and
-    <span class="red"><b>52</b> lines missed </span>
+    <span class="red"><b>63</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -107,10 +103,10 @@
       <tr>
         <td class="strong"><a href="#f306f8ffd905af8fc3a10bc7af323b632d2f6019" class="src_link" title="app/controllers/api/v1/stores/categories_controller.rb">app/controllers/api/v1/stores/categories_controller.rb</a></td>
         <td class="red strong">0.0 %</td>
-        <td>19</td>
-        <td>5</td>
+        <td>18</td>
+        <td>16</td>
         <td>0</td>
-        <td>5</td>
+        <td>16</td>
         <td>0.0</td>
       </tr>
       
@@ -423,20 +419,20 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="yellow">84.42%</span></span>
+    (<span class="covered_percent"><span class="red">80.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.53
+         4.29
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>13</b> files in total.
-    <b>199</b> relevant lines. 
+    <b>210</b> relevant lines. 
     <span class="green"><b>168</b> lines covered</span> and
-    <span class="red"><b>31</b> lines missed </span>
+    <span class="red"><b>42</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -485,10 +481,10 @@
       <tr>
         <td class="strong"><a href="#f306f8ffd905af8fc3a10bc7af323b632d2f6019" class="src_link" title="app/controllers/api/v1/stores/categories_controller.rb">app/controllers/api/v1/stores/categories_controller.rb</a></td>
         <td class="red strong">0.0 %</td>
-        <td>19</td>
-        <td>5</td>
+        <td>18</td>
+        <td>16</td>
         <td>0</td>
-        <td>5</td>
+        <td>16</td>
         <td>0.0</td>
       </tr>
       
@@ -1701,9 +1697,9 @@
     <h3>app/controllers/api/v1/stores/categories_controller.rb</h3>
     <h4><span class="red">0.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
+      <b>16</b> relevant lines. 
       <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>5</b> lines missed.</span>
+      <span class="red"><b>16</b> lines missed.</span>
     </div>
   </div>
   
@@ -1731,94 +1727,88 @@
         <li class="missed" data-hits="0" data-linenumber="4">
           
           
-          <code class="ruby">    render json: Category.first</code>
+          <code class="ruby">    token = request.headers[&#39;X_TOKEN&#39;]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="missed" data-hits="0" data-linenumber="5">
           
           
-          <code class="ruby">    # token = request.headers[&#39;X_TOKEN&#39;]</code>
+          <code class="ruby">    if JsonTokenHandler.authenticate_token(token)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="missed" data-hits="0" data-linenumber="6">
           
           
-          <code class="ruby">    # if JsonTokenHandler.authenticate_token(token)</code>
+          <code class="ruby">      store_name = request.params(:store)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="missed" data-hits="0" data-linenumber="7">
           
           
-          <code class="ruby">    #   store_name = request.params(:store)</code>
+          <code class="ruby">      store = Store.find_by(name: store_name)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="missed" data-hits="0" data-linenumber="8">
           
           
-          <code class="ruby">    #   store = Store.find_by(name: store_name)</code>
+          <code class="ruby">      if store</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="missed" data-hits="0" data-linenumber="9">
           
           
-          <code class="ruby">    #   if store</code>
+          <code class="ruby">        render json: store.categories_by_popularity</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="missed" data-hits="0" data-linenumber="10">
           
           
-          <code class="ruby">    #     render json: store.categories_by_popularity</code>
+          <code class="ruby">      else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="missed" data-hits="0" data-linenumber="11">
           
           
-          <code class="ruby">    #   else</code>
+          <code class="ruby">        render json: nil</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="missed" data-hits="0" data-linenumber="12">
           
           
-          <code class="ruby">    #     render json: nil</code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="13">
           
           
-          <code class="ruby">    #   end</code>
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="missed" data-hits="0" data-linenumber="14">
           
           
-          <code class="ruby">    # else</code>
+          <code class="ruby">      render json: nil</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="missed" data-hits="0" data-linenumber="15">
           
           
-          <code class="ruby">    #   render json: nil</code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby">    # end</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="17">
+        <li class="missed" data-hits="0" data-linenumber="16">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
+        <li class="missed" data-hits="0" data-linenumber="18">
           
           
           <code class="ruby">end</code>

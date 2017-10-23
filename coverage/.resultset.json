@@ -700,18 +700,17 @@
         null,
         0,
         0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         null,
         0
@@ -727,10 +726,6 @@
         0
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1508734225
-=======
-    "timestamp": 1508734750
->>>>>>> 384ddefc16c0ec922272058cad22de79d1b28f75
+    "timestamp": 1508770144
   }
 }
