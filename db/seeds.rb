@@ -435,6 +435,7 @@ end
 
 ants = Store.create!(name: "Ants in My Eyes Johnson's", description: "Our prices, I hope, aren't too low!", image: "j-peterman.png")
 
+<<<<<<< HEAD
 appliances = Category.create(name: "home appliances", title: "Home Appliances")
 
 appliance_items = [
@@ -697,6 +698,194 @@ User.create(first_name: "Ash", last_name: "Whatever", address: "I am as dry as m
 User.create(first_name: "Mimi", last_name: "Le", address: "18th & Market is where it's at", email: "mimi@littleshop.com", username: "mimi", password: "mimi", platform_admin: true)
 User.create(first_name: "Liam", last_name: "Barstad", address: "The same as above", email: "liam@littleshop.com", username: "Liam", password: "LOGIN", platform_admin: true)
 
+    appliances = Category.create(name: "home appliances", title: "Home Appliances")
+
+    appliance_items = [
+      Item.create(store: ants, title: "Refridgerator", description: "Keep food cold", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Microwave", description: "Heat food up", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "VCR", description: "Outdated but classic", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "DVD Player", description: "Streaming has taken its place", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Toaster Oven", description: "The bachelor's dream", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Vacuum Cleaner", description: "Clean up", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Space Heater", description: "Stay warm dude!", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Toaster", description: "Breakfast is served", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Deep Freeze", description: "Keep large amounts of meat", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "TV", description: "Cornerstone", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Interdimensional Cable Box", description: "Check out TV from different timelines", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Butter Robot", description: "Passes the butter, SRP baby!", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Meseeks Box", description: "Give it a simple task, or else", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Box Fan", description: "keep cool", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Boombox", description: "Blast the tunes", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Alarm Clock", description: "Wake up Morty!", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Roomba", description: "If you don't want to manually vacuum", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Desk Lamp", description: "Get some work done with proper lighting", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Printer", description: "Print off your emails and then shred them up", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Coffee Maker", description: "For the working stiff", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Crock Pot", description: "Slooooow cook that pork shoulder", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Pressure Cooker", description: "Garbanzo beans come out great", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Waffle Iron", description: "Because who doesn't love waffles", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Blender", description: "Make that smoothie", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Food Processor", description: "Make that pesto", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "TV Tray", description: "For TV dinners", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Reading Lamp", description: "Clamp it onto your headboard", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Hot Plate", description: "Makes great grilled cheeses", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Espresso Machine", description: "For the purest", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Bendy Lamp", description: "Works in tight spaces", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Washer", description: "Standard washer", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Dryer", description: "Standard dryer", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Washer/Dryer Stack Combo", description: "Excellent space saver", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "The Clapper", description: "Clap on Clap off", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "TV Stand", description: "Put the TV on it", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Stand Mixer", description: "Make some dough, or batter", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Immersion Blender", description: "Handy mixing tool", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Panini Press", description: "Make grilled sandwiches", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Iron", description: "Smooth out your clothes", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Can opener", description: "Automatic", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Juicer", description: "All the rage right now", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Dehumidifier", description: "Dry up the air", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Humidifier", description: "Helps with breathing difficulties in dry climates", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Garbage Disposal", description: "Dump food down the drain", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Water Purifier", description: "Take out the heavy metals", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Sewing Machine", description: "Sew it up", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Paper Shredder", description: "To shred up your printed emails", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Smoke Detector", description: "Don't get burnt", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Carbon Monoxide Detector", description: "The silent killer just met its match", price: Faker::Commerce.price),
+      Item.create(store: ants, title: "Swamp Cooler", description: "Keep it cool, and dare I say it, moist", price: Faker::Commerce.price)
+    ]
+
+    appliance_items.each do |item|
+      ItemCategory.create(item: item, category: appliances)
+      puts "Adding #{item[:name]} to the Home Appliances category"
+    end
+
+    store_a = Store.create!(name: "Francesca's", description: "Clothing and Jewelry", image: "francescas.png")
+    store_2 = Store.create!(name: "Trunkt Club", description: "Men's Clothing", image: "trunkt-club.png")
+    store_3 = Store.create!(name: "Zippo's", description: "Jewelry", image: "zippos.png")
+    store_4 = Store.create!(name: "Smacy's", description: "Jewelry", image: "smacys.png")
+    store_5 = Store.create!(name: "J. Peterman", description: "Distinctive Lifestyle Merchandise", image: "j-peterman.png")
+
+    jewelry = Category.create!(name: "jewelry", title: "Jewelry")
+    clothes = Category.create!(name: "clothes", title: "Clothes")
+
+
+    clothes_items = [Item.create(store: store_a, title: "White Dress", description: "With cool designs", price: Faker::Commerce.price),
+      Item.create(store: store_a, title: "Blue Dress", description: "Plain blue dress", price: Faker::Commerce.price),
+      Item.create(store: store_a, title: "Black Dress", description: "Plain black dress", price: Faker::Commerce.price),
+      Item.create(store: store_a, title: "Red Dress", description: "Plain red dress", price: Faker::Commerce.price),
+      Item.create(store: store_a, title: "Green Dress", description: "Leafs and stuff", price: Faker::Commerce.price),
+      Item.create(store: store_a, title: "White Skirt", description: "Who wears white skirts?", price: Faker::Commerce.price),
+      Item.create(store: store_a, title: "Blue Skirt", description: "Just a blue skirt", price: Faker::Commerce.price),
+      Item.create(store: store_a, title: "Black Skirt", description: "Goes with everything", price: Faker::Commerce.price),
+      Item.create(store: store_a, title: "Red Skirt", description: "Doesn't go with as many outfits as the black skirt", price: Faker::Commerce.price),
+      Item.create(store: store_a, title: "Green Skirt", description: "Goes with even less outfits", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Searsucker Suit Jacket", description: "Classic pattern for classy dudes", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "White Pinstripe Suit Jacket", description: "Pinstripes are slimming", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Dark Blue Suit Jacket", description: "Versatile, for cocktails or job interviews. Why not both on the same day?", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Tan Suit Jacket", description: "Just a tan suit jacket", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Red Wool Suit Jacket", description: "What?", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Charcoal Suit Jacket", description: "Cool grey vibes", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Black Suit Jacket", description: "Wear to funerals", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Blue Pinstripe Suit Jacket", description: "Really pops", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Brown Suit Jacket", description: "Paintin the town brown", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Orange Suit Jacket", description: "Dumb", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Baby Blue Suit Jacket", description: "and Dumber", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Tan Pants", description: "Tan pants", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Black Pants", description: "Just regular black pants", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Khaki Pants", description: "Play some polo", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "White Pinstripe Pants", description: "Classy pants for a classy dude", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Green Pants", description: "Whoa, calm down there buddy", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Orange Pants", description: "Pretty darn hip", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Short Pants", description: "Pretty much just shorts", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Plaid Tie", description: "Doesn't really go with anything", price: Faker::Commerce.price),
+      Item.create(store: store_2, title: "Black Tie", description: "Makes you look serious", price: Faker::Commerce.price),
+      Item.create(store: store_5, title: "Urban Sombrero", description: "It combines the spirit of old Mexico with a little big city panache.", price: 125.00),
+      Item.create(store: store_5, title: "The Rogue's Wallet", description: "That's where he kept his card, his dirty little secret. Short, devious, balding. his name was Costanza. He killed my mother!", price: 49.99),
+      Item.create(store: store_5, title: "Italian Cap Toe Oxfords", description: "Then, in the distance, I heard the bulls. I began running as fast as I could. Fortunately, I was wearing my Italian cap toe oxfords. Sophisticated yet different; nothing to make a huge fuss about. Rich dark brown calfskin leather. Matching leather vent. Men's whole and half sizes 7 through 13", price: 135.00),
+      Item.create(store: store_5, title: "Irish Storytelling Sweater", description: "No sleeves because, as any Irishman knows, to tell a good story you need your arms and hands free. Slip it on and you’ll be more entertaining. Even fanciful. Have an unquenchable thirst for Guinness.", price: 148.00),
+      Item.create(store: store_5, title: "1924 Football Jersey", description: "1924 Football Jersey (No. 3731). I made this with pure cotton jersey knit. Crew neckline crosses at center front. Full-length sleeves with contrasting stripes. Three-inch ribbed cuffs. Side seams. Quilted elbow patches and yoke. Imported.", price: 89.00),
+      Item.create(store: store_5, title: "The Pamplona Beret", description: "...And there, tucked into the river's bend was the object of my search. The Gwon-Jaya River market, fabrics and spices traded under a starlit sky. It was there that I discovered the Pamplona beret. Sizes seven-and-a-half through eight-and-three-quarters.", price: 35.00),
+      Item.create(store: store_5, title: "Grouse-Hunting Jacket", description: "To be worn kindly: this splendid Irish tweed grouse-hunting jacket with all the traditional country details, e.g., buttoning throat-latch, rear bi-swing vents and stitched-down Norfolk belt, suede elbow patches.", price: 698.00),
+      Item.create(store: store_5, title: "Horseman's Duster", description: "Because it’s cut very long to do the job, it’s unintentionally very flattering. With or without a horse.", price: 379.00),
+      Item.create(store: store_5, title: "The Dressy Sneaker", description: "The Dressy Sneaker (No. 5696). Rich cognac leather that will only get better the more you wear it. Navy and olive striping detail. Dark laces contrast sharply with the white rubber sole. Comfortable. Sharp. Different. Imported.", price: 129.00),
+      Item.create(store: store_5, title: "The Last Lumberjacks Cotton Shirt", description: "The Last Lumberjack’s Cotton Shirt (No. 5479). 100% heavyweight cotton twill in yarn-dyed plaid. Adjustable button cuffs. Flat-felled seams with three-needle topstitching. Patch pockets with flap-and-button closure. Shirttail hem. Double-layer back yoke with box pleat at center back. Built to last. Imported.", price: 89.00),
+      Item.create(store: store_5, title: "Roughside Leather Jacket", description: "Despite an evaporating sense of what is real, or was once real, a few old things mysteriously hold up under the pressure of overexposure, the onslaught of fame. This is one of those things.", price: 349.00),
+      Item.create(store: store_5, title: "Otavalo Mountain Shirt", description: "Men will look broad-shouldered, brave, and secretly kind. Their female friends will encourage them to go without shaving for a few days. Women will look narrow-waisted, innocent (but with a hint of wildness) when wearing it with trousers. Worn with a soft skirt and a wide belt? That’s another matter entirely. I don't want to spoil the surprise. Imported.", price: 98.00),
+      Item.create(store: store_5, title: "Quilted Chambray Nightshirt", description: "It's a hot night. The mind races. You think about your knife; the only friend who hasn't betrayed you, the only friend who won't be dead by sun up. Sleep tight, mates, in your quilted Chambray nightshirts.", price: 84.98),
+      Item.create(store: store_5, title: "Lush Paisley Blazer", description: "Autumn Reflections. The light is different now. Not blinding white like summer. It’s more like old gold, a little more burnished. More fireplaces are blazing. More candles are doing their magic. What’s needed is a superbly-cut velvet blazer in a classic French paisley to subtly capture all that magic in its folds", price: 198.00),
+      Item.create(store: store_5, title: "Lambswool Stole", description: "Nothing will get their juices flowing like throwing a luscious Lambswool Stole (No. 5560) in a moody hellebore print over your shoulder. Much more dismissive and dramatic than the hair flip; your agent will be fielding offers soon. 100% lightweight lambswool. Designed in Scotland. Dry clean only.Imported.", price: 198.00),
+      Item.create(store: store_5, title: "The Almost Fall Wool Shawl", description: "Easily dressed up with a belt and boots for evening jaunts. Leave it on your sofa and get compliments on your eye-catching throw. Made in India. ", price: 178.00),
+      Item.create(store: store_5, title: "The Last Frontier Boot", description: "The Last Frontier Boot (No. 5548). Full-grain leather boot with laser-etched western pattern on foot and upper. Hand-nailed, scoured and distressed leather outsole. Stonewash finishing. Goodyear leather welt and Ariat’s Advanced Torque Stability (ATS) technology for all-day comfort. 1 3/4” heel height, 13” shaft height.  Imported.", price: 239.00),
+      Item.create(store: store_5, title: "Black Bowtie Cape", description: "Black Bowtie Cape (No. 2460). Found in a little boutique in Orleans. Made of 100% pure cashmere. Trimmed to waist length with a 9-inch wide collar, three-quarter length bell sleeves and tie front. A definite attention-getter.  ", price: 279.00),
+      Item.create(store: store_5, title: "The Tuxedo-Front Dress", description: "Who needs a power suit when you’ve got a dress like this? The navy color is rich, classic, and bold. You’re not suffering fools in this dress and the board knows this.", price: 229.00),
+      Item.create(store: store_5, title: "The Quarter-Zip Cashmere Sweater", description: "This 100% cashmere quarter-zip sweater (or pullover if you prefer) is a light 306 grams, exceedingly soft and supple, yet warm enough to do the job.", price: 298.00)]
+
+    jewelry_items = [
+      Item.create(store: store_1, title: "Gold Necklace", description: "Pretty chill necklace", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Silver Pendant", description: "Super hip", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Jangly Bracelets", description: "Make a lot of noise", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Big Ruby Ring", description: "This is gawdy", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Dream Catcher Earrings", description: "Cultural appropriation!", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Gold Earrings", description: "Hoops", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Silver Earrings", description: "Dangly things", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Butterfly Wing Earrings", description: "They died naturally", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Ruby Earrings", description: "Faceted rubies", price: Faker::Commerce.price),
+      Item.create(store: store_1, title: "Bone Earrings", description: "They're fake bones, chill out", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Emerald Ring", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Ruby Ring", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Sapphire Ring", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Opal Ring", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Topaz Ring", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Jade Ring", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Turquoise Ring", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Tourmaline Ring", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Calcite Ring", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Amethyst Ring", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Citrine Ring", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Gold Bracelet with Emeralds", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Gold Bracelet with Rubies", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Silver Bracelet with Lapis Lazuli", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Silver Bracelet with Jade", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Bronze Necklace", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Sterling Silver Necklace", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Rose Gold Necklace", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Ornate Gold Earrings", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_3, title: "Ornate Silver Earrings", description: "Sparkly", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Gold Bracelet with Diamonds", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Gold Bracelet with Jade", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Gold Bracelet with Sapphire", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Gold Ring with Garnet", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Gold Ring with Topaz", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Gold Bracelet with Topaz", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Gold Bracelet with Lapis Lazuli", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Silver Bracelet with Moonstone", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Silver Bracelet with Rose Quartz", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Silver Bracelet with Amethyst", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Silver Bracelet with Peridot", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Silver Bracelet with Citrine", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Silver and Gold Bracelet", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Brass Necklace", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Twine Necklace", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Leather Necklace", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Gold Necklace with Blue Tourmaline", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Silver Necklace with Zircon", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Silver Necklace with Amethyst", description: "Shiny", price: Faker::Commerce.price),
+      Item.create(store: store_4, title: "Silver Necklace with Watermelon Tourmaline", description: "Shiny", price: Faker::Commerce.price)
+    ]
+
+
+    clothes_items.map do |item|
+      ItemCategory.create(item: item, category: clothes)
+      puts "Adding #{item[:name]} to the Clothes category"
+    end
+
+    puts "Clothes seeded"
+
+    jewelry_items.map do |item|
+      ItemCategory.create(item: item, category: jewelry)
+      puts "Adding #{item[:name]} to the Jewelry category"
+    end
+
+    puts "Jewelry seeded"
 
     @client = Twilio::REST::Client.new ENV['twilio_sid'], ENV['twilio_token']
     @client.messages.create(from: ENV['twilio_phone'], to: ENV['test_phone'], body: "Seeding complete")

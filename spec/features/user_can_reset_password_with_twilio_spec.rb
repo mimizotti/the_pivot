@@ -26,6 +26,8 @@ feature 'User forgets their password' do
         # Then I should be redirected to "/dashboard"
         expect(current_path).to eq '/dashboard'
         # And I should be logged in
+        # And I should be logged in
+        expect(current_path).to eq '/dashboard'
         expect(current_user).to_not be nil
 
         click_on 'Logout'
