@@ -1,73 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>
-    </title>
-  </head>
-  <body>
-    <div class="text-center" style="margin: auto;">
-          <h1>Admin Dashboard</h1>
-          <h2>You are a Business Admin for the following store:</h2>
-          <h2><strong><%= current_user.full_name %></strong></h2>
-          <h5><strong>Username: </strong><%= current_user.username %></h5>
-          <h5><strong>Address: </strong><%= current_user.address %></h5>
-          <h5><strong>Email: </strong><%= current_user.email %></h5>
-          <button class="round"><%= link_to "View past orders", orders_path %></button>
-          <button class="round"><%= link_to "Edit Account", edit_user_path(current_user) %></button>
-          <button class="round all-items"><%= link_to "View all items", admin_items_path %></button>
-          <button class="round"><%= link_to "Create New Item", new_admin_item_path %></button>
-      </div>
+<div class="text-center" style="margin: auto;">
+  <h1>Admin Dashboard</h1>
+  <h2><strong><%= current_user.full_name %></strong></h2>
+  <h5><strong>Username: </strong><%= current_user.username %></h5>
+  <h5><strong>Address: </strong><%= current_user.address %></h5>
+  <h5><strong>Email: </strong><%= current_user.email %></h5>
+</div>
 
-    <table class="table table-striped text-left table-bordered">
-      <thead><strong>All Orders</strong></thead>
-      <tr>
-        <th>Order ID</th>
-        <th>Full Name</th>
-        <th>Status</th>
-        <th>Total Price</th>
-        <th>Change to Paid/Completed</th>
-        <th>Cancel Order</th>
-      </tr>
-      <tbody>
-        <tr><% @orders.each do |order| %></tr>
-        <td><%= link_to order.id, order_path(order) %></td>
-        <td><%= order.user.full_name %></td>
-        <td><%= order.status %></td>
-        <td><%= order.total_price %></td>
-        <% @order = order %>
-        <td><% if order.ordered? %>
-              <%= button_to "Paid", paid_path(@order), class: "btn btn-primary" %>
-            <% end %>
-            <% if order.paid? %>
-              <%= button_to "Completed", completed_path(@order), class: "btn btn-primary" %>
-            <% end %>
-        </td>
-        <td>
-          <% if order.ordered? || order.paid? %>
-            <%= button_to "Cancel", cancelled_path(@order), class: "btn btn-danger" %>
-          <% end %>
-        </td>
-        <% end %>
-      </tbody>
-    </table>
-
-    <table class="table table-striped text-left table-bordered">
-      <thead><strong>Orders By Status</strong></thead>
-      <tr>
-        <th><%= link_to 'Ordered', admin_ordered_path %></th>
-        <th><%= link_to 'Paid', admin_paid_path %></th>
-        <th><%= link_to 'Cancelled', admin_cancelled_path %></th>
-        <th><%= link_to 'Completed', admin_completed_path %></th>
-      </tr>
-      <tbody>
-        <tr>
-          <td><%= @orders.ordered_count %></td>
-          <td><%= @orders.paid_count %></td>
-          <td><%= @orders.cancelled_count %></td>
-          <td><%= @orders.completed_count %></td>
-        </tr>
-      </tbody>
-  </table>
-</body>
-</html>
+<div class="stores">
+  <% @stores.each do |store| %>
+    <%= link_to (image_tag(store.image)), admin_store_path(store), class: store.name %>
+    <%= current_user.user_roles.find_by(store: store).role.name %>
+  <% end %>
+</div>

@@ -7,7 +7,7 @@ feature "As a business manager" do
     items = create_list(:item, 10, store: store)
     UserRole.create(user: bus_man, role: Role.create(name: "Business Manager"), store: store)
   end
-  scenario "I can create items" do
+  scenario "I can create items for my store" do
     visit '/'
 
     click_on "Login"
@@ -17,22 +17,27 @@ feature "As a business manager" do
     click_on "Login"
 
     expect(current_path).to eq('/admin/dashboard')
-    save_and_open_page
 
-    expect(page).to have_content("You are a Business Admin for the following store:")
+    expect(page).to have_content("Business Manager")
 
-    expect(page).to have_content("Create Item")
+    find("img.#{Store.first.name}").click
 
-    click_on "Create Item"
+    expect(page).to have_content("Create New Item")
+
+    click_link 'Create New Item'
 
     expect(current_path).to eq(new_admin_item_path)
-    expect(page).to have_content("Create New Item")
 
     within(".container-fluid") do
       expect(page).to have_field("Title")
       expect(page).to have_field("Description")
       expect(page).to have_field("Price")
       expect(page).to have_field("Image")
+      expect(page).to have_field("Store")
     end
+
+    fill_in "Title", with: "Ricky's Hoola Hoop"
+    fill_in "Description", with: "This was once owned by the U.S. hoola hoop champion -- Ricky Amparo"
+    fill_in "Price", with: "99.00"
   end
 end

@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     get '/completed', to: "orders#completed"
     get '/items', to: 'items#index', as: 'items'
     resources :items, only: [:new, :edit, :update, :create]
+    resources :stores, only: [:show]
   end
 
   post 'retire' => 'items#retire_item', as: :retire
