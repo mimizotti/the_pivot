@@ -21,7 +21,7 @@
         <li style="float:right"><a class="active" href="/dashboard">Dashboard</a></li>
       <% end %>
       <% if logged_in? %>
-        <li style="float:right"><a class="active" href="/logout">Logout</a></li>
+        <li style="float:right"><a class="active" href="/logout" data-method="delete">Logout</a></li>
       <% else %>
         <li style="float:right"><a class="active" href="/login">Login</a></li>
       <% end %>
