@@ -15,14 +15,23 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'friendly_id', '~> 5.1.0'
-gem 'brakeman'
-gem 'rubycritic'
+# Use Capistrano for deployment
+# gem 'capistrano-rails', group: :development
+
 gem 'faker'
+
+gem 'betterlorem'
+gem 'rubycritic'
+gem 'brakeman'
+
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'figaro'
 gem 'faraday'
 # gem 'capistrano-rails', group: :development
 # gem 'therubyracer', platforms: :ruby
 # gem 'redis', '~> 3.0'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

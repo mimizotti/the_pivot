@@ -11,9 +11,8 @@ class Order < ApplicationRecord
   def add(item_hash)
     item_hash.each do |item, item_quantity|
       items << item
-      order_item = OrderItem.find_by(item_id: item.id)
-      order_items.find_by(item_id: item.id).update(quantity: item_quantity)
-      order_items.find_by(item_id: item.id).update(line_item_total: (item.price * item_quantity))
+      item.order_items.update(quantity: item_quantity)
+      item.order_items.update(line_item_total: (item.price * item_quantity))
     end
   end
 

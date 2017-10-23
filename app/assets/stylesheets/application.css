@@ -14,7 +14,9 @@
  *= require_self
  */
 
-
+ nav>h5 {
+   text-align: center;
+ }
  .display {
   width:  250px;
   height: 250px;
@@ -44,4 +46,7 @@ h1 {
 }
 p{
   font-family: 'Caveat Brush', cursive;
+}
+.disabled {
+  display: none;
 }

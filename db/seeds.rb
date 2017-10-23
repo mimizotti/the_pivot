@@ -1,3 +1,11 @@
+Dir[File.dirname(__FILE__) + '/seeds/*.rb'].each {|file| require file }
+
+SeedInstruments.seed
+SeedGoldfish.seed
+SeedElectronics.seed
+SeedPeppers.seed
+SeedTowels.seed
+
 user = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "bonjovirules")
 user_2 = User.create(first_name: "Styx", last_name: "Rules", address: "123 man in the wilderness", email: "renegade@amazing.com", username: "styxrules", password: "styxrules")
 
@@ -20,55 +28,55 @@ item_13 = Item.create(title: "Yellow Tank, Vest, and Hookups", description: "For
 
 category_2 = Category.create(name: "basket", title: "Finished Baskets")
 
-item_14 = Item.create(title: "Basic Basket", description: "Basic Basket for all of your lush supplies.  Woven at a depth of 400ft, while shipwreck diving.", store: store_1, price: 39.95, image: "basicbasket.jpg")
-item_15 = Item.create(title: "Twotone Dream Basket", description: "Basket to hold your dreams.  Woven at a depth of 1200ft, in an old diving suit. while fighting hammerheads.", store: store_1, price: 129.95, image: "barrelbasketmultitone.jpg")
-item_16 = Item.create(title: "Black Tray Basket", description: "Simple black tray basket.  Woven in a pool.", store: store_1, price: 5.00, image: "blacktraybasket.jpg")
-item_17 = Item.create(title: "Basket with Rim", description: "Need a place to put Magazines in your 15th guest bathroom? Look no further!  Woven at a depth of 12ft, while diving for clams.", store: store_1, price: 55.95, image: "multicolorbasket.jpg")
-item_18 = Item.create(title: "Picnic Basket", description: "This lovely picnic basket has a notch to sit comfortably on the side of the table.  Woven at a depth of 395ft, while looking for lost treasure.", store: store_1, price: 149.95, image: "picnicbasket.jpg")
-item_19 = Item.create(title: "Pronounced Weave Basket", description: "Basket with an intricate, noticeable weave.", store: store_1, price: 79.95, image: "pronouncedweavebasket.jpg")
-item_20 = Item.create(title: "Baskets with Extra Weave Arrow Layer (set of 3)", description: "Normal baskets, with a little bit of flare!  Woven at a depth of 200ft, no air tank, free-diving.  Took 4 years.", store: store_1, price: 249.95, image: "setof3baskets.jpg")
-item_21 = Item.create(title: "Tall Baskets with Lids (set of 3)", description: "Pier 1 has nothing on you!  Imagine how coordinated you'll look with these pre-matched baskets.  Woven at a depth of 5ft (weaver held her head underwater), with crab claws.", store: store_1, price: 315.99, image: "setof3basketswithlids.jpg")
-item_22 = Item.create(title: "Tribal Basket", description: "COLOR! Woven at a depth of 25ft, weaver lost an arm when the colors attracted a barracuda.", store: store_1, price: 249.95, image: "tribalbasket.jpg")
-item_23 = Item.create(title: "Waste Basket", description: "It's a wastebasket.  Woven in the shallow end of the kiddy pool, has been properly sanitized post-weave.", store: store_1, price: 29.95, image: "wastebasket.jpg")
+item_14 = Item.create(title: "Basic Basket", description: "Basic Basket for all of your lush supplies.  Woven at a depth of 400ft, while shipwreck diving.", price: 39.95, image: "basicbasket.jpg")
+item_15 = Item.create(title: "Twotone Dream Basket", description: "Basket to hold your dreams.  Woven at a depth of 1200ft, in an old diving suit. while fighting hammerheads.", price: 129.95, image: "barrelbasketmultitone.jpg")
+item_16 = Item.create(title: "Black Tray Basket", description: "Simple black tray basket.  Woven in a pool.", price: 5.00, image: "blacktraybasket.jpg")
+item_17 = Item.create(title: "Basket with Rim", description: "Need a place to put Magazines in your 15th guest bathroom? Look no further!  Woven at a depth of 12ft, while diving for clams.", price: 55.95, image: "multicolorbasket.jpg")
+item_18 = Item.create(title: "Picnic Basket", description: "This lovely picnic basket has a notch to sit comfortably on the side of the table.  Woven at a depth of 395ft, while looking for lost treasure.", price: 149.95, image: "picnicbasket.jpg")
+item_19 = Item.create(title: "Pronounced Weave Basket", description: "Basket with an intricate, noticeable weave.", price: 79.95, image: "pronouncedweavebasket.jpg")
+item_20 = Item.create(title: "Baskets with Extra Weave Arrow Layer (set of 3)", description: "Normal baskets, with a little bit of flare!  Woven at a depth of 200ft, no air tank, free-diving.  Took 4 years.", price: 249.95, image: "setof3baskets.jpg")
+item_21 = Item.create(title: "Tall Baskets with Lids (set of 3)", description: "Pier 1 has nothing on you!  Imagine how coordinated you'll look with these pre-matched baskets.  Woven at a depth of 5ft (weaver held her head underwater), with crab claws.", price: 315.99, image: "setof3basketswithlids.jpg")
+item_22 = Item.create(title: "Tribal Basket", description: "COLOR! Woven at a depth of 25ft, weaver lost an arm when the colors attracted a barracuda.", price: 249.95, image: "tribalbasket.jpg")
+item_23 = Item.create(title: "Waste Basket", description: "It's a wastebasket.  Woven in the shallow end of the kiddy pool, has been properly sanitized post-weave.", price: 29.95, image: "wastebasket.jpg")
 
 category_3 = Category.create(name: "basketmaking", title: "Basket Making Supplies")
 
-item_24 = Item.create(title: "1inch flat Reed", description: "Flat Reed for weaving.  35ft", store: store_1, price: 59.95, image: "1inchflatreed.png")
-item_25 = Item.create(title: "8inch Wood Base", description: "8inch wood base, nothing special.", store: store_1, price: 13.95, image: "8inchwoodbase.jpg")
-item_26 = Item.create(title: "10inch Wood Base", description: "10inch wood base, nothing special.", store: store_1, price: 16.95, image: "10inchbasewood.jpg")
-item_27 = Item.create(title: "Small Blue Ceramic Bases", description: "Tiny bases for tiny baskets.  Short projects for those who can't hold their breath.", store: store_1, price: 14.95, image: "bluesmallceramicbasketbases.jpg")
-item_28 = Item.create(title: "Ceramic Starfish Base", description: "This is the most elegant vase you've ever laid eyes on. It's almost assured that anything you come up with, weaving-wise, to sit atop this gorgeous piece isn't worthy of the pedestal.  Good Luck!", store: store_1, price: 650.00, image: "ceramicstarfishbase.jpg")
-item_29 = Item.create(title: "Half-Inch Flat Reed", description: "Half-Inch flat reed, great for weaving your standard wastebasket. 100ft", store: store_1, price: 69.95, image: "halfinchflatreed.jpg")
-item_30 = Item.create(title: "Long Palm Frond (set of 6)", description: "Reconnect with nature, enjoy underwater basket weaving the way it was originally, 1000's of years ago.", store: store_1, price: 14.95, image: "longpalmfrond.jpg")
-item_31 = Item.create(title: "Multi-colored Small Ceramic Bases", description: "They're tiny, but they can pack a punch...of color!  Small projects for days when your nanny can't take the kids for long.", store: store_1, price: 45.95, image: "multicoloredceramicsmallbases.jpg")
-item_32 = Item.create(title: "Wooden Oval Base", description: "Wooden oval base, about the size of Steven Colbert's head.", store: store_1, price: 23.95, image: "ovalbase.jpg")
-item_33 = Item.create(title: "Wooden Rectangular Base", description: "Wooden, rectangular base. About the side of a small axe.", store: store_1, price: 23.95, image: "rectanglebase.jpg")
-item_34 = Item.create(title: "Round Basket Cord", description: "Cord for weaving details on the outside of your basket.  Works equally well in, and out, of water, but out of water would be cheating! 200ft", store: store_1, price: 33.95, image: "round_baskey_cord.jpg")
-item_35 = Item.create(title: "Round Reed", description: "300ft", store: store_1, price: 34.95, image: "roundcordextralong.jpg")
-item_36 = Item.create(title: "Round Palm Frond (set of 6)", description: "Reconnect with nature, enjoy underwater basket weaving the way it was originally, 1000's of years ago.", store: store_1, price: 14.95, image: "roundpalmfrond.jpg")
-item_37 = Item.create(title: "Twine", description: "You could leave your basket plain, but then you'd be boring.  Buy this twine for weaving beautiful details! Don't be boring...", store: store_1, price: 45.95, image: "twineforaccents.jpg")
-item_38 = Item.create(title: "Extra Thick Reed", description: "Building a framework for an industrial basket? Present and accounted for, this is your reed!  Can stand up to a Category 5 hurricane (tested)!  Unfortunately, our tester was not so lucky.", store: store_1, price: 67.96, image: "xtrathickreed.jpg")
+item_24 = Item.create(title: "1inch flat Reed", description: "Flat Reed for weaving.  35ft", price: 59.95, image: "1inchflatreed.png")
+item_25 = Item.create(title: "8inch Wood Base", description: "8inch wood base, nothing special.", price: 13.95, image: "8inchwoodbase.jpg")
+item_26 = Item.create(title: "10inch Wood Base", description: "10inch wood base, nothing special.", price: 16.95, image: "10inchbasewood.jpg")
+item_27 = Item.create(title: "Small Blue Ceramic Bases", description: "Tiny bases for tiny baskets.  Short projects for those who can't hold their breath.", price: 14.95, image: "bluesmallceramicbasketbases.jpg")
+item_28 = Item.create(title: "Ceramic Starfish Base", description: "This is the most elegant vase you've ever laid eyes on. It's almost assured that anything you come up with, weaving-wise, to sit atop this gorgeous piece isn't worthy of the pedestal.  Good Luck!", price: 650.00, image: "ceramicstarfishbase.jpg")
+item_29 = Item.create(title: "Half-Inch Flat Reed", description: "Half-Inch flat reed, great for weaving your standard wastebasket. 100ft", price: 69.95, image: "halfinchflatreed.jpg")
+item_30 = Item.create(title: "Long Palm Frond (set of 6)", description: "Reconnect with nature, enjoy underwater basket weaving the way it was originally, 1000's of years ago.", price: 14.95, image: "longpalmfrond.jpg")
+item_31 = Item.create(title: "Multi-colored Small Ceramic Bases", description: "They're tiny, but they can pack a punch...of color!  Small projects for days when your nanny can't take the kids for long.", price: 45.95, image: "multicoloredceramicsmallbases.jpg")
+item_32 = Item.create(title: "Wooden Oval Base", description: "Wooden oval base, about the size of Steven Colbert's head.", price: 23.95, image: "ovalbase.jpg")
+item_33 = Item.create(title: "Wooden Rectangular Base", description: "Wooden, rectangular base. About the side of a small axe.", price: 23.95, image: "rectanglebase.jpg")
+item_34 = Item.create(title: "Round Basket Cord", description: "Cord for weaving details on the outside of your basket.  Works equally well in, and out, of water, but out of water would be cheating! 200ft", price: 33.95, image: "round_baskey_cord.jpg")
+item_35 = Item.create(title: "Round Reed", description: "300ft", price: 34.95, image: "roundcordextralong.jpg")
+item_36 = Item.create(title: "Round Palm Frond (set of 6)", description: "Reconnect with nature, enjoy underwater basket weaving the way it was originally, 1000's of years ago.", price: 14.95, image: "roundpalmfrond.jpg")
+item_37 = Item.create(title: "Twine", description: "You could leave your basket plain, but then you'd be boring.  Buy this twine for weaving beautiful details! Don't be boring...", price: 45.95, image: "twineforaccents.jpg")
+item_38 = Item.create(title: "Extra Thick Reed", description: "Building a framework for an industrial basket? Present and accounted for, this is your reed!  Can stand up to a Category 5 hurricane (tested)!  Unfortunately, our tester was not so lucky.", price: 67.96, image: "xtrathickreed.jpg")
 
 category_4 = Category.create(name: "snorkel", title: "Snorkeling Gear")
 
-item_39 = Item.create(title: "Black Snorkel", description: "It's a snorkel, it's black, you should purchase this one if you don't have much of a personality.", store: store_1, price: 19.95, image:"blacksnorkel.jpg")
-item_40 = Item.create(title: "Blue Snorkel", description: "It's a snorkel, it's blue, you should purchase this one if you have a little bit of a personality.", store: store_1, price: 21.95, image: "bluesnorkel.jpg")
-item_41 = Item.create(title: "Orange Snorkel", description: "It's a snorkel, it's orange, you should purchase this one if you have a little bit of a personality.  Has a strap for your head.  All the cool kids are doing it.", store: store_1, price: 22.95, image: "orangesnorkel.jpg")
-item_42 = Item.create(title: "Rainbow Snorkel", description: "It's a snorkel, it's rainbow, you should purchase this one if you have a lot of personality.  Goes well with our hot pink or yellow tank.", store: store_1, price: 24.95, image: "rainbowsnorkel.jpg")
-item_43 = Item.create(title: "Snorkel with Head Attachments", description: "Do you like options? Of course you do!  Here are 3. They do different things.", store: store_1, price: 210.00, image: "snorkelwithextraheadattachments.jpg")
-item_44 = Item.create(title: "Yellow Snorkel, Extra Long", description: "Some extra snorkel for that big noggin of yours.  Don't worry, there's a filter for that!", store: store_1, price: 76.95, image: "yellowFinis-Freestyle-Snorkel.jpg")
+item_39 = Item.create(title: "Black Snorkel", description: "It's a snorkel, it's black, you should purchase this one if you don't have much of a personality.", price: 19.95, image:"blacksnorkel.jpg")
+item_40 = Item.create(title: "Blue Snorkel", description: "It's a snorkel, it's blue, you should purchase this one if you have a little bit of a personality.", price: 21.95, image: "bluesnorkel.jpg")
+item_41 = Item.create(title: "Orange Snorkel", description: "It's a snorkel, it's orange, you should purchase this one if you have a little bit of a personality.  Has a strap for your head.  All the cool kids are doing it.", price: 22.95, image: "orangesnorkel.jpg")
+item_42 = Item.create(title: "Rainbow Snorkel", description: "It's a snorkel, it's rainbow, you should purchase this one if you have a lot of personality.  Goes well with our hot pink or yellow tank.", price: 24.95, image: "rainbowsnorkel.jpg")
+item_43 = Item.create(title: "Snorkel with Head Attachments", description: "Do you like options? Of course you do!  Here are 3. They do different things.", price: 210.00, image: "snorkelwithextraheadattachments.jpg")
+item_44 = Item.create(title: "Yellow Snorkel, Extra Long", description: "Some extra snorkel for that big noggin of yours.  Don't worry, there's a filter for that!", price: 76.95, image: "yellowFinis-Freestyle-Snorkel.jpg")
 
 
-item_45 = Item.create(title: "Blue and Clear Split Fins", description: "These fins will make you go SO fast, which is essential during basketweaving because we said so. Plus, they're split, which we are sure is integral to the speed, somehow.", store: store_1, price: 149.95, image: "blueandclearMares-x-stream-dive-fins.jpg")
-item_46 = Item.create(title: "Blue Open Fin", description: "Fins that are blue, have openings, to allow water through, and obviously play a vital role in your staying alive.", store: store_1, price: 129.95, image: "blueopenfin.jpg")
-item_47 = Item.create(title: "Full Face Mask with Go Pro", description: "Do you feel the need to not only weave, but film your adventures? This is the mask for you.  Pinterest/Instagram account not included.", store: store_1, price: 650.00, image: "fullfacemaskblack.jpg")
-item_48 = Item.create(title: "Full Face Mask", description: "Only the most adventurous need apply.  With this face mask, you can swim the great barrier reef with sharks, and weave your little heart out at the same time! What fun!", store: store_1, price: 100.00, image: "fullfacemaskminussnorkel.png")
-item_49 = Item.create(title: "Full Face Mask with Go Pro (White)", description: "Do you feel the need to not only weave, but film your adventures? This is the mask for you.  Pinterest/Instagram account not included.", store: store_1, price: 700.00, image: "fullfacewhitesnorkel.jpg")
-item_50 = Item.create(title: "Grey Fins, Extra Long", description: "Grey Fins, extra long for your pleasure...of swimming! Flappy Flap Flap!", store: store_1, price: 55.95, image: "greyfinsextralong.jpg")
-item_51 = Item.create(title: "Merfin", description: "Wanna be fabulous and weaving at the same time?  Now you can! Enter the merfin.  Please be advised, swimming is mildly difficult.", store: store_1, price: 54.95, image: "merfin.png")
-item_52 = Item.create(title: "Orange Lens Mask", description: "Worried about eye protection while weaving? Aren't we all.  Full protection from UVA, UVB, UCV, UVG, UVX, and UVZ rays. You can never be too careful!", store: store_1, price: 79.95, image: "orange lens goggles.jpg")
-item_53 = Item.create(title: "Orange Short Fins", description: "Shorter fins for shorter projects.  We know what we're talking about.", store: store_1, price: 43.95, image: "orange_fins.jpg")
-item_54 = Item.create(title: "Black and Yellow Viper Fins", description: "Aren't you sporty?! Look at you, going so fast in that swimming pool, while weaving.  That's totally a thing.", store: store_1, price: 64.95, image: "yellowblackviperfins.jpg")
+item_45 = Item.create(title: "Blue and Clear Split Fins", description: "These fins will make you go SO fast, which is essential during basketweaving because we said so. Plus, they're split, which we are sure is integral to the speed, somehow.", price: 149.95, image: "blueandclearMares-x-stream-dive-fins.jpg")
+item_46 = Item.create(title: "Blue Open Fin", description: "Fins that are blue, have openings, to allow water through, and obviously play a vital role in your staying alive.", price: 129.95, image: "blueopenfin.jpg")
+item_47 = Item.create(title: "Full Face Mask with Go Pro", description: "Do you feel the need to not only weave, but film your adventures? This is the mask for you.  Pinterest/Instagram account not included.", price: 650.00, image: "fullfacemaskblack.jpg")
+item_48 = Item.create(title: "Full Face Mask", description: "Only the most adventurous need apply.  With this face mask, you can swim the great barrier reef with sharks, and weave your little heart out at the same time! What fun!", price: 100.00, image: "fullfacemaskminussnorkel.png")
+item_49 = Item.create(title: "Full Face Mask with Go Pro (White)", description: "Do you feel the need to not only weave, but film your adventures? This is the mask for you.  Pinterest/Instagram account not included.", price: 700.00, image: "fullfacewhitesnorkel.jpg")
+item_50 = Item.create(title: "Grey Fins, Extra Long", description: "Grey Fins, extra long for your pleasure...of swimming! Flappy Flap Flap!", price: 55.95, image: "greyfinsextralong.jpg")
+item_51 = Item.create(title: "Merfin", description: "Wanna be fabulous and weaving at the same time?  Now you can! Enter the merfin.  Please be advised, swimming is mildly difficult.", price: 54.95, image: "merfin.png")
+item_52 = Item.create(title: "Orange Lens Mask", description: "Worried about eye protection while weaving? Aren't we all.  Full protection from UVA, UVB, UCV, UVG, UVX, and UVZ rays. You can never be too careful!", price: 79.95, image: "orange lens goggles.jpg")
+item_53 = Item.create(title: "Orange Short Fins", description: "Shorter fins for shorter projects.  We know what we're talking about.", price: 43.95, image: "orange_fins.jpg")
+item_54 = Item.create(title: "Black and Yellow Viper Fins", description: "Aren't you sporty?! Look at you, going so fast in that swimming pool, while weaving.  That's totally a thing.", price: 64.95, image: "yellowblackviperfins.jpg")
 
 
 ItemCategory.create(item: item_1, category: category_1)
@@ -138,7 +146,7 @@ ItemCategory.create(item: item_54, category: category_4)
 
 order_1 = Order.create(user_id: 1, status: 0, total_price: 154.85)
 order_2 = Order.create(user_id: 2, status: 0, total_price: 149.89)
-OrderItem.create(order: order_1, item: item_1, quantity: 3)
+oi = OrderItem.create(order: order_1, item: item_1, quantity: 3)
 OrderItem.create(order: order_1, item: item_3, quantity: 1)
 OrderItem.create(order: order_2, item: item_2, quantity: 2)
 OrderItem.create(order: order_2, item: item_4, quantity: 1)
@@ -696,4 +704,3 @@ User.create(first_name: "Jim", last_name: "Sad Path", address: "The road to succ
 User.create(first_name: "Ash", last_name: "Whatever", address: "I am as dry as my code", email: "ash@littleshop.com", username: "ash", password: "ash", platform_admin: true)
 User.create(first_name: "Mimi", last_name: "Le", address: "18th & Market is where it's at", email: "mimi@littleshop.com", username: "mimi", password: "mimi", platform_admin: true)
 User.create(first_name: "Liam", last_name: "Barstad", address: "The same as above", email: "liam@littleshop.com", username: "Liam", password: "LOGIN", platform_admin: true)
-

@@ -1,1 +1,12 @@
-
+<div class="row">
+<% @categories.each do |category| %>
+  <div class="col-md-3">
+    <div class="thumb">
+      <%= image_tag category.best_image, size: '100' %>
+      <%= link_to category.name, category_path(category), class: "thumb_name" %>
+    </div>
+  </div>
+<% end %>
+</div>
+<button id="cycle_backwards">Back</button>
+<button id="cycle_forwards">Forward</button>
