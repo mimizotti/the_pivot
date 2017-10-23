@@ -55,7 +55,7 @@ describe Category do
 
       image = category.best_image
 
-      expect(image).to eq(item1.image)
+      expect(image).to eq(item2.image)
     end
   end
 end
