@@ -5,6 +5,7 @@
     <th></th>
     <th>Title</th>
     <th>Description</th>
+    <th>Price</th>
     <th>Status</th>
     <th></th>
   </tr>
@@ -13,8 +14,9 @@
       <td><%= image_tag(item.image, class: "thumbs") %></td>
       <td><%= link_to item.title, item_path(item) %></td>
       <td><%= item.description %></td>
+      <td><%= item.price %></td>
       <td><%= item.status %></td>
-      <td><%= button_to "Edit", edit_admin_item_path(item), class: "btn btn-primary", method: :get %></td>
+      <td><%= button_to "Edit", edit_admin_store_item_path(@store, item), class: "btn btn-primary", method: :get %></td>
     </tr>
   <% end %>
 </table>

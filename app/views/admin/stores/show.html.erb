@@ -4,10 +4,10 @@
       <h5><strong>Username: </strong><%= current_user.username %></h5>
       <h5><strong>Address: </strong><%= current_user.address %></h5>
       <h5><strong>Email: </strong><%= current_user.email %></h5>
-      <button class="round"><%= link_to "View past orders", orders_path %></button>
+      <button class="round"><%= link_to "View My Stores", admin_dashboard_path %></button>
       <button class="round"><%= link_to "Edit Account", edit_user_path(current_user) %></button>
       <button class="round all-items"><%= link_to "View all items", admin_items_path %></button>
-      <button class="round"><%= link_to "Create New Item", new_admin_item_path %></button>
+      <button class="round"><%= link_to "Create New Item", new_admin_store_item_path(@store) %></button>
   </div>
 
 <table class="table table-striped text-left table-bordered">
@@ -15,27 +15,31 @@
   <tr>
     <th>Order ID</th>
     <th>Full Name</th>
-    <th>Status</th>
+    <th>Address</th>
+    <th>Quantity</th>
     <th>Total Price</th>
+    <th>Status</th>
     <th>Change to Paid/Completed</th>
     <th>Cancel Order</th>
   </tr>
   <tbody>
-    <tr><% @orders.each do |order| %></tr>
-    <td><%= link_to order.id, order_path(order) %></td>
-    <td><%= order.user.full_name %></td>
-    <td><%= order.status %></td>
-    <td><%= order.total_price %></td>
-    <% @order = order %>
-    <td><% if order.ordered? %>
+    <tr><% @store_orders.each do |store_order| %></tr>
+    <td><%= store_order.order.id %></td>
+    <td><%= store_order.order.user.full_name %></td>
+    <td><%= store_order.order.user.address %></td>
+    <td><%= store_order.quantity %></td>
+    <td><%= store_order.line_item_total %></td>
+    <td><%= store_order.order.status %></td>
+    <% @order = store_order.order %>
+    <td><% if @order.ordered? %>
           <%= button_to "Paid", paid_path(@order), class: "btn btn-primary" %>
         <% end %>
-        <% if order.paid? %>
+        <% if @order.paid? %>
           <%= button_to "Completed", completed_path(@order), class: "btn btn-primary" %>
         <% end %>
     </td>
     <td>
-      <% if order.ordered? || order.paid? %>
+      <% if store_order.order.ordered? || store_order.order.paid? %>
         <%= button_to "Cancel", cancelled_path(@order), class: "btn btn-danger" %>
       <% end %>
     </td>
@@ -53,9 +57,9 @@
   </tr>
   <tbody>
     <tr>
-      <td><%= @orders.ordered_count %></td>
-      <td><%= @orders.paid_count %></td>
-      <td><%= @orders.cancelled_count %></td>
-      <td><%= @orders.completed_count %></td>
+      <td><%= Order.ordered_count %></td>
+      <td><%= Order.paid_count %></td>
+      <td><%= Order.cancelled_count %></td>
+      <td><%= Order.completed_count %></td>
     </tr>
   </tbody>

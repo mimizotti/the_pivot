@@ -4,6 +4,6 @@ class Admin::StoresController < ApplicationController
 
   def show
     @store = Store.find(params["id"])
-    @orders = OrderItem.store_orders(@store)
+    @store_orders = OrderItem.store_orders(@store)
   end
 end
