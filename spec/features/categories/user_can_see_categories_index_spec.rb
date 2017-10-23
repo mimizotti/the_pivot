@@ -25,8 +25,8 @@ RSpec.describe "user visits categories index path" do
   it "and will see images of most popular item in each category" do
     category1, category2 = create_list(:category, 2)
     store1, store2 = create_list(:store, 2)
-    item1, item3 = create_list(:item, 2, store: store1)
-    item2 = create(:item, store: store2)
+    item1, item2 = create_list(:item, 2, store: store1, image: "https://adriaballetbeat.files.wordpress.com/2013/02/tony-waag-1-lois-greenfield.jpg")
+    item3 = create(:item, store: store2, image: "https://www.digitalbond.com/wp-content/uploads/2011/06/fred.jpg")
     order1, order2 = create_list(:order, 2)
     order_item1 = create(:order_item, order: order1, item: item1, line_item_total: 5.00)
     order_item2 = create(:order_item, order: order2, item: item1, line_item_total: 5.00)
@@ -36,7 +36,6 @@ RSpec.describe "user visits categories index path" do
     category2.items << item3
 
     visit("/categories")
-    save_and_open_page
 
     expect(page).to have_css("img[src*='#{item2.image}']")
     expect(page).to have_css("img[src*='#{item3.image}']")
