@@ -27,7 +27,6 @@ Rails.application.routes.draw do
 
   resource :cart
 
-  get '/:category', to: 'categories#show', param: :slug, as: "category"
 
 
   namespace :admin do
@@ -46,4 +45,5 @@ Rails.application.routes.draw do
   post 'cancelled' => 'orders#change_to_cancelled', as: :cancelled
   post 'completed' => 'orders#change_to_completed', as: :completed
 
+  get '/:category', to: 'categories#show', param: :slug, as: "category"
 end

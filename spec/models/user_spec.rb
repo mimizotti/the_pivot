@@ -13,7 +13,7 @@ describe User do
   end
 
   describe ".instance_methods" do
-    let(:user) { User.create(first_name: "Jim", last_name: "Szalewski", address: "526 Kalamath St.", email: "jim.szalewski@gmail.com", username: "sadlypath", password: "takethesadpath", platform_admin: true) }
+    let(:user) { User.create(first_name: "Jim", last_name: "Szalewski", address: "526 Kalamath St.", email: "jim.szalewski@gmail.com", phone: ENV['test_phone'], username: "sadlypath", password: "takethesadpath", platform_admin: true) }
     context ".full_name" do
       it "can generate a full name for a user" do
         expect(user.full_name).to eq("Jim Szalewski")
@@ -31,7 +31,7 @@ describe User do
       it "generates a code, sends it to the users phone and stores it on the user" do
         expect(user.reset_password).to_not be nil
         expect(user[:reset_digest]).to_not be nil
-        expect(user[:reset_digest]/length).to eq 6
+        expect(user[:reset_digest].length).to eq 6
       end
     end
   end

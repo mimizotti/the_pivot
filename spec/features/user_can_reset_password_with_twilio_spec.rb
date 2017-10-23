@@ -15,11 +15,6 @@ feature 'User forgets their password' do
 
         expect(current_path).to eq '/password-verification'
 
-        # And I should have received a text message with a confirmation code
-        # expect(message.to).to eq '+17203616510'
-        # expect(message.from).to eq '+12406961677'
-        # message was a place holder variable,
-        # unsure on how to test receipt of confirmation code
         expect(page).to have_content 'A confirmation code has been sent to 7203616510'
         expect(page).to have_css '.container-fluid'
         expect(page).to have_content 'Enter your confirmation code'
@@ -29,8 +24,8 @@ feature 'User forgets their password' do
         fill_in 'user[password_confirmation]', with: 'password'
         click_on 'Submit'
         # Then I should be redirected to "/dashboard"
-        # And I should be logged in
         expect(current_path).to eq '/dashboard'
+        # And I should be logged in
         expect(current_user).to_not be nil
 
         click_on 'Logout'
