@@ -3,17 +3,21 @@ class Admin::ItemsController < ApplicationController
   before_action :require_admin
 
   def index
-    @items = Item.all
+    @store = Store.find(params["store_id"])
+    @items = @store.items
   end
 
   def new
+    @store = Store.find(params["store_id"])
     @item = Item.new
   end
 
   def create
+    @store = Store.find(params["store_id"])
     @item = Item.new(item_attributes)
+    @item.store_id = @store.id
     if @item.save
-      redirect_to item_path(@item)
+      redirect_to admin_store_items_path(@store)
     else
       flash[:danger] = 'Invalid information entered, try again'
       render :new
@@ -24,17 +28,17 @@ class Admin::ItemsController < ApplicationController
   end
 
   def edit
+    @store = Store.find(params["store_id"])
     @item = Item.find(params[:id])
   end
 
   def update
+    @store = Store.find(params["store_id"])
     @item = Item.find(params[:id])
     @item.update(item_params)
 
-    redirect_to admin_items_path
+    redirect_to admin_store_items_path(@store)
   end
-
-  private
 
 
   private

@@ -14,13 +14,13 @@ class OrdersController < ApplicationController
   end
 
   def new
-		order = Order.create(status: 0, user_id: current_user.id, total_price: @cart.cart_total)
-		item_hash = @cart.order_hash
-		order.add(item_hash)
-		@cart.destroy
-		flash[:success] = "Order was successfully placed"
-		redirect_to orders_path
-	end
+    order = Order.create(status: 0, user_id: current_user.id, total_price: @cart.cart_total)
+    item_hash = @cart.order_hash
+    order.add(item_hash)
+    @cart.destroy
+    flash[:success] = "Order was successfully placed"
+    redirect_to orders_path
+   end
 
   def change_to_paid
     @order = Order.find(params[:format])
