@@ -5,7 +5,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if request.env['omniauth.auth']['provider'].present?
+    # binding.pry
+    if request.env['omniauth.auth'].present?
       @user = User.find_or_create_from_auth(request.env['omniauth.auth'])
       set_session_id
     else
@@ -20,12 +21,12 @@ class SessionsController < ApplicationController
 
   def native_login
     @user = User.find_by(username: params[:session][:username])
-    if user && user.authenticate(params[:session][:password]) && user.is_admin?
-      session[:user_id] = user.id
+    if @user && @user.authenticate(params[:session][:password]) && @user.is_admin?
+      session[:user_id] = @user.id
       session[:logged_in?] = true
       redirect_to admin_dashboard_path
-    elsif user && user.authenticate(params[:session][:password])
-      session[:user_id] = user.id
+    elsif @user && @user.authenticate(params[:session][:password])
+      session[:user_id] = @user.id
       session[:logged_in?] = true
       redirect_to dashboard_path
     else
