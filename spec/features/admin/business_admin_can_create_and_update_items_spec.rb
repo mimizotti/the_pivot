@@ -12,8 +12,7 @@ feature "As a business manager" do
     end
 
     UserRole.create(user: bus_man, role: Role.create(name: "Business Manager"), store: @store)
-  end
-  scenario "I can create items for my store" do
+
     visit '/'
 
     click_on "Login"
@@ -21,6 +20,8 @@ feature "As a business manager" do
     fill_in "Username", with: "josh@turing.io"
     fill_in "Password", with: "password"
     click_on "Login"
+  end
+  scenario "I can create items for my store" do
 
     expect(current_path).to eq('/admin/dashboard')
 
@@ -53,5 +54,21 @@ feature "As a business manager" do
     expect(page).to have_content("Ricky's Hoola Hoop")
     expect(page).to have_content("This was once owned by the U.S. hoola hoop champion -- Ricky Amparo")
     expect(page).to have_content("99")
+  end
+  scenario "I can edit items in my store" do
+
+    find(".#{Store.first.name}").click
+
+    click_link "View all items"
+
+    first('.edit').click_button('Edit')
+
+    fill_in "Description", with: "This item is no longer useless"
+
+    click_on "Update Item"
+
+    expect(current_path).to eq(admin_store_items_path(@store))
+
+    expect(page).to have_content("This item is no longer useless")
   end
 end

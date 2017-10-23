@@ -28,14 +28,16 @@ class Admin::ItemsController < ApplicationController
   end
 
   def edit
+    @store = Store.find(params["store_id"])
     @item = Item.find(params[:id])
   end
 
   def update
+    @store = Store.find(params["store_id"])
     @item = Item.find(params[:id])
     @item.update(item_params)
 
-    redirect_to admin_items_path
+    redirect_to admin_store_items_path(@store)
   end
 
   private

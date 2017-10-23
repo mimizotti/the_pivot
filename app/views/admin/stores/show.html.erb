@@ -6,7 +6,7 @@
       <h5><strong>Email: </strong><%= current_user.email %></h5>
       <button class="round"><%= link_to "View My Stores", admin_dashboard_path %></button>
       <button class="round"><%= link_to "Edit Account", edit_user_path(current_user) %></button>
-      <button class="round all-items"><%= link_to "View all items", admin_items_path %></button>
+      <button class="round all-items"><%= link_to "View all items", admin_store_items_path(@store) %></button>
       <button class="round"><%= link_to "Create New Item", new_admin_store_item_path(@store) %></button>
   </div>
 

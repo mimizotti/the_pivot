@@ -16,7 +16,7 @@
       <td><%= item.description %></td>
       <td><%= item.price %></td>
       <td><%= item.status %></td>
-      <td><%= button_to "Edit", edit_admin_store_item_path(@store, item), class: "btn btn-primary", method: :get %></td>
+      <td class="edit"><%= button_to "Edit", edit_admin_store_item_path(@store, item), class: "btn btn-primary", method: :get %></td>
     </tr>
   <% end %>
 </table>
