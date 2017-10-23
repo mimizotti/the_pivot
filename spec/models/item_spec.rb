@@ -60,7 +60,7 @@ describe Item do
       order_item1 = create(:order_item, item: item1, order: order, line_item_total: 16.00)
       order_item2 = create(:order_item, item: item2, order: order, line_item_total: 4.00)
       order_item3 = create(:order_item, item: item2, order: order, line_item_total: 6.00)
-
+      binding.pry
       top = Item.by_revenue.first
       bottom = Item.by_revenue.last
 

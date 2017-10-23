@@ -145,7 +145,7 @@ ItemCategory.create(item: item_54, category: category_4)
 
 order_1 = Order.create(user_id: 1, status: 0, total_price: 154.85)
 order_2 = Order.create(user_id: 2, status: 0, total_price: 149.89)
-OrderItem.create(order: order_1, item: item_1, quantity: 3)
+oi = OrderItem.create(order: order_1, item: item_1, quantity: 3)
 OrderItem.create(order: order_1, item: item_3, quantity: 1)
 OrderItem.create(order: order_2, item: item_2, quantity: 2)
 OrderItem.create(order: order_2, item: item_4, quantity: 1)
