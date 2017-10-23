@@ -36,7 +36,6 @@ RSpec.describe "user visits categories index path" do
     category2.items << item3
 
     visit("/categories")
-    save_and_open_page
 
     expect(page).to have_css("img[src*='#{item2.image}']")
     expect(page).to have_css("img[src*='#{item3.image}']")

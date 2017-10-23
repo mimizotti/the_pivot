@@ -18,7 +18,6 @@ RSpec.describe "An API call can be made" do
       token = jth.get_token
 
       conn = Faraday.new("https://localhost:3000/api/v1") do |f|
-        f.adapter                Faraday.default_adapter
         f.headers['X-Token']     = token
         f.params                 = { store: store.name }
       end
@@ -31,7 +30,7 @@ RSpec.describe "An API call can be made" do
       expect(result[2]["name"]).to eq(item3.name)
     end
 
-    it "with specified count" do
+    xit "with specified count" do
       user = create(:user, password: "GETMEIN")
       store = create(:store)
       category1, category2, category3 = create_list(:category, 3)
@@ -46,8 +45,7 @@ RSpec.describe "An API call can be made" do
       jth = JsonTokenHandler.new(username: user.username, password: "GETMEIN")
       token = jth.get_token
 
-      conn = Faraday.new("https://localhost:3000/api/v1") do |f|
-        f.adapter               Faraday.default_adapter
+      conn = Faraday::Adapter::Test::Stubs.new("https://localhost:3000/api/v1") do |f|
         f.headers['X-Token']    = token
         f.params                = { store: store.name,
                                     limit: 1}

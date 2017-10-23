@@ -29,63 +29,26 @@
         1,
         null
       ],
-<<<<<<< HEAD
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/user.rb": [
-=======
-      "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/categories_controller.rb": [
-        1,
-        null,
-        1,
-        4,
-        null,
-        null,
-        1,
-        12,
-        12,
-        null,
-        null,
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/application_controller.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
->>>>>>> fa476ddfad3e964b370605924df8aeaf491feadb
-        1,
         1,
         1,
         null,
         1,
-<<<<<<< HEAD
         1,
         null,
         1,
-=======
-        229,
-        null,
-        null,
         1,
-        149,
-        null,
-        null,
         1,
-        113,
-        null,
->>>>>>> fa476ddfad3e964b370605924df8aeaf491feadb
+        1,
         null,
         1,
         0,
         null,
         null,
         1,
-<<<<<<< HEAD
-=======
-        23,
+        0,
         null,
         null,
->>>>>>> fa476ddfad3e964b370605924df8aeaf491feadb
         null
       ],
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/application_record.rb": [
@@ -94,6 +57,8 @@
         null
       ],
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/store.rb": [
+        1,
+        1,
         1,
         1,
         1,
@@ -113,11 +78,16 @@
         null,
         null,
         null,
+        null,
         0,
         null,
         null,
         1,
         0,
+        0,
+        null,
+        0,
+        null,
         null,
         null,
         null
@@ -138,7 +108,6 @@
         null,
         1,
         null,
-        1,
         null,
         null,
         null,
@@ -158,22 +127,11 @@
         1,
         null,
         1,
-<<<<<<< HEAD
-=======
-        173,
-        null,
-        null,
->>>>>>> fa476ddfad3e964b370605924df8aeaf491feadb
         1,
         null,
         1,
         null,
         1,
-<<<<<<< HEAD
-=======
-        114,
-        null,
->>>>>>> fa476ddfad3e964b370605924df8aeaf491feadb
         null,
         1,
         0,
@@ -216,27 +174,11 @@
         null,
         null,
         1,
-<<<<<<< HEAD
         0,
         null,
         null,
         1,
         0,
-=======
-        null,
-        null,
-        null,
-        null,
-        4,
-        null,
-        null,
-        1,
-        8,
-        8,
-        null,
-        0,
-        null,
->>>>>>> fa476ddfad3e964b370605924df8aeaf491feadb
         null,
         null,
         null
@@ -251,38 +193,31 @@
         1,
         null,
         1,
-        2,
-        2,
+        1,
+        1,
         null,
         null,
         1,
-        2,
-        2,
+        null,
+        1,
+        null,
+        1,
         null,
         null,
+        1,
         null,
+        0,
         0,
         null,
         null,
-<<<<<<< HEAD
-=======
-        22,
-        null,
-        null,
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/order_item.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/order.rb": [
-        1,
->>>>>>> fa476ddfad3e964b370605924df8aeaf491feadb
         1,
         null,
         1,
+        0,
+        0,
+        0,
+        null,
+        0,
         null,
         null,
         null,
@@ -397,33 +332,7 @@
         0,
         0,
         null,
-<<<<<<< HEAD
         0
-=======
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/role.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/store.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/user_role.rb": [
-        1,
-        1,
-        1,
-        1,
-        null
->>>>>>> fa476ddfad3e964b370605924df8aeaf491feadb
       ],
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/application_controller.rb": [
         0,
@@ -433,21 +342,15 @@
         0,
         0,
         0,
+        0,
+        null,
+        0,
+        0,
+        0,
         null,
         0,
         0,
         0,
-        null,
-<<<<<<< HEAD
-        0,
-        0,
-        0,
-=======
-        1,
-        1,
-        1,
-        1,
->>>>>>> fa476ddfad3e964b370605924df8aeaf491feadb
         null,
         0,
         0,
@@ -457,18 +360,11 @@
         0,
         0,
         null,
-<<<<<<< HEAD
         0,
         0,
         0,
+        null,
         0
-=======
-        1,
-        89,
-        null,
-        null,
-        null
->>>>>>> fa476ddfad3e964b370605924df8aeaf491feadb
       ],
       "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/controllers/carts_controller.rb": [
         0,
@@ -520,6 +416,7 @@
         0,
         0,
         null,
+        0,
         0,
         0,
         0,
@@ -803,12 +700,21 @@
         0,
         null,
         0
+      ],
+      "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/role.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/chameleon/Documents/TURING/MOD3/projects/little_shop_of_useless_items/app/models/user_role.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1508716116
-=======
-    "timestamp": 1508725567
->>>>>>> fa476ddfad3e964b370605924df8aeaf491feadb
+    "timestamp": 1508729750
   }
 }

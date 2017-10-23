@@ -25,6 +25,8 @@ gem 'rubycritic'
 gem 'brakeman'
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
 gem 'jwt'
 gem 'figaro'
 gem 'faraday'
