@@ -11,7 +11,9 @@ class User < ApplicationRecord
   end
 
   def create_reset_digest
-    rand(100000...999999).to_s
+    code = rand(100000...999999).to_s
+    self[:reset_digest] = code
+    code
   end
 
   def reset_password

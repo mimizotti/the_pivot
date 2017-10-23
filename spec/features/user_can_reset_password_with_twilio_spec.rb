@@ -4,7 +4,6 @@ feature 'User forgets their password' do
   context 'and clicks the Forgot Password link on the login page' do
     it 'and is taken through the process of resetting their password' do
       user = User.create(first_name: 'Jim', last_name: 'Szalewski', username: 'sadlypath', address: '526 Kalamath St.', phone: '7203616510', email: 'jim.szalewski@gmail.com', password: 'sadsadsad')
-      confirmation_code = '123456'
 
         visit '/login'
         click_on 'Forgot my Password'
@@ -16,16 +15,16 @@ feature 'User forgets their password' do
 
         expect(current_path).to eq '/password-verification'
 
-        expect(page).to have_content 'A confirmation code has been sent to 7203616510'
-        expect(page).to have_css '.container-fluid'
-        expect(page).to have_content 'Enter your confirmation code'
         # And I should have received a text message with a confirmation code
         # expect(message.to).to eq '+17203616510'
         # expect(message.from).to eq '+12406961677'
-        # expect(message.body).to eq 'Your confirmation code is 123456'
-          # message was a place holder variable,
-          # unsure on how to test receipt of confirmation code
-        fill_in 'user[reset_digest]', with: confirmation_code
+        # message was a place holder variable,
+        # unsure on how to test receipt of confirmation code
+        expect(page).to have_content 'A confirmation code has been sent to 7203616510'
+        expect(page).to have_css '.container-fluid'
+        expect(page).to have_content 'Enter your confirmation code'
+
+        fill_in 'user[reset_digest]', with: user[:reset_digest]
         fill_in 'user[password]', with: 'password'
         fill_in 'user[password_confirmation]', with: 'password'
         click_on 'Submit'

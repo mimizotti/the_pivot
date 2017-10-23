@@ -30,6 +30,8 @@ describe User do
     context ".reset_password" do
       it "generates a code, sends it to the users phone and stores it on the user" do
         expect(user.reset_password).to_not be nil
+        expect(user[:reset_digest]).to_not be nil
+        expect(user[:reset_digest]/length).to eq 6
       end
     end
   end

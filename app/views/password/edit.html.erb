@@ -1,6 +1,6 @@
 <h2>A confirmation code has been sent to <%= @user.phone %></h2>
 <div class="container-fluid">
-  <%= form_for @user, url: '/dashboard' do |f| %>
+  <%= form_for @user, url: '/password-update' do |f| %>
     <%= f.label 'Enter your confirmation code' %>
     <%= f.text_field :reset_digest %>
     <%= f.label 'Enter your new password' %>

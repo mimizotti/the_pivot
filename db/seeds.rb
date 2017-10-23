@@ -628,3 +628,6 @@ ants = Store.create!(name: "Ants in My Eyes Johnson's", description: "Our prices
     end
 
     puts "Jewelry seeded"
+
+    @client = Twilio::REST::Client.new ENV['twilio_sid'], ENV['twilio_token']
+    @client.messages.create(from: ENV['twilio_phone'], to: ENV['test_phone'], body: "Seeding complete")
