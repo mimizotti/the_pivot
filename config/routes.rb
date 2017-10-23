@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
+  namespace :api do
+    namespace :v1 do
+      namespace :stores do
+        get '/popular_categories', to: 'categories#index'
+      end
+    end
+  end
+
   resources :stores, only: [:index, :show] do
     resources :items, only: [:index, :show]
   end
@@ -41,12 +49,4 @@ Rails.application.routes.draw do
   post 'cancelled' => 'orders#change_to_cancelled', as: :cancelled
   post 'completed' => 'orders#change_to_completed', as: :completed
 
-  namespace :api do
-    namespace :v1 do
-      namespace :stores do
-        get '/popular_categories', to: 'categories#index'
-      end
-    end
-  end
-  
 end

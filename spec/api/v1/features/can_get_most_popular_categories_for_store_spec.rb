@@ -21,7 +21,7 @@ RSpec.describe "An API call can be made" do
         f.headers['X-Token']     = token
         f.params                 = { store: store.name }
       end
-      response = conn.get("/api/v1/stores/popular_categories")
+      response = conn.get("/api/v1/stores/popular_categories.json")
       result = JSON.parse(response.body)
 
       expect(result.count).to eq(3)
