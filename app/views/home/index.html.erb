@@ -1,0 +1,82 @@
+<section class="team-sec">
+    <div class="container">
+      <h1 class="text-center">Come Visit our Shops!</h1>
+      <p class="home-paragraph text-center">See some of our popular items below <br> we sell books, cars, and a bunch of other stuff</p>
+      <div class="row">
+          <div id="carousel-example" class="carousel slide team team-web-view" data-ride="carousel">
+              <div class="carousel-line">
+                  <div class="controls pull-right">
+                      <a class="left fa fa-angle-left btn" href="#carousel-example" data-slide="prev"></a><a class="right fa fa-angle-right btn " href="#carousel-example" data-slide="next"></a>
+                  </div>
+              </div>
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                  <div class="item active">
+                      <div class="row">
+                          <div class="col-sm-3">
+                              <div class="col-item">
+                                  <div class="photo-shadow"></div>
+                                  <div class="photo">
+                                      <%= link_to image_tag(@items.first.image, class: 'display'), item_path(@items.first)  %>
+                                  </div>
+                                  <div class="info">
+                                      <div class="name"><%= @items.first.title %></div>
+                                      <p class="card-text"><%= number_to_currency(@items.first.price) %></p>
+                                      <div class="degination"><%= @items.first.description %></div>
+                                      <div class="clearfix"></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div class="col-item">
+                                  <div class="photo-shadow"></div>
+                                  <div class="photo">
+                                    <%= link_to image_tag(@items.last.image, class: 'display'), item_path(@items.last)  %>
+                                  </div>
+                                  <div class="info">
+                                      <div class="name"><%= @items.last.title %></div>
+                                      <p class="card-text"><%= number_to_currency(@items.last.price) %></p>
+                                      <div class="degination"><%= @items.last.description %></div>
+                                      <div class="clearfix"></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div class="col-item">
+                                  <div class="photo-shadow"></div>
+                                  <div class="photo">
+                                    <%= link_to image_tag(@items.second.image, class: 'display'), item_path(@items.second)  %>
+                                  </div>
+                                  <div class="info">
+                                      <div class="name"><%= @items.second.title %></div>
+                                      <p class="card-text"><%= number_to_currency(@items.second.price) %></p>
+                                      <div class="degination"><%= @items.second.description %></div>
+                                      <div class="clearfix"></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div class="col-item">
+                                  <div class="photo-shadow"></div>
+                                  <div class="photo">
+                                    <%= link_to image_tag(@items.find(100).image, class: 'display'), item_path(@items.find(100))  %>
+                                  </div>
+                                  <div class="info">
+                                      <div class="name"><%= @items.find(100).title %></div>
+                                      <p class="card-text"><%= number_to_currency(@items.find(100).price) %></p>
+                                      <div class="degination"><%= @items.find(100).description %></div>
+                                      <div class="clearfix"></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                 <div class="item">
+                      <div class="row">
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
