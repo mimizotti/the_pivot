@@ -15,7 +15,9 @@ feature "Business Admin" do
 
     visit '/'
 
-    click_on "Login"
+    within(".login") do
+      click_on "Login"
+    end
 
     fill_in "Username", with: "josh@turing.io"
     fill_in "Password", with: "password"

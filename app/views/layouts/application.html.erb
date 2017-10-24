@@ -28,7 +28,7 @@
       <% if logged_in? %>
         <li style="float:right"><a class="active" href="/logout" data-method="delete">Logout</a></li>
       <% else %>
-        <li style="float:right"><a class="active" href="/login">Login</a></li>
+        <li style="float:right" class="login"><a class="active" href="/login">Login</a></li>
       <% end %>
       <li style="float:right">
         <%= link_to image_tag("glyphicons-203-shopping-cart.png"), cart_path, class: "cart logout" %>

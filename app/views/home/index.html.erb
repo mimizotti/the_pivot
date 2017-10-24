@@ -59,12 +59,12 @@
                               <div class="col-item">
                                   <div class="photo-shadow"></div>
                                   <div class="photo">
-                                    <%= link_to image_tag(@items.find(100).image, class: 'display'), item_path(@items.find(100))  %>
+                                    <%= link_to image_tag(@items.third.image, class: 'display'), item_path(@items.third)  %>
                                   </div>
                                   <div class="info">
-                                      <div class="name"><%= @items.find(100).title %></div>
-                                      <p class="card-text"><%= number_to_currency(@items.find(100).price) %></p>
-                                      <div class="degination"><%= @items.find(100).description %></div>
+                                      <div class="name"><%= @items.third.title %></div>
+                                      <p class="card-text"><%= number_to_currency(@items.third.price) %></p>
+                                      <div class="degination"><%= @items.third.description %></div>
                                       <div class="clearfix"></div>
                                   </div>
                               </div>
