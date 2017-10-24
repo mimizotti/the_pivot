@@ -17,4 +17,10 @@ class Admin::StoresController < ApplicationController
 
     redirect_to admin_store_path(@store)
   end
+
+  private
+
+  def store_params
+    params.require(:store).permit(:name, :description, :image)
+  end
 end

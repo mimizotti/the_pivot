@@ -36,7 +36,7 @@
             <div class="card border-0 text-center">
               <div class="card-body item-<%= "#{item.id}" %>">
                 <h4 class="card-title"><%= link_to item.title, item_path(item) %></h4>
-                <%= link_to image_tag(assets_path(item.image), class: 'display'), item_path(item) %>
+                <%= link_to image_tag(asset_path(item.image), class: 'display'), item_path(item) %>
                 <p class="card-text"><%= item.description %></p>
                 <p class="card-text"><%= number_to_currency(item.price) %></p>
                 <% if item.active? %>

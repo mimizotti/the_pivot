@@ -99,7 +99,7 @@ feature "Business Admin" do
 
     fill_in "Description", with: "This store sells all the things."
 
-    click_on "Update Item"
+    click_on "Update Store"
 
     expect(current_path).to eq(admin_store_path(@store))
     expect(page).to have_content("This store sells all the things.")
