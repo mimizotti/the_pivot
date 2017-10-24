@@ -6,4 +6,15 @@ class Admin::StoresController < ApplicationController
     @store = Store.find(params["id"])
     @store_orders = OrderItem.store_orders(@store)
   end
+
+  def edit
+    @store = Store.find(params["id"])
+  end
+
+  def update
+    @store = Store.find(params["id"])
+    @store.update(store_params)
+
+    redirect_to admin_store_path(@store)
+  end
 end

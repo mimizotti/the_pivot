@@ -10,58 +10,31 @@
       <button class="round"><%= link_to "Create New Item", new_admin_store_item_path(@store) %></button>
   </div>
 
-<table class="table table-striped text-left table-bordered">
-  <thead><strong>All Orders</strong></thead>
-  <tr>
-    <th>Order ID</th>
-    <th>Full Name</th>
-    <th>Address</th>
-    <th>Item</th>
-    <th>Quantity</th>
-    <th>Total Price</th>
-    <th>Status</th>
-    <th>Change to Paid/Completed</th>
-    <th>Cancel Order</th>
-  </tr>
-  <tbody>
-    <tr><% @store_orders.each do |store_order| %></tr>
-    <td><%= store_order.order.id %></td>
-    <td><%= store_order.order.user.full_name %></td>
-    <td><%= store_order.order.user.address %></td>
-    <td><%= store_order.item.title %>
-    <td><%= store_order.quantity %></td>
-    <td>$<%= store_order.line_item_total %></td>
-    <td><%= store_order.order.status %></td>
-    <% @order = store_order %>
-    <td><% if @order.ordered? %>
-          <%= button_to "Paid", paid_path(@order), class: "btn btn-primary" %>
-        <% end %>
-        <% if @order.paid? %>
-          <%= button_to "Completed", completed_path(@order), class: "btn btn-primary" %>
-        <% end %>
-    </td>
-    <td>
-      <% if store_order.order.ordered? || store_order.order.paid? %>
-        <%= button_to "Cancel", cancelled_path(@order), class: "btn btn-danger" %>
-      <% end %>
-    </td>
-    <% end %>
-  </tbody>
-</table>
-
-<table class="table table-striped text-left table-bordered">
-  <thead><strong>Orders By Status</strong></thead>
-  <tr>
-    <th><%= link_to 'Ordered', admin_ordered_path %></th>
-    <th><%= link_to 'Paid', admin_paid_path %></th>
-    <th><%= link_to 'Cancelled', admin_cancelled_path %></th>
-    <th><%= link_to 'Completed', admin_completed_path %></th>
-  </tr>
-  <tbody>
-    <tr>
-      <td><%= @store_orders.ordered_count %></td>
-      <td><%= @store_orders.paid_count %></td>
-      <td><%= @store_orders.cancelled_count %></td>
-      <td><%= @store_orders.completed_count %></td>
-    </tr>
-  </tbody>
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Store Information</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#orders" role="tab">Orders</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#messages" role="tab">Items</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Analytics</a>
+  </li>
+</ul>
+<div>
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home" role="tabpanel">
+    <%= render "admin/shared/store" %>
+  </div>
+  <div class="tab-pane" id="orders" role="tabpanel">
+    <%= render "admin/shared/orders" %>
+  </div>
+  <div class="tab-pane" id="items" role="tabpanel">...</div>
+  <div class="tab-pane" id="analytics" role="tabpanel">...</div>
+</div>
+</div>
