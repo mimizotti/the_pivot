@@ -23,7 +23,7 @@ RSpec.describe "An API call can be made" do
       end
       response = conn.get("/api/v1/stores/popular_categories")
       result = JSON.parse(response.body)
-      binding.pry
+
       expect(result.count).to eq(3)
       expect(result[0]["name"]).to eq(category1.name)
       expect(result[1]["name"]).to eq(category2.name)
