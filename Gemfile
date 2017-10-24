@@ -22,6 +22,7 @@ gem 'omniauth-twitter'
 gem 'figaro'
 gem 'faraday'
 gem 'jquery-rails'
+gem 'twilio-ruby'
 # gem 'capistrano-rails', group: :development
 # gem 'therubyracer', platforms: :ruby
 # gem 'redis', '~> 3.0'
