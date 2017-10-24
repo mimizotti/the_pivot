@@ -1,0 +1,92 @@
+.logout {
+  margin-right: 10px;
+}
+
+.leitbild-text{
+  font-size: 2em;
+  line-height: 2em;
+  height: 13em;
+  display: table;
+  vertical-align: middle;
+  margin:auto;
+}
+
+.head {
+  text-align: center;
+}
+
+.profile {
+  width: 500px;
+  text-align: center;
+  margin-left: 450px;
+}
+
+.round {
+  border-radius: 5px;
+}
+
+.add-to-cart{
+
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+
+ .display {
+  width:  250px;
+  height: 250px;
+ }
+
+ .thumbs {
+  width:  75px;
+  height: 75px;
+ }
+
+ .btn-circle {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  padding: 6px;
+  font-size: 12px;
+  line-height: 1;
+  border-radius: 15px;
+  float: right;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 110px;
+  font-family: 'Fredericka the Great', cursive;
+}
+p{
+  font-family: 'Caveat Brush', cursive;
+}
+
+
+.loginBtn--twitter {
+  position: relative;
+  text-align: center;
+  }
+
+
+.loginBtn--twitter:before {
+  background: url('https://s.gr-assets.com/assets/icons/twitter_icon-2289166aec1c47ee68cfb5716142273f.jpg') 6px 6px no-repeat;
+}
+.loginBtn--twitter:focus {
+  background: #66ccff;
+}
