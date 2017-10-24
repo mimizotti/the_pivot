@@ -30,7 +30,6 @@ feature "user can checkout" do
 
     visit "/dashboard"
 
-    expect(page).to have_content("Logged in as #{user.username}")
     expect(page).to have_content user.username
 
     find(:css, ".cart").click
@@ -95,7 +94,7 @@ feature "user can checkout" do
 
     fill_in "Username", with: user.username
     fill_in "Password", with: user.password
-    click_on "Login"
+    click_button "Login"
 
     find(:css, ".cart").click
     click_button "Checkout"

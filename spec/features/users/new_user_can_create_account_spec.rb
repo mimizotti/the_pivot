@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe "An unregistered user creates an account" do
+  before(:each) do
+    create_list(:item, 10)
+  end
   context "with valid information" do
     it "and sees their dashboard" do
       visit '/'
@@ -21,7 +24,6 @@ RSpec.describe "An unregistered user creates an account" do
       click_on "Create User"
 
       expect(current_path).to eq '/dashboard'
-      expect(page).to have_content("Logged in as booboo")
       expect(page).to have_content("Mike Butera")
       expect(page).to have_content("123 Some Street")
       expect(page).to have_content("booboo")

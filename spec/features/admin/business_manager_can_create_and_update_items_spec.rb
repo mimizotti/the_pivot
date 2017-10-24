@@ -15,11 +15,13 @@ feature "As a business manager" do
 
     visit '/'
 
-    click_on "Login"
+    within(".login") do
+      click_on "Login"
+    end
 
     fill_in "Username", with: "josh@turing.io"
     fill_in "Password", with: "password"
-    click_on "Login"
+    click_button "Login"
   end
   scenario "I can create items for my store" do
 

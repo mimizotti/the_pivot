@@ -21,7 +21,7 @@ feature "Business Admin" do
 
     fill_in "Username", with: "josh@turing.io"
     fill_in "Password", with: "password"
-    click_on "Login"
+    click_button "Login"
   end
   scenario "I can create items for my store" do
     expect(current_path).to eq('/admin/dashboard')
