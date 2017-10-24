@@ -433,66 +433,66 @@ car_collection.map do |c|
   ItemCategory.create(item: c, category: cars)
 end
 
-ants = Store.create!(name: "Ants in My Eyes Johnson's", description: "Our prices, I hope, aren't too low!", image: "j-peterman.png")
+ants = Store.create!(name: "Ants in My Eyes Johnson's", description: "Our prices, I hope, aren't too low!", image: "antsinmyeyes.jpeg")
 
 appliances = Category.create(name: "home appliances", title: "Home Appliances")
 
 appliance_items = [
-  Item.create(store: ants, title: "Refridgerator", description: "Keep food cold", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Microwave", description: "Heat food up", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "VCR", description: "Outdated but classic", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "DVD Player", description: "Streaming has taken its place", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Toaster Oven", description: "The bachelor's dream", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Vacuum Cleaner", description: "Clean up", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Space Heater", description: "Stay warm dude!", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Toaster", description: "Breakfast is served", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Deep Freeze", description: "Keep large amounts of meat", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "TV", description: "Cornerstone", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Interdimensional Cable Box", description: "Check out TV from different timelines", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Butter Robot", description: "Passes the butter, SRP baby!", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Meseeks Box", description: "Give it a simple task, or else", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Box Fan", description: "keep cool", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Boombox", description: "Blast the tunes", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Alarm Clock", description: "Wake up Morty!", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Roomba", description: "If you don't want to manually vacuum", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Desk Lamp", description: "Get some work done with proper lighting", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Printer", description: "Print off your emails and then shred them up", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Coffee Maker", description: "For the working stiff", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Crock Pot", description: "Slooooow cook that pork shoulder", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Pressure Cooker", description: "Garbanzo beans come out great", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Waffle Iron", description: "Because who doesn't love waffles", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Blender", description: "Make that smoothie", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Food Processor", description: "Make that pesto", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "TV Tray", description: "For TV dinners", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Reading Lamp", description: "Clamp it onto your headboard", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Hot Plate", description: "Makes great grilled cheeses", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Espresso Machine", description: "For the purest", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Bendy Lamp", description: "Works in tight spaces", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Washer", description: "Standard washer", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Dryer", description: "Standard dryer", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Washer/Dryer Stack Combo", description: "Excellent space saver", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "The Clapper", description: "Clap on Clap off", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "TV Stand", description: "Put the TV on it", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Stand Mixer", description: "Make some dough, or batter", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Immersion Blender", description: "Handy mixing tool", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Panini Press", description: "Make grilled sandwiches", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Iron", description: "Smooth out your clothes", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Can opener", description: "Automatic", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Juicer", description: "All the rage right now", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Dehumidifier", description: "Dry up the air", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Humidifier", description: "Helps with breathing difficulties in dry climates", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Garbage Disposal", description: "Dump food down the drain", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Water Purifier", description: "Take out the heavy metals", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Sewing Machine", description: "Sew it up", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Paper Shredder", description: "To shred up your printed emails", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Smoke Detector", description: "Don't get burnt", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Carbon Monoxide Detector", description: "The silent killer just met its match", price: Faker::Commerce.price),
-  Item.create(store: ants, title: "Swamp Cooler", description: "Keep it cool, and dare I say it, moist", price: Faker::Commerce.price)
+  Item.create(store: ants, title: "Refridgerator", description: "Keep food cold", price: Faker::Commerce.price, image: "fridge.jpeg"),
+  Item.create(store: ants, title: "Microwave", description: "Heat food up", price: Faker::Commerce.price, image: "microwave.jpeg"),
+  Item.create(store: ants, title: "VCR", description: "Outdated but classic", price: Faker::Commerce.price, image: "vcr.jpg"),
+  Item.create(store: ants, title: "DVD Player", description: "Streaming has taken its place", price: Faker::Commerce.price, image: "dvd.jpeg"),
+  Item.create(store: ants, title: "Toaster Oven", description: "The bachelor's dream", price: Faker::Commerce.price, image: "toaster_over.jpeg"),
+  Item.create(store: ants, title: "Vacuum Cleaner", description: "Clean up", price: Faker::Commerce.price, image: "vacuum.jpg"),
+  Item.create(store: ants, title: "Space Heater", description: "Stay warm dude!", price: Faker::Commerce.price, image: "space_heater.jpeg"),
+  Item.create(store: ants, title: "Toaster", description: "Breakfast is served", price: Faker::Commerce.price, image: "toaster.jpeg"),
+  Item.create(store: ants, title: "Deep Freeze", description: "Keep large amounts of meat", price: Faker::Commerce.price, image: "deep_freeze.jpeg"),
+  Item.create(store: ants, title: "TV", description: "Cornerstone", price: Faker::Commerce.price, image: "tv.png"),
+  Item.create(store: ants, title: "Interdimensional Cable Box", description: "Check out TV from different timelines", price: Faker::Commerce.price, image: "interdimensional_cable.png"),
+  Item.create(store: ants, title: "Butter Robot", description: "Passes the butter, SRP baby!", price: Faker::Commerce.price, image: "butter_robot.png"),
+  Item.create(store: ants, title: "Meseeks Box", description: "Give it a simple task, or else", price: Faker::Commerce.price, image: "meseeks.jpg"),
+  Item.create(store: ants, title: "Box Fan", description: "keep cool", price: Faker::Commerce.price, image: "box_fan."),
+  Item.create(store: ants, title: "Boombox", description: "Blast the tunes", price: Faker::Commerce.price, image: "boombox.jpg"),
+  Item.create(store: ants, title: "Alarm Clock", description: "Wake up Morty!", price: Faker::Commerce.price, image: "alarm_clock.jpeg"),
+  Item.create(store: ants, title: "Roomba", description: "If you don't want to manually vacuum", price: Faker::Commerce.price, image: "roomba.jpeg"),
+  Item.create(store: ants, title: "Desk Lamp", description: "Get some work done with proper lighting", price: Faker::Commerce.price, image: "desk_lamp.jpeg"),
+  Item.create(store: ants, title: "Printer", description: "Print off your emails and then shred them up", price: Faker::Commerce.price, image: "printer.jpeg"),
+  Item.create(store: ants, title: "Coffee Maker", description: "For the working stiff", price: Faker::Commerce.price, image: "coffee_maker.jpg"),
+  Item.create(store: ants, title: "Crock Pot", description: "Slooooow cook that pork shoulder", price: Faker::Commerce.price, image: "crock_pot.jpg"),
+  Item.create(store: ants, title: "Pressure Cooker", description: "Garbanzo beans come out great", price: Faker::Commerce.price, image: "pressure_cooker.jpg"),
+  Item.create(store: ants, title: "Waffle Iron", description: "Because who doesn't love waffles", price: Faker::Commerce.price, image: "waffle_iron.jpeg"),
+  Item.create(store: ants, title: "Blender", description: "Make that smoothie", price: Faker::Commerce.price, image: "blender.jpg"),
+  Item.create(store: ants, title: "Food Processor", description: "Make that pesto", price: Faker::Commerce.price, image: "food_processor.jpeg"),
+  Item.create(store: ants, title: "TV Tray", description: "For TV dinners", price: Faker::Commerce.price, image: "tv_tray.jpeg"),
+  Item.create(store: ants, title: "Reading Lamp", description: "Clamp it onto your headboard", price: Faker::Commerce.price, image: "reading_lamp.jpg"),
+  Item.create(store: ants, title: "Hot Plate", description: "Makes great grilled cheeses", price: Faker::Commerce.price, image: "hot_plate.jpeg"),
+  Item.create(store: ants, title: "Espresso Machine", description: "For the purest", price: Faker::Commerce.price, image: "espresso.jpeg"),
+  Item.create(store: ants, title: "Bendy Lamp", description: "Works in tight spaces", price: Faker::Commerce.price, image: "bendy_lamp.png"),
+  Item.create(store: ants, title: "Washer", description: "Standard washer", price: Faker::Commerce.price, image: "washer.jpeg"),
+  Item.create(store: ants, title: "Dryer", description: "Standard dryer", price: Faker::Commerce.price, image: "dryer.jpeg"),
+  Item.create(store: ants, title: "Washer/Dryer Stack Combo", description: "Excellent space saver", price: Faker::Commerce.price, image: "combo.jpeg"),
+  Item.create(store: ants, title: "The Clapper", description: "Clap on Clap off", price: Faker::Commerce.price, image: "clapper.jpeg"),
+  Item.create(store: ants, title: "TV Stand", description: "Put the TV on it", price: Faker::Commerce.price, image: "tv_stand.png"),
+  Item.create(store: ants, title: "Stand Mixer", description: "Make some dough, or batter", price: Faker::Commerce.price, image: "stand_mixer.jpeg"),
+  Item.create(store: ants, title: "Immersion Blender", description: "Handy mixing tool", price: Faker::Commerce.price, image: "immersion_blender.jpeg"),
+  Item.create(store: ants, title: "Panini Press", description: "Make grilled sandwiches", price: Faker::Commerce.price, image: "panini.jpeg"),
+  Item.create(store: ants, title: "Iron", description: "Smooth out your clothes", price: Faker::Commerce.price, image: "iron.jpeg"),
+  Item.create(store: ants, title: "Can opener", description: "Automatic", price: Faker::Commerce.price, image: "can_opener.jpeg"),
+  Item.create(store: ants, title: "Juicer", description: "All the rage right now", price: Faker::Commerce.price, image: "juicer.jpeg"),
+  Item.create(store: ants, title: "Dehumidifier", description: "Dry up the air", price: Faker::Commerce.price, image: "dehumid.jpeg"),
+  Item.create(store: ants, title: "Humidifier", description: "Helps with breathing difficulties in dry climates", price: Faker::Commerce.price, image: "humid.jpeg"),
+  Item.create(store: ants, title: "Garbage Disposal", description: "Dump food down the drain", price: Faker::Commerce.price, image: "garbage_disposal.jpeg"),
+  Item.create(store: ants, title: "Water Purifier", description: "Take out the heavy metals", price: Faker::Commerce.price, image: "water_purifier.jpeg"),
+  Item.create(store: ants, title: "Sewing Machine", description: "Sew it up", price: Faker::Commerce.price, image: "sewing_machine.jpeg"),
+  Item.create(store: ants, title: "Paper Shredder", description: "To shred up your printed emails", price: Faker::Commerce.price, image: "paper_shredder.jpeg"),
+  Item.create(store: ants, title: "Smoke Detector", description: "Don't get burnt", price: Faker::Commerce.price, image: "smoke_detector.jpeg"),
+  Item.create(store: ants, title: "Carbon Monoxide Detector", description: "The silent killer just met its match", price: Faker::Commerce.price, image: "co_detector.jpeg"),
+  Item.create(store: ants, title: "Swamp Cooler", description: "Keep it cool, and dare I say it, moist", price: Faker::Commerce.price, image: "swamp_cooler.jpeg")
 ]
 
 appliance_items.each do |item|
   ItemCategory.create(item: item, category: appliances)
-  puts "Adding #{item[:name]} to the Home Appliances category"
+  puts "Adding #{item[:title]} to the Home Appliances category"
 end
 
 store_a = Store.create!(name: "Francesca's", description: "Clothing and Jewelry", image: "francescas.png")
@@ -612,14 +612,14 @@ jewelry_items = [
 
 clothes_items.map do |item|
   ItemCategory.create(item: item, category: clothes)
-  puts "Adding #{item[:name]} to the Clothes category"
+  puts "Adding #{item[:title]} to the Clothes category"
 end
 
 puts "Clothes seeded"
 
 jewelry_items.map do |item|
   ItemCategory.create(item: item, category: jewelry)
-  puts "Adding #{item[:name]} to the Jewelry category"
+  puts "Adding #{item[:title]} to the Jewelry category"
 end
 
 puts "Jewelry seeded"
@@ -692,9 +692,8 @@ stores.zip(business_admins).each do |store, ba|
   puts "#{ba.first_name} is now the Business Admin at #{store.name}!"
 end
 
-User.create(first_name: "Cory", last_name: "Westerfield", username: "cory@turing.io", password: "password", address: "1331 17th St ll100, Denver, CO 80202", email: "cory@turing.io", platform_admin: true)
-User.create(first_name: "Jim", last_name: "Sad Path", address: "The road to success requires a sad path", email: "sadpath@littleshop.com", username: "sadpath", password: "saddestpath", platform_admin: true)
-User.create(first_name: "Ash", last_name: "Whatever", address: "I am as dry as my code", email: "ash@littleshop.com", username: "ash", password: "ash", platform_admin: true)
-User.create(first_name: "Mimi", last_name: "Le", address: "18th & Market is where it's at", email: "mimi@littleshop.com", username: "mimi", password: "mimi", platform_admin: true)
-User.create(first_name: "Liam", last_name: "Barstad", address: "The same as above", email: "liam@littleshop.com", username: "Liam", password: "LOGIN", platform_admin: true)
-
+User.create(first_name: "Cory", last_name: "Westerfield", username: "cory@turing.io", password: ENV['cory_password'], address: "1331 17th St ll100, Denver, CO 80202", email: "cory@turing.io", platform_admin: true)
+User.create(first_name: "Jim", last_name: "Sad Path", address: "The road to success requires a sad path", email: "sadpath@littleshop.com", username: ENV['jim_password'], password: "saddestpath", platform_admin: true)
+User.create(first_name: "Ash", last_name: "Whatever", address: "I am as dry as my code", email: "ash@littleshop.com", username: "ash", password: ENV['ash_password'], platform_admin: true)
+User.create(first_name: "Mimi", last_name: "Le", address: "18th & Market is where it's at", email: "mimi@littleshop.com", username: "mimi", password: ENV['mimi_password'], platform_admin: true)
+User.create(first_name: "Liam", last_name: "Barstad", address: "The same as above", email: "liam@littleshop.com", username: "Liam", password: ENV['liam_password'], platform_admin: true)
