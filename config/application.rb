@@ -27,5 +27,6 @@ module LittleShop
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end
