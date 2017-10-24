@@ -2,7 +2,12 @@ class Api::V1::Stores::CategoriesController < ApplicationController
   before_action :authenticate
 
   def index
-    render json: Category.first
+    store = Store.find_by(name: request.params["store"])
+    if store
+      render json: Category.by_store_and_popularity(store)
+    else
+      render json: nil
+    end
   end
 
   private

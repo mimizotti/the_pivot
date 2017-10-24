@@ -22,4 +22,9 @@ class Category < ApplicationRecord
     end
   end
 
+  def self.by_store_and_popularity(store)
+    store_specific = self.where("items.store_id = ?", store.id)
+    self.by_popularity.merge(store_specific).to_a.uniq
+  end
+
 end
