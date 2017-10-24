@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
-  before_action :require_login, except: [:new, :create, :edit, :update]
-  # before_action :verify_info, only: [:update]
+  # before_action :require_login, except: [:new, :create, :edit, :update]
 
   def new
     @user = User.new
@@ -24,21 +23,17 @@ class UsersController < ApplicationController
   end
 
   def update
-    if current_user.save && current_user.is_admin?
-      current_user.update!(user_params)
-      redirect_to admin_dashboard_path
-    elsif current_user.save
-      current_user.update!(user_params)
+    if current_user.save
+      current_user.update(user_params)
       redirect_to dashboard_path
     else
-      redirect_to edit_user_path
     end
   end
 
   private
 
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :address)
+      params.require(:user).permit(:first_name, :last_name, :username, :email, :address, :password)
     end
 
     def require_login
@@ -47,8 +42,4 @@ class UsersController < ApplicationController
         redirect_to login_path
       end
     end
-
-    # def verify_info
-    #   require "pry"; binding.pry
-    # end
 end
