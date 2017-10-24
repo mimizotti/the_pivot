@@ -1,3 +1,20 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.team-sec{float: left;width: 100%;}
+.team .photo {width: 250px; height: 250px; display: inline-block; overflow: hidden; position: relative; }
+.photo-shadow {position: absolute; z-index: -1; top: 12px; left: 16px; bottom: -10px; border: 1px solid #E3E3E3; height: 250px; width: 246px; background: #fff; }
+.col-item{position: relative;}
+.team{margin-top: 60px;}
+.team .photo img{width: 100%;    vertical-align: middle;position: relative;}
+.social-connect{margin-top: 13px;}
+.info{margin-top: 22px;}
+.info .name{font-size: 18px;font-weight: 600;margin-bottom: 2px;}
+.info .degination{font-size: 16px;font-weight: 300;font-style: italic;color: #8B8B8B;}
+.social-connect a{ display: inline-block; border: 1px solid #E3E3E3; font-size: 14px; color: #919191; width: 24px; height: 24px; text-align: center; line-height: 24px;margin-right: 4px;}
+.social-connect a .fa{margin: 0;}
+.social-connect a:hover{background-color: #4EBEE9;color: #fff;} .carousel-line{    border: 1px solid #ddd; height: 320px; position: absolute; bottom: -90px; width: 110%; left: -5.5%;}
+.carousel-line > .controls{position: absolute; bottom: -16px; left: 50%; margin-left: -50px; background: #fff; padding: 0px 20px; color: #000;}
+.carousel-line > .controls > a{    color: #868686; font-size: 24px; font-weight: 300;}
