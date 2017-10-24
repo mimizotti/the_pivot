@@ -19,11 +19,12 @@ class User < ApplicationRecord
 
   def create_reset_digest
     code = rand(100000...999999).to_s
-    self[:reset_digest] = code
+    self.update_attribute(:reset_digest, code)
     code
   end
 
   def reset_password
+    require "pry"; binding.pry
     create_reset_digest
     @client = Twilio::REST::Client.new ENV['twilio_sid'], ENV['twilio_token']
     @client.messages.create(from: ENV['twilio_phone'], to: self.phone, body: "Your confirmation code is #{create_reset_digest}")

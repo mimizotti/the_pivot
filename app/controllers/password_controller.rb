@@ -16,12 +16,17 @@ class PasswordController < ApplicationController
 
   def edit
     @user = User.find_by(phone: params[:phone])
-    @user.reset_password
     require "pry"; binding.pry
-    redirect_to controller: :password, action: :update, params: {user: @user}
+    @user.reset_password
+    redirect_to params: {user: @user}
   end
 
   def update
     @user = User.find(params[:user])
   end
 end
+
+private
+    def user_params
+      params.require(:user).permit(:reset_digest, :id, :phone, :email)
+    end

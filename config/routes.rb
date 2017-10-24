@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/password-reset', to: 'password#new'
   post '/password-confirmation', to: 'password#create'
   get '/password-verification', to: 'password#edit'
-  get '/password-update', to: 'password#update'
+  put '/password-update', to: 'password#update'
 
   resources :stores, only: [:index, :show] do
     resources :items, only: [:index, :show]
