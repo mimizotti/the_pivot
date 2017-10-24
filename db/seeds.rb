@@ -651,9 +651,10 @@ end
 orders = Order.all
 items = Item.all
 stores = Store.all
+status = [0, 1, 2, 3]
 
 orders.each do |order|
-  OrderItem.create(item: items.sample, order: order, quantity: rand(1..9))
+  OrderItem.create(item: items.sample, order: order, quantity: rand(1..9), status: status.sample)
   puts "OrderItem #{order.id} created!"
 end
 

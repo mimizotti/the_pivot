@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <%= form_for [:admin, @item], html: { multipart: true } do |f| %>
+  <%= form_for [:admin, @store, @item], html: { multipart: true } do |f| %>
 
     <div class="form-group">
       <%= f.label :title %>
@@ -27,6 +27,6 @@
       <%= f.text_field :image %>
     </div>
 
-    <%= f.submit class: 'btn btn-primary'%>
+    <%= f.submit class: 'btn btn-primary' %>
   <% end %>
 </div>
