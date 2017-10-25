@@ -22,12 +22,12 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
 
-  resources :items, only:[:new, :create, :index, :show]
+  resources :items, only:[:new, :create, :index]
 
   resource :cart
 
+  get '/:item', to: 'items#show', param: :slug, as: "item"
   get '/:category', to: 'categories#show', param: :slug, as: "category"
-
 
   namespace :admin do
     get "/dashboard", to: "users#show", as: "dashboard"

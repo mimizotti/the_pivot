@@ -6,6 +6,6 @@ FactoryGirl.define do
     description "This product is totatlly useless"
     price "9.99"
     image "smacys.png"
-    store
+    store 
   end
 end
