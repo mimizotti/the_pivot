@@ -1,55 +1,17 @@
 require 'rails_helper'
 
 describe Item do
-
-  let(:store) { Store.create(name: "Knautical Knots", description: "Underwater basket weaving supplies, not just for lazy millenials!", image: "knotical-knots.png") }
-
-  describe "validations" do
-    context "invalid attributes" do
-      it "is invalid without a unique title" do
-        Item.create(title: "Mask", store: store, description: "Something to put on your face.", price: 49.95, status: 1)
-        item = Item.new(title: "Mask", store: store, description: "Something to put on your face.", price: 49.95, status: 1)
-        expect(item).to be_invalid
-      end
-
-      it "is invalid without a description" do
-        item = Item.new(title: "Mask", price: 49.95, status: 1)
-        expect(item).to be_invalid
-      end
-
-      it "is invalid without a price" do
-        item = Item.new(title: "Mask", store: store, description: "Something to put on your face.", status: 1)
-        expect(item).to be_invalid
-      end
-    end
-
-    context "valid attributes" do
-      it "is valid with a title, description, and price" do
-        item = Item.new(title: "Mask", store: store, description: "Something to put on your face.", price: 49.95, status: 1)
-        expect(item).to be_valid
-      end
-    end
+  describe 'validations' do
+    it { should validate_presence_of(:title) }
+    it { should validate_presence_of(:description) }
+    it { should validate_presence_of(:price) }
+    it { should validate_uniqueness_of(:title) }
   end
 
-  describe "relationships" do
-    it "has many order_items" do
-      item = Item.new(title: "Mask", store: store, description: "Something to put on your face.", price: 49.95, status: 1)
-      expect(item).to respond_to(:order_items)
-    end
-
-    it "has many orders" do
-      item = Item.new(title: "Mask", store: store, description: "Something to put on your face.", price: 49.95, status: 1)
-      expect(item).to respond_to(:orders)
-    end
-
-    it "has many item_categories" do
-      item = Item.new(title: "Mask", store: store, description: "Something to put on your face.", price: 49.95, status: 1)
-      expect(item).to respond_to(:item_categories)
-    end
-
-    it "has many categories" do
-      item = Item.new(title: "Mask", store: store, description: "Something to put on your face.", price: 49.95, status: 1)
-      expect(item).to respond_to(:categories)
-    end
+  describe 'relationships' do
+    it { should belong_to(:store) }
+    it { should have_many(:orders) }
+    it { should have_many(:item_categories) }
+    it { should have_many(:categories).through(:item_categories) }
   end
 end
