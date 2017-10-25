@@ -63,5 +63,17 @@ feature "Platform Admin" do
     expect(page).to have_content("9999.99")
   end
 
+  scenario "I can manage another stores orders" do
 
+  end
+
+  scenario "I can update a store's personal information" do
+
+  end
+
+  scenario "I can manage any business admin for any of my shops" do
+
+  end
+
+  
 end
