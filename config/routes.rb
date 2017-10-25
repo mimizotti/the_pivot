@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   get '/auth/twitter',  as: :twitter_login
   get '/auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
+  get '/password-reset', to: 'reset#show'
+  get '/password-confirmation', to: 'confirmation#edit'
+  patch '/password-confirmation', to: 'confirmation#update'
 
   resources :items, only:[:new, :create, :index, :show]
 
@@ -35,9 +38,12 @@ Rails.application.routes.draw do
     get '/cancelled', to: "orders#cancelled"
     get '/completed', to: "orders#completed"
     get '/items', to: 'items#index', as: 'items'
+<<<<<<< HEAD
     get '/pending_stores', to: 'pending_stores#index'
     resources :pending_stores, only: [:show, :update]
 
+=======
+>>>>>>> master
     resources :stores, only: [:show, :edit, :update] do
       resources :items, only: [:index, :new, :edit, :update, :create]
     end

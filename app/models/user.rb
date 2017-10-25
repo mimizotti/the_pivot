@@ -1,8 +1,9 @@
 class User < ApplicationRecord
   has_secure_password
 
-  validates_presence_of :first_name, :last_name, :username, :password, :address, :email
+  validates_presence_of :first_name, :last_name, :username, :address, :email
   validates_uniqueness_of :username
+  validates :password, confirmation: true, presence: true
 
   has_many :orders
   has_many :user_roles
