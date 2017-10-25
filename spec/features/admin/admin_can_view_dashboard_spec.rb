@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe "Admin visits dashboard" do
+  before(:each) do
+    create_list(:item, 10)
+  end
   it "admin sees dashboard" do
 
     user = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive", platform_admin: true)

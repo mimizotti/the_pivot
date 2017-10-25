@@ -36,7 +36,7 @@ Rails.application.routes.draw do
     get '/cancelled', to: "orders#cancelled"
     get '/completed', to: "orders#completed"
     get '/items', to: 'items#index', as: 'items'
-    resources :stores, only: [:show] do
+    resources :stores, only: [:show, :edit, :update] do
       resources :items, only: [:index, :new, :edit, :update, :create]
     end
   end

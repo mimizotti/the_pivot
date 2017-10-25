@@ -5,7 +5,7 @@ class OrderItem < ApplicationRecord
   enum status: [:ordered, :paid, :cancelled, :completed]
 
   def self.store_orders(store)
-    joins(:item).where(items: {store: store})
+    joins(:item).includes(order: :user).where(items: {store: store})
   end
 
   def self.ordered

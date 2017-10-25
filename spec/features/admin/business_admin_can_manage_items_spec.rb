@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature "As a business manager" do
+feature "Business Admin" do
   before(:each) do
     bus_man = User.create(first_name: "Josh", last_name: "Mejia", username: "josh@turing.io", password: "password", address: "1331 17th St ll100, Denver, CO 80202", email: "josh@turing.io")
     @store = create(:store)
@@ -11,7 +11,7 @@ feature "As a business manager" do
       ItemCategory.create(item: item, category: @category)
     end
 
-    UserRole.create(user: bus_man, role: Role.create(name: "Business Manager"), store: @store)
+    UserRole.create(user: bus_man, role: Role.create(name: "Business Admin"), store: @store)
 
     visit '/'
 
@@ -24,10 +24,9 @@ feature "As a business manager" do
     click_button "Login"
   end
   scenario "I can create items for my store" do
-
     expect(current_path).to eq('/admin/dashboard')
 
-    expect(page).to have_content("Business Manager")
+    expect(page).to have_content("Business Admin")
 
     find(".#{Store.first.name}").click
 
@@ -87,5 +86,24 @@ feature "As a business manager" do
 
     expect(current_path).to eq(admin_store_items_path(@store))
     expect(page).to have_content("retired")
+  end
+  scenario "I can update my business information" do
+
+    find(".#{Store.first.name}").click
+
+    expect(page).to have_content("Update Business Information")
+
+    click_on "Update Business Information"
+
+    expect(page).to have_field("Name")
+    expect(page).to have_field("Description")
+    expect(page).to have_field("Image")
+
+    fill_in "Description", with: "This store sells all the things."
+
+    click_on "Update Store"
+
+    expect(current_path).to eq(admin_store_path(@store))
+    expect(page).to have_content("This store sells all the things.")
   end
 end
