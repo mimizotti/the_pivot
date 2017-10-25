@@ -1,6 +1,3 @@
-
-require 'rails_helper'
-
 require 'rails_helper'
 
 feature "Platform Admin" do
@@ -32,7 +29,7 @@ feature "Platform Admin" do
   scenario "I can deny a new business application for my website" do
 
 
-  end 
+  end
 
 
 end
