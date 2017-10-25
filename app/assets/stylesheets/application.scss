@@ -57,23 +57,34 @@ p{
 .loginBtn--twitter:focus {
   background: #66ccff;
 }
+.footer {
+  background-color: rgba(50, 50, 50, 0.3);
+  width: 100%;
+  height: 15em;
+  padding: 0.5em;
+}
 /////////////stores index
 .store_title {
-  text-align: center;
   font-family: 'Caveat Brush', cursive;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
 }
 .store {
   vertical-align: top;
   display: inline-block;
-  align-items: center;
-  padding: 20px;
+  text-align: center;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  padding: 5px;
 }
 .gradient_unselect {
   background: linear-gradient(to top left, rgba(184, 184, 160, 0.5), rgba(243, 243, 46, 0.7));
 }
 .gradient_select {
   background: linear-gradient(to top left, rgba(144, 46, 243, 0.5), rgba(243, 243, 46, 0.7));
+}
+.body_background_img {
+  background-image: url("https://thumbs.dreamstime.com/b/arabesque-star-pattern-grunge-light-grey-background-vector-illustration-65877348.jpg");
 }
 #main_title {
   background-color: rgba(255, 255, 255, 0.4);
@@ -84,7 +95,9 @@ p{
   background-position: center;
   background-repeat: no-repeat;
 }
-#body_background_img {
-  background-image: url("https://previews.123rf.com/images/dezignmart/dezignmart1510/dezignmart151000022/47746742-Arabesque-Star-Pattern-Light-Grey-Background-Vector-Illustration-Stock-Vector.jpg");
+#main_body {
+  margin-left: 10%;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  align-items: center;
 }
-/////////////////////////////

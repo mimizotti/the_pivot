@@ -4,22 +4,20 @@
   </div>
 </div>
 
-<div id="body_background_img">
-  <div class="container">
+  <div id="main_body">
     <div class="row">
       <% @stores.each do |store| %>
-      <div class="col-md-3">
-        <div class="card">
-          <ul class="store gradient_unselect">
+      <div class="col-md-2 store">
+        <div class="body_background_img">
+          <ul class="gradient_unselect">
             <li class="card-img-top"> <%= image_tag store.image, size: '150' %> </li>
-            <li class="card-body store_title"> <%= link_to "#{store.name}", store_path(store) %> </li>
+            <li class="store_title"> <%= link_to "#{store.name}", store_path(store) %> </li>
           </ul>
         </div>
       </div>
       <% end %>
     </div>
   </div>
-</div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
