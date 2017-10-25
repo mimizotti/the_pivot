@@ -12,6 +12,10 @@
     <%= f.text_field :image %>
   </div>
   <div class="form_group">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+  <div class="form_group">
     <%= f.label :status %><br />
     <%= f.label :status, "Active" %>
     <%= f.radio_button :status, "active", id: "activate" %>

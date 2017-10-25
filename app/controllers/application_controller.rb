@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :set_cart
   helper_method :require_admin
   helper_method :current_admin?
+  helper_method :platform_admin?
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
@@ -25,6 +26,10 @@ class ApplicationController < ActionController::Base
 
   def require_admin
     render file: "/public/404" unless current_user && current_user.is_admin?
+  end
+
+  def platform_admin?
+    current_user.platform_admin == true
   end
 
 end

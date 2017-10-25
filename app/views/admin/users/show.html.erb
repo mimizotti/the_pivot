@@ -9,10 +9,10 @@
 <div class="stores">
   <% @stores.each do |store| %>
     <%= link_to (image_tag(store.image)), admin_store_path(store), class: store.name %>
+    <% if current_user.platform_admin? %>
+    <h5>Platform Admin</h5>
+    <% else %>
     <%= current_user.user_roles.find_by(store: store).role.name %>
   <% end %>
-
-  <% if current_user.platform_admin %>
-  <h5>Platform Admin</h5>
-  <% end %>
+<% end %>
 </div>

@@ -28,6 +28,12 @@ feature "Platform Admin" do
 
     expect(page).to have_content("Platform Admin")
 
+    # and I should see a navigation column with a link "All Stores",
+    # when I click "All Stores" I should see all stores and their logo,
+    # and when I click the store logo,
+    # I should see a page with the store name, the store description, and links for the following: Manage Items, Manage Orders, Update Business Information, and Manage Business Admins.
+
+
     find(".#{Store.first.name}").click
 
     expect(page).to have_content("Create New Item")
