@@ -38,12 +38,10 @@ Rails.application.routes.draw do
     get '/cancelled', to: "orders#cancelled"
     get '/completed', to: "orders#completed"
     get '/items', to: 'items#index', as: 'items'
-<<<<<<< HEAD
     get '/pending_stores', to: 'pending_stores#index'
     resources :pending_stores, only: [:show, :update]
 
-=======
->>>>>>> master
+
     resources :stores, only: [:show, :edit, :update] do
       resources :items, only: [:index, :new, :edit, :update, :create]
     end

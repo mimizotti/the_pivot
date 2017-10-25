@@ -25,10 +25,7 @@ feature "Business Admin" do
   end
   scenario "I can create items for my store" do
     expect(current_path).to eq('/admin/dashboard')
-<<<<<<< HEAD
-=======
 
->>>>>>> master
     expect(page).to have_content("Business Admin")
 
     find(".#{Store.first.name}").click
