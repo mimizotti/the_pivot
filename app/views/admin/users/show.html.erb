@@ -6,6 +6,12 @@
   <h5><strong>Email: </strong><%= current_user.email %></h5>
 </div>
 
+
+<button type="button" class="btn btn-primary">
+  <a href="/admin/pending_stores">Pending Stores</a> <span class="badge badge-light"><%= @pending_stores.count %></span>
+</button>
+
+
 <div class="stores">
   <% @stores.each do |store| %>
     <%= link_to (image_tag(store.image)), admin_store_path(store), class: store.name %>

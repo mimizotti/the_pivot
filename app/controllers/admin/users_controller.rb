@@ -8,5 +8,6 @@ class Admin::UsersController < ApplicationController
     else
       @stores = current_user.stores
     end 
+    @pending_stores = Store.where(status: "pending")
   end
 end

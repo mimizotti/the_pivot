@@ -5,7 +5,7 @@ class Store < ApplicationRecord
   has_many :user_roles
   has_many :users, through: :user_roles
 
-  enum status: ["online", "offline"]
+  enum status: ["online", "offline", "pending", "rejected"]
 
   def retire_items
     items.map do |item|

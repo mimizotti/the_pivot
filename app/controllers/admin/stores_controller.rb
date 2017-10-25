@@ -11,6 +11,7 @@ class Admin::StoresController < ApplicationController
     @store = Store.find(params["id"])
   end
 
+
   def update
     @store = Store.find(params["id"])
     @store.update(store_params)
