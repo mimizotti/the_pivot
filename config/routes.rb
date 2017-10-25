@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   get '/auth/twitter',  as: :twitter_login
   get '/auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
+  get '/password-reset', to: 'reset#show'
+  get '/password-confirmation', to: 'confirmation#edit'
+  patch '/password-confirmation', to: 'confirmation#update'
 
   resources :items, only:[:new, :create, :index, :show]
 
