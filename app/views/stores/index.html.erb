@@ -4,33 +4,17 @@
   </div>
 </div>
 
-  <div id="main_body">
-    <div class="row">
-      <% @stores.each do |store| %>
-      <div class="col-md-2 store">
-        <div class="body_background_img">
-          <ul class="gradient_unselect">
-            <li class="card-img-top"> <%= image_tag store.image, size: '150' %> </li>
-            <li class="store_title"> <%= link_to "#{store.name}", store_path(store) %> </li>
-          </ul>
-        </div>
+<div id="main_body">
+  <div class="row">
+    <% @stores.each do |store| %>
+    <div class="col-md-2 store">
+      <div class="body_background_img">
+        <ul class="gradient_unselect">
+          <li class="card-img-top"> <%= image_tag store.image, size: '150' %> </li>
+          <li class="store_title"> <%= link_to "#{store.name}", store_path(store) %> </li>
+        </ul>
       </div>
-      <% end %>
     </div>
+    <% end %>
   </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
-      $(document).ready(function() {
-        var store = $('.store');
-        function selection(eventParam) {
-          eventParam.preventDefault();
-          eventParam.stopPropogation();
-          var frame = $(this);
-          frame.toggleClass('gradient_unselect');
-          frame.toggleClass('gradient_select');
-        };
-        store.on('mouseEnter', '.store_frame', selection(event));
-        store.on('mouseLeave', '.store_frame', selection(event));
-      });
-  </script>
+</div>
