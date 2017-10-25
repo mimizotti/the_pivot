@@ -11,16 +11,23 @@ class Admin::StoresController < ApplicationController
     @store = Store.find(params["id"])
   end
 
+
   def update
     @store = Store.find(params["id"])
     @store.update(store_params)
+    if @store.status == "offline"
+      @store.retire_items
+    else @store.status == "online"
+      @store.activate_items
+    end
 
     redirect_to admin_store_path(@store)
   end
 
+
   private
 
   def store_params
-    params.require(:store).permit(:name, :description, :image)
+    params.require(:store).permit(:name, :description, :image, :status)
   end
 end

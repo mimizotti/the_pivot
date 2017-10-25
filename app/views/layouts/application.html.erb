@@ -42,7 +42,7 @@
         <%= content_tag :div, raw(msg), class: name %>
       </div>
     <% end %>
-    <div class="container">
+
       <%= yield %>
     </div>
     
@@ -51,6 +51,9 @@
     <div class="footer">
       <div class="about_us">
         <h6><a href="https://github.com/mimilettd/little_shop_of_useless_items" target="_blank">About Us</a></h6>
+      </div>
+      <div class="sell_on_little_shop">
+        <%= link_to "Sell on Little Shop", new_store_path %>
       </div>
     </div>
   </footer>

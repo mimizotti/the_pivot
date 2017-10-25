@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
-  resources :stores, only: [:index, :show] do
+  resources :stores, only: [:index, :show, :new, :create] do
     resources :items, only: [:index, :show]
   end
 
@@ -28,7 +28,6 @@ Rails.application.routes.draw do
   resources :items, only:[:new, :create, :index, :show]
 
   resource :cart
-
   get '/:category', to: 'categories#show', param: :slug, as: "category"
 
 
@@ -39,6 +38,10 @@ Rails.application.routes.draw do
     get '/cancelled', to: "orders#cancelled"
     get '/completed', to: "orders#completed"
     get '/items', to: 'items#index', as: 'items'
+    get '/pending_stores', to: 'pending_stores#index'
+    resources :pending_stores, only: [:show, :update]
+
+
     resources :stores, only: [:show, :edit, :update] do
       resources :items, only: [:index, :new, :edit, :update, :create]
     end

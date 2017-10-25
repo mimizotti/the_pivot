@@ -11,5 +11,17 @@
     <%= f.label :image %>
     <%= f.text_field :image %>
   </div>
+  <% if current_user.platform_admin? %>
+  <div class="form_group">
+    <%= f.label :status %><br />
+    <%= f.label :status, "Online" %>
+    <%= f.radio_button :status, "online", id: "online" %>
+    <%= f.label :status, "Offline" %>
+    <%= f.radio_button :status, "offline", id: "offline" %>
+  </div>
+  <% end %>
   <%= f.submit class: "btn btn-success" %>
 <% end %>
+
+
+<%= link_to "Back", :back %>

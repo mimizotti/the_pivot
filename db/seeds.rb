@@ -697,6 +697,3 @@ User.create(first_name: "Jim", last_name: "Sad Path", address: "The road to succ
 User.create(first_name: "Ash", last_name: "Whatever", address: "I am as dry as my code", email: "ash@littleshop.com", username: "ash", password: ENV['ash_password'], platform_admin: true)
 User.create(first_name: "Mimi", last_name: "Le", address: "18th & Market is where it's at", email: "mimi@littleshop.com", username: "mimi", password: ENV['mimi_password'], platform_admin: true)
 User.create(first_name: "Liam", last_name: "Barstad", address: "The same as above", email: "liam@littleshop.com", username: "Liam", password: ENV['liam_password'], platform_admin: true)
-
-@client = Twilio::REST::Client.new ENV['twilio_sid'], ENV['twilio_token']
-@client.messages.create(to: ENV['test_phone'], from: ENV['twilio_phone'], body: 'Seeding is complete!')
