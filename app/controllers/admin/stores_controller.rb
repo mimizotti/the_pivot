@@ -18,6 +18,9 @@ class Admin::StoresController < ApplicationController
     redirect_to admin_store_path(@store)
   end
 
+  def destroy
+  end
+
   private
 
   def store_params

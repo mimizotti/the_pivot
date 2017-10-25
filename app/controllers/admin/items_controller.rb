@@ -54,4 +54,5 @@ class Admin::ItemsController < ApplicationController
   def item_attributes
     params.require(:item).permit(:title, :description, :price, :image, :status, category_ids: [])
   end
+
 end

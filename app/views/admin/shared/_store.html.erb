@@ -2,3 +2,5 @@
 <h3><%= @store.name %></h3>
 <p><%= @store.description %></p>
 <%= link_to("Update Business Information", edit_admin_store_path(@store), class: "badge badge-pill badge-primary") %>
+
+<%= link_to("Take Business Offline", admin_store_path(@store), class: "badge badge-pill badge-primary", method: :delete) %>
