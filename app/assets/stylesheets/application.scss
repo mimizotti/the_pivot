@@ -57,3 +57,22 @@ p{
 .loginBtn--twitter:focus {
   background: #66ccff;
 }
+
+.store_image {
+  align-self: center;
+}
+.store_title {
+  text-align: center;
+  display: inline-block;
+  font-family: 'Caveat Brush', cursive;
+}
+.store_frame {
+  vertical-align: top;
+  display: inline-block;
+  align-items: baseline;
+  padding: 20px;
+  background: linear-gradient(to bottom right, red, yellow);
+}
+.main_title {
+  
+}

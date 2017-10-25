@@ -29,6 +29,7 @@ gem 'twilio-ruby'
 # gem 'capistrano-rails', group: :development
 # gem 'therubyracer', platforms: :ruby
 # gem 'redis', '~> 3.0'
+gem 'betterlorem'
 
 
 group :development, :test do
