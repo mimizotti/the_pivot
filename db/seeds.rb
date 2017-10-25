@@ -475,7 +475,7 @@ appliance_items = [
   Item.create(store: ants, title: "Smoke Detector", description: "Don't get burnt", price: Faker::Commerce.price, image: "smoke_detector.jpeg"),
   Item.create(store: ants, title: "Space Heater", description: "Stay warm dude!", price: Faker::Commerce.price, image: "space_heater.jpeg"),
   Item.create(store: ants, title: "Stand Mixer", description: "Make some dough, or batter", price: Faker::Commerce.price, image: "stand_mixer.jpeg"),
-  Item.create(store: ants, title: "Swamp Cooler", description: "Keep it cool, and dare I say it, moist", price: Faker::Commerce.price, image: "swamp_cooler.jpeg")
+  Item.create(store: ants, title: "Swamp Cooler", description: "Keep it cool, and dare I say it, moist", price: Faker::Commerce.price, image: "swamp_cooler.jpeg"),
   Item.create(store: ants, title: "The Clapper", description: "Clap on Clap off", price: Faker::Commerce.price, image: "clapper.jpeg"),
   Item.create(store: ants, title: "Toaster Oven", description: "The bachelor's dream", price: Faker::Commerce.price, image: "toaster_oven.jpeg"),
   Item.create(store: ants, title: "Toaster", description: "Breakfast is served", price: Faker::Commerce.price, image: "toaster.jpeg"),
