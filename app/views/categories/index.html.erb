@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>All Categories</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Oswald|Quicksand" rel="stylesheet">
+
+    <style>
+    h1 {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 75px;
+      color: black;
+      text-align: center;
+    }
+    h4 {
+      font-family: 'Oswald', sans-serif;
+    }
+    h4 > a{
+      text-decoration: none;
+      color: #CD853F;
+    }
+    p {
+      font-family: 'Quicksand', sans-serif;
+    }
+    </style>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <h1 class="head">All Items</h1>
+      <div class="row">
+        <% @categories.each do |category| %>
+        <div class="col-sm-4">
+          <div class="card-group">
+            <div class="card border-0 text-center">
+              <div class="card-body category-<%= "#{category.slug}" %>">
+                <h4 class="card-title"><%= link_to category.title, category_path(category.slug) %></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </body>
+</html>
