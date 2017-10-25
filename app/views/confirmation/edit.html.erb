@@ -1,7 +1,7 @@
   <%= form_for @user, url: {action: "update"} do |f| %>
     <%= f.hidden_field :email, value: params['email'] %>
     <%= f.label :confirmation_code %>
-    <%= f.text_field :confirmation_code %><br>
+    <%= f.text_field :confirmation_code, :value => 'Enter code' %><br>
     <%= f.label :password %>
     <%= f.password_field :password %><br>
     <%= f.label :password_confirmation %>
