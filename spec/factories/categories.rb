@@ -1,6 +1,10 @@
 FactoryGirl.define do
   factory :category do
-    name "Scuba"
-    slug "Scuba"
+    sequence(:title) do |n|
+      "Category#{n}"
+    end
+    sequence(:name) do |n|
+      "Category#{n}"
+    end
   end
 end
