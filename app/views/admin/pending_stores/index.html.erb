@@ -1,0 +1,6 @@
+
+<ul>
+  <% @pending_stores.each do |store| %>
+ <li> <%= link_to store.name, admin_pending_store_path(store)%> </li>
+  <% end %>
+</ul>

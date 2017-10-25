@@ -48,10 +48,11 @@ class Admin::ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:title, :description, :image, :status)
+    params.require(:item).permit(:title, :description, :image, :status, :price)
   end
 
   def item_attributes
     params.require(:item).permit(:title, :description, :price, :image, :status, category_ids: [])
   end
+
 end

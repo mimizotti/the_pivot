@@ -693,8 +693,16 @@ stores.zip(business_admins).each do |store, ba|
   puts "#{ba.first_name} is now the Business Admin at #{store.name}!"
 end
 
+<<<<<<< HEAD
 User.create(first_name: "Cory", last_name: "Westerfield", username: "cory@turing.io", password: "password", address: "1331 17th St ll100, Denver, CO 80202", email: "cory@turing.io", platform_admin: true)
 User.create(first_name: "Jim", last_name: "Sad Path", address: "The road to success requires a sad path", email: "sadpath@littleshop.com", username: "sadpath", password: "saddestpath", platform_admin: true)
 User.create(first_name: "Ash", last_name: "Whatever", address: "I am as dry as my code", email: "ash@littleshop.com", username: "ash", password: "ash", platform_admin: true)
 User.create(first_name: "Mimi", last_name: "Le", address: "18th & Market is where it's at", email: "mimi@littleshop.com", username: "mimi", password: "mimi", platform_admin: true)
 User.create(first_name: "Liam", last_name: "Barstad", address: "The same as above", email: "liam@littleshop.com", username: "Liam", password: "LOGIN", platform_admin: true)
+=======
+User.create(first_name: "Cory", last_name: "Westerfield", username: "cory@turing.io", password: ENV['cory_password'], address: "1331 17th St ll100, Denver, CO 80202", email: "cory@turing.io", platform_admin: true)
+User.create(first_name: "Jim", last_name: "Sad Path", address: "The road to success requires a sad path", email: "sadpath@littleshop.com", username: ENV['jim_password'], password: "saddestpath", platform_admin: true)
+User.create(first_name: "Ash", last_name: "Whatever", address: "I am as dry as my code", email: "ash@littleshop.com", username: "ash", password: ENV['ash_password'], platform_admin: true)
+User.create(first_name: "Mimi", last_name: "Le", address: "18th & Market is where it's at", email: "mimi@littleshop.com", username: "mimi", password: ENV['mimi_password'], platform_admin: true)
+User.create(first_name: "Liam", last_name: "Barstad", address: "The same as above", email: "liam@littleshop.com", username: "Liam", password: ENV['liam_password'], platform_admin: true)
+>>>>>>> master

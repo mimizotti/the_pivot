@@ -1,0 +1,9 @@
+<%= form_for(@store) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+  <%= f.label :description %>
+  <%= f.text_area :description %><br>
+  <%= f.label :image %>
+  <%= f.text_field :image %><br>
+  <%= f.submit %>
+<% end %>
