@@ -1,10 +1,3 @@
-Dir[File.dirname(__FILE__) + '/seeds/*.rb'].each {|file| require file }
-
-SeedInstruments.seed
-SeedGoldfish.seed
-SeedElectronics.seed
-SeedPeppers.seed
-SeedTowels.seed
 
 user = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "bonjovirules")
 user_2 = User.create(first_name: "Styx", last_name: "Rules", address: "123 man in the wilderness", email: "renegade@amazing.com", username: "styxrules", password: "styxrules")

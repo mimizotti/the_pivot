@@ -63,15 +63,19 @@ p{
   height: 15em;
   padding: 0.5em;
 }
+.about_us {
+  
+}
 /////////////stores index
 .store_title {
   font-family: 'Caveat Brush', cursive;
   background-color: rgba(255, 255, 255, 0.6);
-  position: absolute;
+  height: 4.5em;
+  width: 11.24em;
 }
 .store {
   vertical-align: top;
-  display: inline-block;
+  display: block;
   text-align: center;
   margin-left: 0.3em;
   margin-right: 0.3em;
@@ -90,10 +94,8 @@ p{
   background-color: rgba(255, 255, 255, 0.4);
   text-align: center;
 }
-#title_background_img {
-  background-image: url("http://profilerehab.com/facebook_covers/scenic/turquoise_beach_cover_10.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+#title_background {
+  background: linear-gradient(white, rgba(243, 243, 46, 0.7));
 }
 #main_body {
   margin-left: 10%;
