@@ -57,22 +57,32 @@ p{
 .loginBtn--twitter:focus {
   background: #66ccff;
 }
-
-.store_image {
-  align-self: center;
-}
+/////////////stores index
 .store_title {
   text-align: center;
   display: inline-block;
   font-family: 'Caveat Brush', cursive;
+  background-color: rgba(255, 255, 255, 0.4);
 }
-.store_frame {
+.store {
   vertical-align: top;
   display: inline-block;
-  align-items: baseline;
+  align-items: center;
   padding: 20px;
-  background: linear-gradient(to bottom right, red, yellow);
 }
-.main_title {
-  
+.gradient_unselect {
+  background: linear-gradient(to top left, rgba(243, 46, 144, 0.5), rgb(243, 243, 46));
 }
+.gradient_select {
+  background: linear-gradient(to top left, rgba(144, 46, 243, 0.5), rgb(243, 243, 46));
+}
+#main_title {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+#title_background_img {
+  background-image: url("http://profilerehab.com/facebook_covers/scenic/turquoise_beach_cover_10.jpg");
+}
+#body_background_img {
+  background-image: url("https://previews.123rf.com/images/dezignmart/dezignmart1510/dezignmart151000022/47746742-Arabesque-Star-Pattern-Light-Grey-Background-Vector-Illustration-Stock-Vector.jpg");
+}
+/////////////////////////////
