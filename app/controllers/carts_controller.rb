@@ -7,7 +7,7 @@ class CartsController < ApplicationController
     @cart.add_item(item.id)
     session[:cart] = @cart.contents
 
-    flash[:notice] = "You now have #{pluralize(@cart.count_of(item.id), item.title)}"
+    flash[:notice] = "You now have #{pluralize(@cart.count_of(item.id), item.categories.first.name.singularize)}"
     redirect_back(fallback_location: root_path)
   end
 
