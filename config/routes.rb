@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :items, only: [:index, :show]
   end
 
-  resources :categories, only: [:index]
+  resources :categories, only: [:index, :show]
 
 
   resources :orders, only: [:index, :show, :create, :new]
@@ -28,8 +28,7 @@ Rails.application.routes.draw do
   resources :items, only:[:new, :create, :index, :show]
 
   resource :cart
-  get '/:category', to: 'categories#show', param: :slug, as: "category"
-
+  # get '/:category', to: 'categories#show', param: :slug, as: "category"
 
   namespace :admin do
     get "/dashboard", to: "users#show", as: "dashboard"
