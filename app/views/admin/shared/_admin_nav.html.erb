@@ -1,0 +1,19 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <%= link_to "Store Information", admin_store_path(@store), class: "nav-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Orders", admin_orders_path(id: @store.id), class: "nav-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Items", admin_items_path(store_id: @store.id), class: "nav-link" %>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Analytics</a>
+  </li>
+  <% if current_user.business_admin? || current_user.platform_admin? %>
+    <li class="nav-item">
+      <%= link_to "Manage Others", admin_user_roles_path(id: @store.id), class: "nav-link" %>
+    </li>
+  <% end %>
+</ul>

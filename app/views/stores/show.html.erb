@@ -1,10 +1,10 @@
-<div id="title_background">
+<div id="main_background">
   <div id="main_title">
     <h1><%= @store.name %></h1>
   </div>
 </div>
 
-<div class="container">
+<div class="container bottom_margin">
   <div class="row">
 <% @store.items.each do |item| %>
     <div class="col-md-3">
@@ -17,7 +17,7 @@
               <p class="item_text"><%= truncate(item.description, length: 225) %></p>
               <p class="card-text"><%= number_to_currency(item.price) %></p>
               <% if item.active? %>
-                <%= button_to "Add to Cart", cart_path(item_id: item.id), class: 'btn btn-secondary add-to-cart' %>
+                <%= button_to "Add to Cart", cart_path(item_id: item.id), class: 'btn btn-info' %>
               <% else %>
                 <p>Item Retired</p>
               <% end %>

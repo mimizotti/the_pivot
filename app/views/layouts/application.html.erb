@@ -4,6 +4,7 @@
     <title>LittleShop</title>
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= stylesheet_link_tag    'fonts', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,8 +12,9 @@
     <%= stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'sessions', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'navigation', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'images', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Fredericka+the+Great|Monoton" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   </head>
   <body>
     <ul>
@@ -44,17 +46,13 @@
     <% end %>
 
       <%= yield %>
-    </div>
-    
-  </body>    
+
+  </body>
   <footer>
     <div class="footer">
-      <div class="about_us">
-        <h6><a href="https://github.com/mimilettd/little_shop_of_useless_items" target="_blank">About Us</a></h6>
-      </div>
-      <div class="sell_on_little_shop">
-        <%= link_to "Sell on Little Shop", new_store_path %>
-      </div>
+      <h6><a href="https://github.com/mimilettd/little_shop_of_useless_items" target="_blank">Site Repo</a></h6>
+      <h6><a href="https://www.turing.io/" target="_blank">Offices</a></h6>
+      <h6><%= link_to "Sell on Little Shop", new_store_path %></h6>
     </div>
   </footer>
 </html>

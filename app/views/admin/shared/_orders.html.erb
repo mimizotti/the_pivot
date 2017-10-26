@@ -17,19 +17,19 @@
     <td><%= store_order.order.user.address %></td>
     <td><%= store_order.item.title %>
     <td><%= store_order.quantity %></td>
-    <td>$<%= store_order.line_item_total %></td>
-    <td><%= store_order.order.status %></td>
+    <td><%= number_to_currency(store_order.line_item_total) %></td>
+    <td><%= store_order.status.capitalize %></td>
     <% @order = store_order %>
     <td><% if @order.ordered? %>
-          <%= button_to "Paid", paid_path(@order), class: "btn btn-primary" %>
+          <%= button_to "Paid", admin_order_item_path(@order, status: "paid"), method: :patch, class: "btn btn-primary" %>
         <% end %>
         <% if @order.paid? %>
-          <%= button_to "Completed", completed_path(@order), class: "btn btn-primary" %>
+          <%= button_to "Completed", admin_order_item_path(@order, status: "completed"), method: :patch, class: "btn btn-primary" %>
         <% end %>
     </td>
     <td>
-      <% if store_order.order.ordered? || store_order.order.paid? %>
-        <%= button_to "Cancel", cancelled_path(@order), class: "btn btn-danger" %>
+      <% if store_order.ordered? || store_order.paid? %>
+        <%= button_to "Cancel", admin_order_item_path(@order, status: "cancelled"), method: :patch, class: "btn btn-danger" %>
       <% end %>
     </td>
     <% end %>

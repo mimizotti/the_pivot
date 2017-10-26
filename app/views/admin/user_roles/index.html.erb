@@ -1,0 +1,16 @@
+<%= render "admin/shared/admin_side_nav" %>
+
+<div style="margin-left:16%">
+<%= render "admin/shared/admin_nav" %>
+
+<i>Current Admins:</i><br>
+<% @users.each do |user| %>
+  <%= user.full_name %>  
+  (<%= UserRole.find_role(@store, user) %>) - 
+  <%= link_to "Remove", admin_user_role_path(user, store: @store), method: :delete, :data => {:confirm => 'Are you sure?'} %><br>
+<% end %>
+
+<hr>
+<i>Add New Admin:</i><br>
+
+</div>
