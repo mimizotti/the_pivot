@@ -8,23 +8,19 @@ class Admin::OrdersController < ApplicationController
   end
 
   def ordered
-
     @orders = Order.ordered.paginate(:page => params[:page], :per_page => 50)
-    # @paginated_orders = @store_orders.paginate(:page => params[:page], :per_page => 50)
-    #
-    # @orders = @paginated_orders.paginate(:page => params[:page], :per_page => 50)
   end
 
   def paid
-    @orders = Order.paid
+    @orders = Order.paid.paginate(:page => params[:page], :per_page => 50)
   end
 
   def completed
-    @orders = Order.completed
+    @orders = Order.completed.paginate(:page => params[:page], :per_page => 50)
   end
 
   def cancelled
-    @orders = Order.cancelled
+    @orders = Order.cancelled.paginate(:page => params[:page], :per_page => 50)
   end
 
   private

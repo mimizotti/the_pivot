@@ -11,7 +11,7 @@
     <td><%= link_to order.id, order_path(order) %></td>
     <td><%= order.user.full_name %></td>
     <td><%= order.status %></td>
-    <td><%= order.total_price %></td>
+    <td><%= number_to_currency(order.total_price) %></td>
     <% end %>
     <%= will_paginate @orders %>
   </tbody>
