@@ -1,3 +1,4 @@
+
 class Item < ApplicationRecord
   has_many :order_items
   has_many :orders, through: :order_items
@@ -18,5 +19,5 @@ class Item < ApplicationRecord
     .distinct
     .order("sales DESC")
   end
-  
+
 end

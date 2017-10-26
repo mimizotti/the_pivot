@@ -16,3 +16,26 @@ p.logo {
 p.description {
   font-size: 11px;
 }
+
+h1.home {
+  font-family: 'Lora', serif;
+  font-size: 32px;
+}
+
+div.name {
+  text-align: center;
+  margin-top: 5%;
+  font-family: 'Lora', serif;
+}
+
+
+div.degination {
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'Lora', serif;
+}
+
+p.card-text {
+  text-align: center;
+  font-weight: bold;
+}
