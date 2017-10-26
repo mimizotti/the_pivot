@@ -31,7 +31,7 @@ feature "Unauthenticated user" do
       category = categories.first
       visit "/categories"
 
-      expect(page).to have_css(".col-sm-4", 5)
+      expect(page).to have_css(".col-md-2", 5)
       expect(page).to have_link(category.title)
     end
   end
