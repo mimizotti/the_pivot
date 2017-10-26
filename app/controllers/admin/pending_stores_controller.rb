@@ -1,6 +1,6 @@
 class Admin::PendingStoresController < ApplicationController
   def index
-    @pending_stores = Store.where(status: "pending")
+    @pending_stores = Store.where(status: "pending").decorate
   end
 
   def show

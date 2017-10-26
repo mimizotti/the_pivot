@@ -4,6 +4,6 @@
   <%= link_to "Manage Account", edit_user_path(current_user), class: "w3-bar-item w3-button" %>
   <%= link_to "Manage Stores", admin_dashboard_path, class: "w3-bar-item w3-button" %>
   <% if current_user.platform_admin? %>
-    <%= link_to "Pending Stores", href: '/admin/pending_stores', class: "w3-bar-item w3-button" %>
+    <a href="/admin/pending_stores" class="w3-bar-item w3-button">Pending Stores</a>
   <% end %>
 </div>

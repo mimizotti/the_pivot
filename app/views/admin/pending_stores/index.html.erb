@@ -1,6 +1,8 @@
-
-<ul>
-  <% @pending_stores.each do |store| %>
- <li> <%= link_to store.name, admin_pending_store_path(store)%> </li>
-  <% end %>
-</ul>
+<%= render "admin/shared/admin_side_nav" %>
+<div style="margin-left:16%">
+  <h4>Pending Stores</h4>
+    <% @pending_stores.each do |store| %>
+      <%= link_to store.name, admin_pending_store_path(store)%> -
+      Request made on <%= store.created_at %>
+    <% end %>
+</div>
