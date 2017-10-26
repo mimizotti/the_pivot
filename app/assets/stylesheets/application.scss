@@ -54,13 +54,15 @@
 .digg_pagination {
   background: white;
   cursor: default;
+  margin-left: 14%;
   /* self-clearing method: */ }
   .digg_pagination a, .digg_pagination span, .digg_pagination em {
+    text-align: center;
     padding: 0.2em 0.5em;
     display: block;
     float: left;
     width: 100px;
-    margin: 0 auto;
+    margin:  0 auto;
     margin-right: 1px; }
   .digg_pagination .disabled {
     color: #999999;
@@ -84,6 +86,7 @@
     padding: 0.4em 0.6em;
     width: 22em;
     margin-bottom: 0.3em;
+    margin-left: 31%;
     text-align: center; }
     .digg_pagination .page_info b {
       color: #000033;
