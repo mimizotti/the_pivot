@@ -36,15 +36,6 @@
   margin-right: 10px;
 }
 
-h1 {
-  font-size: 110px;
-  font-family: 'Fredericka the Great', cursive;
-}
-p{
-  font-family: 'Caveat Brush', cursive;
-}
-
-
 .loginBtn--twitter {
   position: relative;
   text-align: center;
@@ -58,7 +49,7 @@ p{
   background: #66ccff;
 }
 .footer {
-  background-color: rgb(243, 243, 46);
+  background-color: rgba(50, 50, 50, 0.3);
   width: 100%;
   height: 10em;
   padding: 0.5em;
@@ -70,7 +61,6 @@ p{
   background-color: rgba(255, 255, 255, 0.3);
 }
 .store_title {
-  font-family: 'Caveat Brush', cursive;
   background-color: rgba(255, 255, 255, 0.6);
   height: 4.5em;
   width: 11.24em;
@@ -84,7 +74,7 @@ p{
   padding: 5px;
 }
 .gradient_unselect {
-  background: linear-gradient(to top left, rgba(184, 184, 160, 0.5), rgba(243, 243, 46, 0.7));
+  // background: linear-gradient(to top left, rgba(184, 184, 160, 0.5), rgba(243, 243, 46, 0.7));
 }
 .gradient_select {
   background: linear-gradient(to top left, rgba(144, 46, 243, 0.5), rgba(243, 243, 46, 0.7));
@@ -93,12 +83,10 @@ p{
   background-image: url("https://thumbs.dreamstime.com/b/arabesque-star-pattern-grunge-light-grey-background-vector-illustration-65877348.jpg");
 }
 #main_title {
-  background-color: rgba(255, 255, 255, 0.4);
   text-align: center;
+  font-size: 50px;
 }
-#title_background {
-  background: linear-gradient(white, rgba(243, 243, 46, 0.7));
-}
+
 #main_body {
   margin-left: 10%;
   margin-right: 10px;
