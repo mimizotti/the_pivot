@@ -7,8 +7,8 @@ RSpec.describe "User can see past order" do
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user_1)
 
-      category_1 = Category.create(name: "scuba")
-      category_2 = Category.create(name: "basket")
+      category_1 = Category.create(title: "scuba")
+      category_2 = Category.create(title: "basket")
 
       item_1 = Item.create(title: "Mask", description: "Something to put on your face.", price: 49.95, image: "https://slack-imgs.com/?c=1&url=http%3A%2F%2Fwww.scubadivingdreams.com%2Fwp-content%2Fuploads%2F2015%2F11%2Fthe-best-scuba-snorkel-mask-mares-i3-sunrise.jpg")
       item_2 = Item.create(title: "Fins", description: "Something to put on your feet.", price: 69.95, image: "http://www.scuba-info.com/images/scuba_gear_fins.jpg")

@@ -58,7 +58,7 @@ feature "Platform Admin" do
     fill_in "Price", with: 9999.99
     fill_in 'item[image]', with: "https://ae01.alicdn.com/kf/HTB14mH.QpXXXXb2XFXXq6xXFXXXK/-font-b-Gold-b-font-Sliver-104-PBT-Keycaps-Double-Shot-font-b-key-b.jpg"
 
-    check "#{@category.name}"
+    check "#{@category.title}"
     click_button "Create Item"
 
     expect(current_path).to eq(admin_store_items_path(@store))

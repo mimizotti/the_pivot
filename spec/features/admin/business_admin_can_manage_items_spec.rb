@@ -52,7 +52,7 @@ feature "Business Admin" do
     fill_in "Price", with: 99.00
     fill_in 'item[image]', with: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR509iY3ruk1lW5PmyGSd_on1SXTnNLtbDLVW4Xly1DCiksAmp48Q"
 
-    check "#{@category.name}"
+    check "#{@category.title}"
     click_button "Create Item"
 
     expect(current_path).to eq(admin_store_items_path(@store))

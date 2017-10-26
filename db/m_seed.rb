@@ -1,7 +1,7 @@
 mimizon = Store.create(name: "Mimizon", description: "You want all the books? You can have all the books", image: "mimizon.png")
 indiecovers = Store.create(name: "Indie Covers", description: "A collection of independent titles aimed for hipsters", image: "indie-covers.png")
 
-books = Category.create(name: "books", title: "Read to your heart's content")
+books = Category.create(title: "books", title: "Read to your heart's content")
 
 item_100 = Item.create(title: "The Little Prince", description: "Antoine de Saint-Exupery. The Little Prince is a poetic tale, with watercolour illustrations by the author, in which a pilot stranded in the desert meets a young prince visiting Earth from a tiny asteroid. The story is philosophical and includes social criticism of the adult world", price: 6.99, image: "little-prince.jpg", store: mimizon, category: books)
 item_101 = Item.create(title: "Leonardo da Vinci", description: "Walter Isaacson. The author of the acclaimed best sellers Benjamin Franklin, Einstein, and Steve Jobs delivers an engrossing biography of Leonardo da Vinci, the world's most creative genius", price: 12.99, image: "leonardo-da-vinci.png", store: mimizon, category: books)
@@ -62,7 +62,7 @@ livecomfy = Store.create(name: "Live Comfy", description: "The best type of life
 bf = Store.create(name: "BeauFrames", description: "Elevate your bedroom with a beautiful bed frame", image: "beau-frame.png")
 dt = Store.create(name: "18th & Market", description: "Find stylish and affordable Furniture to reflect your personality at 18th & Market. Enjoy free shipping on many items in our wide selection!", image: "18-and-market.png")
 
-furniture = Category.create(name: "furniture", title: "Find stylish and affordable Furniture to reflect your personality")
+furniture = Category.create(title: "furniture", title: "Find stylish and affordable Furniture to reflect your personality")
 
 items_151 = Item.create(title: "Maier Charcoal 2 Piece Sectional W/Raf Chaise", description: "Whether enjoying a cozy evening with your sweetie or entertaining a party of many, this sectional has the perfect design for getting close and spreading out. Tufted cushions provide exceptional comfort and impart tailored style, while a chaise lounge allows you to stretch your legs and seat more guests", price: 595.99, image: "maier-charcoal.png", store: livecomfy, category: furniture)
 items_152 = Item.create(title: "Zella Charcoal 2 Piece Sectional W/Raf Chaise", description: "Big on comfort and style yet tidy in size, the Zella charcoal sectional is the ideal contemporary piece for living rooms of all sizes. A handsome profile marked by shaped arms and soft grey upholstery exudes understated elegance, while reversible accent pillows add a pop of color. Available with a right or left-facing chaise, this sectional sofa offers versatile seating options and snazzy style", price: 550.99, image: "zella-charcoal.png", store: livecomfy, category: furniture)
@@ -118,8 +118,8 @@ items_199 = Item.create(title: "Sandy Honey 5 Piece Square Dining Set", descript
 items_200 = Item.create(title: "Carson II 5 Piece Dining Set", description: "What could be more appetizing than an entire dining set offered at an outstanding deal? With its incomparable price and versatile design, this is one of the most popular selections in our menu of collections. The slat back chairs and tapered leg table boast hardwood and veneer construction and a dark brown finish that fits numerous styles and settings", price: 195.99, image: "carson.png", store: dt, category: furniture)
 
 
-Category.create(name: "Toys", title: "Toy Stores")
-Category.create(name: "Cars", title: "Car stores")
+Category.create(title: "Toys", title: "Toy Stores")
+Category.create(title: "Cars", title: "Car stores")
 
 
 Store.create(name: "Uncle Randy's Toy Shop", description: "Flashback toys from the 80's", image: "uncle-randys-toy-shop.png")
@@ -259,7 +259,7 @@ Item.create(title: "Ford Edge 2011", description: Faker::Hipster.sentence, store
 
 ants = Store.create!(name: "Ants in My Eyes Johnson's", description: "Our prices, I hope, aren't too low!", image: "j-peterman.png")
 
-    appliances = Category.create(name: "home appliances", title: "Home Appliances")
+    appliances = Category.create(title: "home appliances", title: "Home Appliances")
 
     appliance_items = [
       Item.create(store: ants, title: "Refridgerator", description: "Keep food cold", price: Faker::Commerce.price),

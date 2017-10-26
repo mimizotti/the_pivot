@@ -16,7 +16,7 @@
       <%= f.text_field :price, class: 'form-control' %>
     </div>
 
-    <%= collection_check_boxes(:item, :category_ids, Category.all, :id, :name) do |c| %>
+    <%= collection_check_boxes(:item, :category_ids, Category.all, :id, :title) do |c| %>
       <div class="checkbox" style="height: 10%; width: 33%; display: inline-block;">
         <%= c.label {c.check_box(type: 'checkbox') + c.text} %>
       </div>
