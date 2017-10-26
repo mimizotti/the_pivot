@@ -7,3 +7,7 @@ h3.side-nav {
   padding: 0px 16px;
   font-size: 16px;
 }
+
+p.role {
+  line-height: 3.0;
+}
