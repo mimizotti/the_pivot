@@ -3,8 +3,5 @@ FactoryGirl.define do
     sequence(:title) do |n|
       "Category#{n}"
     end
-    sequence(:name) do |n|
-      "Category#{n}"
-    end
   end
 end
