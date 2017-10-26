@@ -15,8 +15,8 @@ feature 'As a registered user' do
 
       stores.each do |store|
         visit "/stores/#{store.id}"
-        expect(page).to have_css(".col-sm-4", count: 3)
-        within(first(".col-sm-4")) do
+        expect(page).to have_css(".item", count: 3)
+        within(first(".item")) do
           click_on "Add to Cart"
         end
         expect(page).to have_content("You now have 1 #{store.items.first.title}")

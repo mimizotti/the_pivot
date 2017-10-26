@@ -53,3 +53,14 @@
     </div>
   </body>
 </html>
+
+
+
+
+
+<div class="digg_pagination">
+    <div class="page_info">
+      <%= page_entries_info @items %>
+    </div>
+    <%= will_paginate @items, :container => false %>
+  </div>
