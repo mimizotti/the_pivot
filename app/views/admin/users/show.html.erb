@@ -1,20 +1,11 @@
-<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
-  <h3 class="w3-bar-item">Admin Dashboard</h3>
-  <h3 class="side-nav"><%= current_user.full_name  %></h3>
-  <%= link_to "Manage Account", edit_user_path(current_user), class: "w3-bar-item w3-button" %>
-  <%= link_to "Manage Stores", admin_dashboard_path, class: "w3-bar-item w3-button" %>
-  <% if current_user.platform_admin? %>
-    <%= link_to "Pending Stores", href: '/admin/pending_stores', class: "w3-bar-item w3-button" %>
-  <% end %>
-
-</div>
+<%= render "admin/shared/admin_side_nav" %>
 <div style="margin-left:16%">
   <h4>My Stores</h4>
 
   <div class="stores">
     <% @stores.each do |store| %>
       <%= link_to (image_tag(store.image, class: "logo")), admin_store_path(store), class: store.name %><br>
-      <p class="logo"><b><%= store.name %></b></p>
+      <p class="logo"><b><%= store.name %></b> - <i><%= store.status.capitalize %></i></p>
       <% if current_user.platform_admin? %>
         <p class="logo">Platform Admin</p>
       <% else %>

@@ -13,4 +13,10 @@
 <hr>
 <i>Add New Admin:</i><br>
 
+<%= form_tag(admin_user_role_path(@store), action: 'show', method: "get") do %>
+  <%= label_tag(:q, "Search user by email:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
 </div>
