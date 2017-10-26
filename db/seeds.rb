@@ -673,8 +673,10 @@ business_managers << User.create(first_name: "Josh", last_name: "Mejia", usernam
   puts "Business Manager #{i+1} created!"
 end
 
+business_manager = Role.create(name: "Business Manager")
+
 stores.zip(business_managers).each do |store, bm|
-  UserRole.create(user: bm, role: Role.create(name: "Business Manager"), store: store)
+  UserRole.create(user: bm, role: business_manager, store: store)
   puts "#{bm.first_name} is now the business manager for #{store.name}!"
 end
 
@@ -687,8 +689,10 @@ business_admins << User.create(first_name: "Ian", last_name: "Douglas", username
   puts "Business Admin #{i+1} created!"
 end
 
+business_admin = Role.create(name: "Business Admin")
+
 stores.zip(business_admins).each do |store, ba|
-  UserRole.create(user: ba, role: Role.create(name: "Business Admin"), store: store)
+  UserRole.create(user: ba, role: business_admin, store: store)
   puts "#{ba.first_name} is now the Business Admin at #{store.name}!"
 end
 

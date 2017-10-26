@@ -1,0 +1,10 @@
+<h4>Search Result:</h4>
+
+<p>Is this the correct user?</p>
+
+<p><%= @user.full_name %><br>
+<%= @user.email %></p>
+
+<%= link_to "Yes, add #{@user.full_name} as a BUSINESS MANAGER for #{@store.name}", admin_user_role_path(@user, role: "Business Manager", store: @store), method: :patch %><br>
+<%= link_to "Yes, add #{@user.full_name} as a BUSINESS ADMIN for #{@store.name}", admin_user_role_path(@user, role: "Business Admin", store: @store), method: :patch %><br>
+<%= link_to "No, this is not the correct user", url_for(:back) %>
