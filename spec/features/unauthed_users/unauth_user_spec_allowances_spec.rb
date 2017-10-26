@@ -45,7 +45,7 @@ feature "Unauthenticated user" do
       end
       visit "/#{category.slug}"
 
-      expect(page).to have_css(".col-sm-4", count: 5)
+      expect(page).to have_css(".item", count: 5)
       expect(page).to have_link(items.first.title)
       expect(page).to have_link(items.last.title)
       expect(page).to have_content(items.first.description)
