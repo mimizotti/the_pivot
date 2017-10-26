@@ -30,9 +30,13 @@ feature "Business Admin" do
 
     find(".#{Store.first.name}").click
 
-    expect(page).to have_content("Create New Item")
+    within(".nav") do
+      click_link "Items"
+    end
 
-    click_link 'Create New Item'
+    expect(page).to have_content("Add Items")
+
+    click_link 'Add Items'
 
     expect(current_path).to eq(new_admin_store_item_path(@store))
 
@@ -60,7 +64,9 @@ feature "Business Admin" do
 
     find(".#{Store.first.name}").click
 
-    click_link "View all items"
+    within(".nav") do
+      click_link "Items"
+    end
 
     first('.edit').click_button('Edit')
 
@@ -76,7 +82,9 @@ feature "Business Admin" do
 
     find(".#{Store.first.name}").click
 
-    click_link "View all items"
+    within(".nav") do
+      click_link "Items"
+    end
 
     first('.edit').click_button('Edit')
 
@@ -85,7 +93,7 @@ feature "Business Admin" do
     click_on "Update Item"
 
     expect(current_path).to eq(admin_store_items_path(@store))
-    expect(page).to have_content("retired")
+    expect(page).to have_content("Retired")
   end
   scenario "I can update my business information" do
 
@@ -104,6 +112,5 @@ feature "Business Admin" do
     click_on "Update Store"
 
     expect(current_path).to eq(admin_store_path(@store))
-    expect(page).to have_content("This store sells all the things.")
   end
 end

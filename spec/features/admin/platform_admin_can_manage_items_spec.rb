@@ -36,9 +36,13 @@ feature "Platform Admin" do
 
     find(".#{Store.first.name}").click
 
-    expect(page).to have_content("Create New Item")
+    expect(page).to have_content("Items")
 
-    click_link 'Create New Item'
+    within(".nav") do
+      click_link 'Items'
+    end
+
+    click_on "Add Items"
 
     expect(current_path).to eq(new_admin_store_item_path(@store))
 
@@ -60,7 +64,7 @@ feature "Platform Admin" do
     expect(current_path).to eq(admin_store_items_path(@store))
     expect(page).to have_content("Double A's Diamond Key Caps")
     expect(page).to have_content("Conflict free diamonds")
-    expect(page).to have_content("9999.99")
+    expect(page).to have_content("9,999.99")
   end
 
   scenario "I can manage another stores orders" do
@@ -75,5 +79,5 @@ feature "Platform Admin" do
 
   end
 
-  
+
 end
