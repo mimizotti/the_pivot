@@ -13,5 +13,6 @@
     <td><%= order.status %></td>
     <td><%= order.total_price %></td>
     <% end %>
+    <%= will_paginate @orders %>
   </tbody>
 </table>
