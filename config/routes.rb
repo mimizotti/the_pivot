@@ -39,6 +39,8 @@ Rails.application.routes.draw do
     get '/completed', to: "orders#completed"
     get '/items', to: 'items#index', as: 'items'
     get '/pending_stores', to: 'pending_stores#index'
+    resources :orders, only: [:index]
+    resources :order_items, only: [:update]
     resources :pending_stores, only: [:show, :update]
 
 
