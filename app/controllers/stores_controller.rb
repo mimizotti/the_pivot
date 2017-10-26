@@ -15,16 +15,10 @@ class StoresController < ApplicationController
   def create
     @store = Store.new(store_params)
     @store.status = "pending"
-    img_response = Net::HTTP.get_response(URI.parse(params[:store][:image]))
-    if img_response.code == "200" && @store.save!
+    if check_response(@store)
       redirect_to stores_path
-      flash[:message] = "Thank you for your submission, if your store is approved, then you'll see it here!"
-    elsif img_response.code == "200"
-      redirect_to new_store_path
-      flash[:message] = "Invalid submission"
     else
       redirect_to new_store_path
-      flash[:message] = "Image file must be tenable"
     end
   end
 
@@ -33,6 +27,17 @@ class StoresController < ApplicationController
 
   def store_params
     params.require(:store).permit(:name, :description, :image)
+  end
+
+  def check_response(store)
+    binding.pry
+    if store.save
+      flash[:message] = "Thank you for your submission, if your store is approved, then you'll see it here!"
+      return true
+    else
+      flash[:message] = "Invalid submission"
+      return false
+    end
   end
 
 end
