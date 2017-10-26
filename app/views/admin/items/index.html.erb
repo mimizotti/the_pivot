@@ -1,25 +1,28 @@
-<h3>All Items</h3>
+<%= render "admin/shared/admin_side_nav" %>
 
-<%= link_to "Back", :back %>
+<div style="margin-left:16%">
+<%= render "admin/shared/admin_nav" %>
 
+<%= link_to "Add Items", new_admin_store_item_path(@store), class: "badge badge-info" %>
 
-<table>
-  <tr>
-    <th></th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Price</th>
-    <th>Status</th>
-    <th></th>
-  </tr>
-  <% @items.each do |item| %>
+  <table>
     <tr>
-      <td><%= image_tag(item.image, class: "thumbs") %></td>
-      <td><%= link_to item.title, item_path(item) %></td>
-      <td><%= item.description %></td>
-      <td><%= item.price %></td>
-      <td><%= item.status %></td>
-      <td class="edit"><%= button_to "Edit", edit_admin_store_item_path(@store, item), class: "btn btn-primary", method: :get %></td>
+      <th></th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Status</th>
+      <th></th>
     </tr>
-  <% end %>
-</table>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= image_tag(item.image, class: "thumbs") %></td>
+        <td><%= link_to item.title, item_path(item) %></td>
+        <td><p class="description"><%= item.description %></p></td>
+        <td><%= number_to_currency(item.price) %></td>
+        <td><%= item.status.capitalize %></td>
+        <td class="edit"><%= button_to "Edit", edit_admin_store_item_path(@store, item), class: "btn btn-primary", method: :get %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

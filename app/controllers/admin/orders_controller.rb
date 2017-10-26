@@ -1,8 +1,9 @@
 class Admin::OrdersController < ApplicationController
   before_action :require_admin
 
-  def show
-    @orders = Order.all
+  def index
+    @store = Store.find(params["id"])
+    @store_orders = OrderItem.includes(:item, order: :user).store_orders(@store)
   end
 
   def ordered
