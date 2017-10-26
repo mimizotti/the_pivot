@@ -1,9 +1,20 @@
-<ul>
-
-<% @stores.each do |store| %>
-<div class="store">
-  <li class="store_image-#{store.id}"> <%= image_tag store.image %> </li>
-  <li class="store-#{store.id}"> <%= link_to "#{store.name}", store_path(store) %> </li>
+<div id="title_background">
+  <div id="main_title">
+    <h1>Stores</h1>
+  </div>
 </div>
-   <% end %>
- </ul>
+
+<div id="main_body">
+  <div class="row">
+    <% @stores.each do |store| %>
+    <div class="col-md-2 store">
+      <div class="body_background_img">
+        <ul class="gradient_unselect">
+          <li class="card-img-top"> <%= image_tag store.image, size: '150' %> </li>
+          <li class="store_title"> <%= link_to "#{store.name}", store_path(store) %> </li>
+        </ul>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

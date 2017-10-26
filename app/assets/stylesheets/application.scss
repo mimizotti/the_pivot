@@ -57,3 +57,51 @@ p{
 .loginBtn--twitter:focus {
   background: #66ccff;
 }
+.footer {
+  background-color: rgb(243, 243, 46);
+  width: 100%;
+  height: 10em;
+  padding: 0.5em;
+}
+.about_us {
+  right: 20%;
+  height: 10em;
+  width: 20%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.store_title {
+  font-family: 'Caveat Brush', cursive;
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 4.5em;
+  width: 11.24em;
+}
+.store {
+  vertical-align: top;
+  display: block;
+  text-align: center;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  padding: 5px;
+}
+.gradient_unselect {
+  background: linear-gradient(to top left, rgba(184, 184, 160, 0.5), rgba(243, 243, 46, 0.7));
+}
+.gradient_select {
+  background: linear-gradient(to top left, rgba(144, 46, 243, 0.5), rgba(243, 243, 46, 0.7));
+}
+.body_background_img {
+  background-image: url("https://thumbs.dreamstime.com/b/arabesque-star-pattern-grunge-light-grey-background-vector-illustration-65877348.jpg");
+}
+#main_title {
+  background-color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+#title_background {
+  background: linear-gradient(white, rgba(243, 243, 46, 0.7));
+}
+#main_body {
+  margin-left: 10%;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+}
