@@ -4,24 +4,28 @@
   </div>
 </div>
 
-<div class="row">
-  <% @category.items.each do |item| %>
-  <div class="col-sm-4">
-    <div class="card-group">
-      <div class="card border-0 text-center">
-        <div class="card-body">
-          <h4 class="card-title"><%= link_to item.title, item_path(item) %></h4>
-          <%= link_to image_tag(item.image, class: 'display'), item_path(item) %>
-          <p class="card-text"><%= item.description %></p>
-          <p class="card-text"><%= number_to_currency(item.price) %></p>
-          <% if item.active? %>
-              <%= button_to "Add to Cart", cart_path(item_id: item.id), class: 'btn btn-secondary add-to-cart' %>
-          <% else %>
-            <p>Item Retired</p>
-          <% end %>
+<div class="container bottom_margin">
+  <div class="row">
+<% @category.items.each do |item| %>
+    <div class="col-md-3">
+      <div class="card-group">
+        <div class="item">
+          <div class="card border-0 text-center">
+            <div class="card-body">
+              <h4 class="item_title"><%= link_to truncate(item.title, length: 40), item_path(item) %></h4>
+              <%= link_to image_tag(item.image, class: 'display'), item_path(item) %>
+              <p class="item_text"><%= truncate(item.description, length: 200) %></p>
+              <p class="card-text"><%= number_to_currency(item.price) %></p>
+              <% if item.active? %>
+                <%= button_to "Add to Cart", cart_path(item_id: item.id), class: 'btn btn-info' %>
+              <% else %>
+                <p>Item Retired</p>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+<% end %>
   </div>
-  <% end %>
 </div>
