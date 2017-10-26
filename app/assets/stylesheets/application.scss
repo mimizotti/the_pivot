@@ -40,13 +40,30 @@
   position: relative;
   text-align: center;
   }
-
-
 .loginBtn--twitter:before {
   background: url('https://s.gr-assets.com/assets/icons/twitter_icon-2289166aec1c47ee68cfb5716142273f.jpg') 6px 6px no-repeat;
 }
 .loginBtn--twitter:focus {
   background: #66ccff;
+}
+.item {
+  height: 650px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  background-color: white;
+}
+.item_text {
+  height: 150px;
+  margin-top: 10px;
+}
+.item_title {
+  height: 60px;
+  padding: 0.2em;
+}
+#main_title {
+  background-color: rgba(255, 255, 255, 0.4);
+  text-align: center;
 }
 .footer {
   background-color: rgba(50, 50, 50, 0.2);
@@ -75,6 +92,12 @@
 
 .store_image {
   margin-top: 10px;
+}
+.add_to_cart {
+  background-color: blue;
+}
+.bottom_margin {
+  margin-bottom: 20px;
 }
 
 #main_title {
