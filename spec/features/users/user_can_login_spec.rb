@@ -21,7 +21,6 @@ RSpec.feature "Visitor Logs in" do
 
       click_button "Login"
       expect(current_path).to eq("/dashboard")
-      expect(page).to have_content('bonjovirules')
       expect(page).to_not have_content("Login")
     end
   end
@@ -44,7 +43,7 @@ RSpec.feature "Visitor Logs in" do
       click_button "Login"
 
       expect(current_path).to eq admin_dashboard_path
-      expect(page).to have_content('bonjovirules')
+      expect(page).to have_content('Bon Jovi')
       expect(page).to_not have_content("Login")
     end
   end
