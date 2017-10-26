@@ -1,5 +1,10 @@
 
-<%= image_tag @pending_store.image, class: "logo" %>
+<% if @pending_store.check_image %>
+  <%= image_tag @pending_store.image, class: "logo" %>
+<% else %>
+  <img src="https://i.pinimg.com/originals/45/d9/2e/45d92e009aefefb6303d8d8550e4a8eb.png"/>
+<% end %>
+
 <h3><%= @pending_store.name %></h3>
 <p><%= @pending_store.description %></p>
 <%= link_to("Approve Business", admin_pending_store_path(@pending_store, status: "approved"), method: :patch, class: "badge badge-pill badge-primary") %>
