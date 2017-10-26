@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
+
   def index
-    @items = Item.all
+    @items = Item.paginate(:page => params[:page], :per_page => 10)
   end
 
   def show
@@ -21,5 +22,9 @@ class ItemsController < ApplicationController
     else
       item.active!
     end
+  end
+
+  def set_page
+    @page = params[:page] || 0
   end
 end
