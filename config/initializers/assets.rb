@@ -14,6 +14,7 @@ Rails.application.config.assets.precompile += %w( navigation.css )
 Rails.application.config.assets.precompile += %w( home.css )
 Rails.application.config.assets.precompile += %w( sessions.css )
 Rails.application.config.assets.precompile += %w( side_navigation.css )
+Rails.application.config.assets.precompile += %w( images.css )
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets

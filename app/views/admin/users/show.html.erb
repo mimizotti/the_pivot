@@ -8,16 +8,16 @@
   <% end %>
 
 </div>
-<div style="margin-left:18%">
+<div style="margin-left:16%">
   <h4>My Stores</h4>
 
   <div class="stores">
     <% @stores.each do |store| %>
-      <%= link_to (image_tag(store.image, height: '120', width: '120')), admin_store_path(store), class: store.name %><br>
+      <%= link_to (image_tag(store.image, class: "logo")), admin_store_path(store), class: store.name %><br>
       <% if current_user.platform_admin? %>
-        <p class="role">Platform Admin</p>
+        <p class="logo">Platform Admin</p>
       <% else %>
-        <p class="role"><%= current_user.user_roles.find_by(store: store).role.name %></p>
+        <p class="logo"><%= current_user.user_roles.find_by(store: store).role.name %></p>
     <% end %>
   <% end %>
   </div>
