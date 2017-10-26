@@ -11,4 +11,9 @@
   <li class="nav-item">
     <a class="nav-link" href="#">Analytics</a>
   </li>
+  <% if current_user.business_admin? || current_user.platform_admin? %>
+    <li class="nav-item">
+      <%= link_to "Manage Others", admin_user_roles_path(id: @store.id), class: "nav-link" %>
+    </li>
+  <% end %>
 </ul>

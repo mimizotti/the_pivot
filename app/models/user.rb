@@ -18,6 +18,10 @@ class User < ApplicationRecord
     platform_admin == true || self.roles.where(name: "Business Manager").any? || self.roles.where(name: "Business Admin").any?
   end
 
+  def business_admin?
+    self.roles.where(name: "Business Admin").any?
+  end
+
   def self.find_or_create_from_auth(auth)
     find_or_create_by(provider: auth["provider"], uid: auth["uid"]) do |user|
       user.uid = auth["uid"]
