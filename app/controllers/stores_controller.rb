@@ -30,7 +30,6 @@ class StoresController < ApplicationController
   end
 
   def check_response(store)
-    binding.pry
     if store.save
       flash[:message] = "Thank you for your submission, if your store is approved, then you'll see it here!"
       return true
