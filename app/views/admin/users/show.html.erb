@@ -14,6 +14,7 @@
   <div class="stores">
     <% @stores.each do |store| %>
       <%= link_to (image_tag(store.image, class: "logo")), admin_store_path(store), class: store.name %><br>
+      <p class="logo"><b><%= store.name %></b></p>
       <% if current_user.platform_admin? %>
         <p class="logo">Platform Admin</p>
       <% else %>

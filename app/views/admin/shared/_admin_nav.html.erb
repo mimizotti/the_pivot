@@ -6,7 +6,7 @@
     <%= link_to "Orders", admin_orders_path(id: @store.id), class: "nav-link" %>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Items</a>
+    <%= link_to "Items", admin_items_path(store_id: @store.id), class: "nav-link" %>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Analytics</a>
