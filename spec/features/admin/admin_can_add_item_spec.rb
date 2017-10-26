@@ -4,7 +4,7 @@
 #   let(:store) { Store.create(name: "Knautical Knots", description: "Underwater basket weaving supplies, not just for lazy millenials!", image: "knotical-knots.png") }
 #   let(:admin) { create(:user, role: 1) }
 #   scenario 'with valid attributes and sees the item' do
-#     category = Category.create(name: "Scuba")
+#     category = Category.create(title: "Scuba")
 #
 #     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 #
@@ -35,7 +35,7 @@
 #   end
 #
 #   scenario 'with invalid attributes and sees a flash message' do
-#     category = Category.create(name: "Scuba")
+#     category = Category.create(title: "Scuba")
 #
 #     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 #

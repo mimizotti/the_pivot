@@ -2,7 +2,7 @@ user = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy str
 user_2 = User.create(first_name: "Styx", last_name: "Rules", address: "123 man in the wilderness", email: "renegade@amazing.com", username: "styxrules", password: "styxrules")
 
 store_1 = Store.create(name: "Knautical Knots", description: "Underwater basket weaving supplies, not just for lazy millenials!", image: "knotical-knots.png")
-category_1 = Category.create(name: "scuba", title: "Scuba Diving Supplies")
+category_1 = Category.create(title: "Scuba")
 
 item_1 = Item.create(title: "Yellow Tank", description: "This lovely tank has a tiny scuba diver to accompany you on your weaving adventures.  With him, you're never alone, even if you are totally, utterly deserted.", store: store_1, price: 45.00, image: "yellow_tank.jpg")
 item_2 = Item.create(title: "Basic Mask", description: "This is a basic mask, don't expect much else from it.", store: store_1, price: 29.95, image: "basicmask.jpg")
@@ -18,7 +18,7 @@ item_11 = Item.create(title: "Scuba Vest with Attachments (Blue)", description: 
 item_12 = Item.create(title: "Normal Tank", description: "This tank lets you breathe under water.  Crazy, right?!", store: store_1, price: 149.95, image: "standardtank.jpg")
 item_13 = Item.create(title: "Yellow Tank, Vest, and Hookups", description: "For those of us unconcerned with how we get underwater, and more interested in staying there while not drowning, look no more! This complete set is a ready-to-go setup, just for your type.", store: store_1, price: 550.00, image: "yellowtankwithhookups.png")
 
-category_2 = Category.create(name: "basket", title: "Finished Baskets")
+category_2 = Category.create(title: "Baskets")
 
 item_14 = Item.create(title: "Basic Basket", description: "Basic Basket for all of your lush supplies.  Woven at a depth of 400ft, while shipwreck diving.", store: store_1, price: 39.95, image: "basicbasket.jpg")
 item_15 = Item.create(title: "Twotone Dream Basket", description: "Basket to hold your dreams.  Woven at a depth of 1200ft, in an old diving suit. while fighting hammerheads.", store: store_1, price: 129.95, image: "barrelbasketmultitone.jpg")
@@ -31,7 +31,7 @@ item_21 = Item.create(title: "Tall Baskets with Lids (set of 3)", description: "
 item_22 = Item.create(title: "Tribal Basket", description: "COLOR! Woven at a depth of 25ft, weaver lost an arm when the colors attracted a barracuda.", store: store_1, price: 249.95, image: "tribalbasket.jpg")
 item_23 = Item.create(title: "Waste Basket", description: "It's a wastebasket.  Woven in the shallow end of the kiddy pool, has been properly sanitized post-weave.", store: store_1, price: 29.95, image: "wastebasket.jpg")
 
-category_3 = Category.create(name: "basketmaking", title: "Basket Making Supplies")
+category_3 = Category.create(title: "Basket Making Supplies")
 
 item_24 = Item.create(title: "1inch flat Reed", description: "Flat Reed for weaving.  35ft", store: store_1, price: 59.95, image: "1inchflatreed.png")
 item_25 = Item.create(title: "8inch Wood Base", description: "8inch wood base, nothing special.", store: store_1, price: 13.95, image: "8inchwoodbase.jpg")
@@ -49,7 +49,7 @@ item_36 = Item.create(title: "Round Palm Frond (set of 6)", description: "Reconn
 item_37 = Item.create(title: "Twine", description: "You could leave your basket plain, but then you'd be boring.  Buy this twine for weaving beautiful details! Don't be boring...", store: store_1, price: 45.95, image: "twineforaccents.jpg")
 item_38 = Item.create(title: "Extra Thick Reed", description: "Building a framework for an industrial basket? Present and accounted for, this is your reed!  Can stand up to a Category 5 hurricane (tested)!  Unfortunately, our tester was not so lucky.", store: store_1, price: 67.96, image: "xtrathickreed.jpg")
 
-category_4 = Category.create(name: "snorkel", title: "Snorkeling Gear")
+category_4 = Category.create(title: "Snorkeling Gear")
 
 item_39 = Item.create(title: "Black Snorkel", description: "It's a snorkel, it's black, you should purchase this one if you don't have much of a personality.", store: store_1, price: 19.95, image:"blacksnorkel.jpg")
 item_40 = Item.create(title: "Blue Snorkel", description: "It's a snorkel, it's blue, you should purchase this one if you have a little bit of a personality.", store: store_1, price: 21.95, image: "bluesnorkel.jpg")
@@ -164,13 +164,10 @@ OrderItem.create(order: order_7, item: item_54, quantity: 1)
 OrderItem.create(order: order_8, item: item_38, quantity: 2)
 OrderItem.create(order: order_8, item: item_23, quantity: 1)
 
-puts "seeded"
-
-
 mimizon = Store.create(name: "Mimizon", description: "You want all the books? You can have all the books", image: "mimizon.png")
 indiecovers = Store.create(name: "Indie Covers", description: "A collection of independent titles aimed for hipsters", image: "indie-covers.png")
 
-books = Category.create(name: "books", title: "Read to your heart's content")
+books = Category.create(title: "Books")
 
 book_collection = [Item.create(title: "The Little Prince", description: "Antoine de Saint-Exupery. The Little Prince is a poetic tale, with watercolour illustrations by the author, in which a pilot stranded in the desert meets a young prince visiting Earth from a tiny asteroid. The story is philosophical and includes social criticism of the adult world", price: 6.99, image: "little-prince.jpg", store: mimizon),
 Item.create(title: "Leonardo da Vinci", description: "Walter Isaacson. The author of the acclaimed best sellers Benjamin Franklin, Einstein, and Steve Jobs delivers an engrossing biography of Leonardo da Vinci, the world's most creative genius", price: 12.99, image: "leonardo-da-vinci.png", store: mimizon),
@@ -235,7 +232,7 @@ livecomfy = Store.create(name: "Live Comfy", description: "The best type of life
 bf = Store.create(name: "BeauFrames", description: "Elevate your bedroom with a beautiful bed frame", image: "beau-frame.png")
 dt = Store.create(name: "18th & Market", description: "Find stylish and affordable Furniture to reflect your personality at 18th & Market. Enjoy free shipping on many  wide selection!", image: "18-and-market.png")
 
-furniture = Category.create(name: "furniture", title: "Find stylish and affordable Furniture to reflect your personality")
+furniture = Category.create(title: "Furniture")
 
 furnitures = [Item.create(title: "Maier Charcoal 2 Piece Sectional W/Raf Chaise", description: "Whether enjoying a cozy evening with your sweetie or entertaining a party of many, this sectional has the perfect design for getting close and spreading out. Tufted cushions provide exceptional comfort and impart tailored style, while a chaise lounge allows you to stretch your legs and seat more guests", price: 595.99, image: "maier-charcoal.png", store: livecomfy),
 Item.create(title: "Zella Charcoal 2 Piece Sectional W/Raf Chaise", description: "Big on comfort and style yet tidy in size, the Zella charcoal sectional is the ideal contemporary piece for living rooms of all sizes. A handsome profile marked by shaped arms and soft grey upholstery exudes understated elegance, while reversible accent pillows add a pop of color. Available with a right or left-facing chaise, this sectional sofa offers versatile seating options and snazzy style", price: 550.99, image: "zella-charcoal.png", store: livecomfy),
@@ -294,8 +291,8 @@ furnitures.map do |f|
   ItemCategory.create(item: f, category: furniture)
 end
 
-toys = Category.create(name: "Toys", title: "Toy Stores")
-cars = Category.create(name: "Cars", title: "Car stores")
+toys = Category.create(title: "Toy Stores")
+cars = Category.create(title: "Car stores")
 
 
 Store.create(name: "Uncle Randy's Toy Shop", description: "Flashback toys from the 80's", image: "uncle-randys-toy-shop.png")
@@ -435,7 +432,7 @@ end
 
 ants = Store.create!(name: "Ants in My Eyes Johnson's", description: "Our prices, I hope, aren't too low!", image: "antsinmyeyes.jpeg")
 
-appliances = Category.create(name: "home appliances", title: "Home Appliances")
+appliances = Category.create(title: "Home Appliances")
 
 appliance_items = [
   Item.create(store: ants, title: "Alarm Clock", description: "Wake up Morty!", price: Faker::Commerce.price, image: "alarm_clock.jpeg"),
@@ -495,14 +492,14 @@ appliance_items.each do |item|
   puts "Adding #{item[:title]} to the Home Appliances category"
 end
 
-store_a = Store.create!(name: "Francesca's", description: "Clothing and Jewelry", image: "francescas.png")
-store_2 = Store.create!(name: "Trunkt Club", description: "Men's Clothing", image: "trunkt-club.png")
-store_3 = Store.create!(name: "Zippo's", description: "Jewelry", image: "zippos.png")
-store_4 = Store.create!(name: "Smacy's", description: "Jewelry", image: "smacys.png")
-store_5 = Store.create!(name: "J. Peterman", description: "Distinctive Lifestyle Merchandise", image: "j-peterman.png")
+store_a = Store.create(name: "Francesca's", description: "Clothing and Jewelry", image: "francescas.png")
+store_2 = Store.create(name: "Trunkt Club", description: "Men's Clothing", image: "trunkt-club.png")
+store_3 = Store.create(name: "Zippo's", description: "Jewelry", image: "zippos.png")
+store_4 = Store.create(name: "Smacy's", description: "Jewelry", image: "smacys.png")
+store_5 = Store.create(name: "J. Peterman", description: "Distinctive Lifestyle Merchandise", image: "j-peterman.png")
 
-jewelry = Category.create!(name: "jewelry", title: "Jewelry")
-clothes = Category.create!(name: "clothes", title: "Clothes")
+jewelry = Category.create(title: "Jewelry")
+clothes = Category.create(title: "Clothes")
 
 
 clothes_items = [Item.create(store: store_a, title: "White Dress", description: "With cool designs", price: Faker::Commerce.price),

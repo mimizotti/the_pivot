@@ -6,7 +6,7 @@ RSpec.describe "An admin views a table of all items" do
 
   xit "and sees all items and a link to edit each" do
     admin = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive", platform_admin: true)
-    category = Category.create(name: "scuba")
+    category = Category.create(title: "scuba")
     item_1 = category.items.create!(title: "Mask", store: store, description: "This is for your face", price: 10.00, image: "http://via.placeholder.com/75")
     item_2 = category.items.create!(title: "Tank", store: store, description: "This is for your face", price: 10.00, image: "http://via.placeholder.com/75", status: 1)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
@@ -30,7 +30,7 @@ RSpec.describe "An admin views a table of all items" do
   end
   xit "and clicks on an edit button" do
     admin = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive", platform_admin: true)
-    category = Category.create(name: "scuba")
+    category = Category.create(title: "scuba")
     item_1 = category.items.create!(title: "Mask", store: store, description: "This is for your face", price: 10.00, image: "http://via.placeholder.com/75")
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
