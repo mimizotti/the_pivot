@@ -47,8 +47,19 @@ feature "Platform Admin" do
   end
 
   scenario "I can deny a new business application for my website" do
+    @store = create(:store, status: "pending")
+    datetime = @store.created_at
 
+    visit "/admin/dashboard"
+    click_on "Pending Stores"
 
+    expect(page).to have_content(@store.name)
+    expect(page).to have_content("Request made on #{datetime.month}/#{datetime.day}/#{datetime.year.to_s[2..3]}")
+
+    click_on(@store.name)
+    click_on("Reject Business")
+
+    expect(@store.pending?).to be_truthy
   end
 
 
