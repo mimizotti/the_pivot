@@ -1,9 +1,8 @@
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
   <h3 class="w3-bar-item">Admin Dashboard</h3>
   <h3 class="side-nav"><%= current_user.full_name  %></h3>
-  <a href="#" class="w3-bar-item w3-button">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <%= link_to "Manage Account", edit_user_path(current_user), class: "w3-bar-item w3-button" %>
+  <%= link_to "Manage Stores", admin_dashboard_path, class: "w3-bar-item w3-button" %>
 </div>
 <div style="margin-left:25%">
   <div class="text-center" style="margin: auto;">
