@@ -36,13 +36,10 @@
   margin-right: 10px;
 }
 
-
 .loginBtn--twitter {
   position: relative;
   text-align: center;
   }
-
-
 .loginBtn--twitter:before {
   background: url('https://s.gr-assets.com/assets/icons/twitter_icon-2289166aec1c47ee68cfb5716142273f.jpg') 6px 6px no-repeat;
 }
@@ -50,6 +47,76 @@
   background: #66ccff;
 }
 
+.item {
+  height: 650px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  background-color: white;
+}
+.item_text {
+  height: 150px;
+  margin-top: 10px;
+}
+.item_title {
+  height: 60px;
+  padding: 0.2em;
+}
+#main_title {
+  background-color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+.footer {
+  background-color: rgba(50, 50, 50, 0.2);
+  width: 100%;
+  height: 10em;
+  padding: 0.5em;
+}
+.about_us {
+  right: 20%;
+  height: 10em;
+  width: 20%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.store_title {
+  height: 4.5em;
+  width: 11.24em;
+}
+.store {
+  vertical-align: top;
+  display: block;
+  text-align: center;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  padding: 5px;
+}
+
+.store_image {
+  margin-top: 10px;
+}
+.add_to_cart {
+  background-color: blue;
+}
+.bottom_margin {
+  margin-bottom: 20px;
+}
+
+#main_title {
+  text-align: center;
+  font-size: 50px;
+}
+#main_background {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(50, 50, 50, 0.2);
+  margin-bottom: 10px;
+}
+#main_body {
+  margin-left: 10%;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+}
 
 .digg_pagination {
   background: white;
