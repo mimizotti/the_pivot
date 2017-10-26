@@ -1,4 +1,6 @@
-<table class="table table-striped text-left table-bordered">
+
+<br><br>
+<table class="table table-striped text-left table-bordered", style="margin-top:6%">
   <tr>
     <th>Order ID</th>
     <th>Full Name</th>
@@ -11,15 +13,15 @@
     <th>Cancel Order</th>
   </tr>
   <tbody>
-    <tr><% @store_orders.each do |store_order| %></tr>
-    <td><%= store_order.order.id %></td>
-    <td><%= store_order.order.user.full_name %></td>
-    <td><%= store_order.order.user.address %></td>
-    <td><%= store_order.item.title %>
-    <td><%= store_order.quantity %></td>
-    <td><%= number_to_currency(store_order.line_item_total) %></td>
-    <td><%= store_order.status.capitalize %></td>
-    <% @order = store_order %>
+    <tr><% @paginated_orders.each do |paginated_order| %></tr>
+    <td><%= paginated_order.order.id %></td>
+    <td><%= paginated_order.order.user.full_name %></td>
+    <td><%= paginated_order.order.user.address %></td>
+    <td><%= paginated_order.item.title %>
+    <td><%= paginated_order.quantity %></td>
+    <td><%= number_to_currency(paginated_order.line_item_total) %></td>
+    <td><%= paginated_order.status.capitalize %></td>
+    <% @order = paginated_order %>
     <td><% if @order.ordered? %>
           <%= button_to "Paid", admin_order_item_path(@order, status: "paid"), method: :patch, class: "btn btn-primary" %>
         <% end %>
@@ -28,11 +30,12 @@
         <% end %>
     </td>
     <td>
-      <% if store_order.ordered? || store_order.paid? %>
+      <% if paginated_order.ordered? || paginated_order.paid? %>
         <%= button_to "Cancel", admin_order_item_path(@order, status: "cancelled"), method: :patch, class: "btn btn-danger" %>
       <% end %>
     </td>
     <% end %>
+    <%= will_paginate @paginated_orders %>
   </tbody>
 </table>
 
@@ -47,10 +50,10 @@
   </tr>
   <tbody>
     <tr>
-      <td><%= @store_orders.ordered_count %></td>
-      <td><%= @store_orders.paid_count %></td>
-      <td><%= @store_orders.cancelled_count %></td>
-      <td><%= @store_orders.completed_count %></td>
+      <td><%= @paginated_orders.ordered_count %></td>
+      <td><%= @paginated_orders.paid_count %></td>
+      <td><%= @paginated_orders.cancelled_count %></td>
+      <td><%= @paginated_orders.completed_count %></td>
     </tr>
   </tbody>
 </table>
