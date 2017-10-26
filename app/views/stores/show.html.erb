@@ -14,7 +14,7 @@
             <div class="card-body">
               <h4 class="item_title"><%= link_to truncate(item.title, length: 40), item_path(item) %></h4>
               <%= link_to image_tag(item.image, class: 'display'), item_path(item) %>
-              <p class="item_text"><%= truncate(item.description, length: 225) %></p>
+              <p class="item_text"><%= truncate(item.description, length: 200) %></p>
               <p class="card-text"><%= number_to_currency(item.price) %></p>
               <% if item.active? %>
                 <%= button_to "Add to Cart", cart_path(item_id: item.id), class: 'btn btn-info' %>

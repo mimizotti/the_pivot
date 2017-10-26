@@ -1,59 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
+<div id="main_background">
+  <div id="main_title">
+    <h1><%= @category.title %></h1>
+  </div>
+</div>
 
-    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Oswald|Quicksand" rel="stylesheet">
-
-    <style>
-    h1 {
-      font-family: 'Fredericka the Great', cursive;
-      font-size: 75px;
-      color: black;
-      text-align: center;
-    }
-    h4 {
-      font-family: 'Oswald', sans-serif;
-    }
-    h4 > a{
-      text-decoration: none;
-      color: #CD853F;
-    }
-    p {
-      font-family: 'Quicksand', sans-serif;
-    }
-    </style>
-  </head>
-  <body>
-    <div class="container-fluid"><br/>
-      <div class="card card-inverse">
-        <%= image_tag("Water-Ocean-l.jpg", class: "card-img") %>
-        <div class="card-img-overlay">
-          <h1 class="card-title"><%= @category.title %></h4>
+<div class="row">
+  <% @category.items.each do |item| %>
+  <div class="col-sm-4">
+    <div class="card-group">
+      <div class="card border-0 text-center">
+        <div class="card-body">
+          <h4 class="card-title"><%= link_to item.title, item_path(item) %></h4>
+          <%= link_to image_tag(item.image, class: 'display'), item_path(item) %>
+          <p class="card-text"><%= item.description %></p>
+          <p class="card-text"><%= number_to_currency(item.price) %></p>
+          <% if item.active? %>
+              <%= button_to "Add to Cart", cart_path(item_id: item.id), class: 'btn btn-secondary add-to-cart' %>
+          <% else %>
+            <p>Item Retired</p>
+          <% end %>
         </div>
-      </div>
-      <div class="row">
-        <% @category.items.each do |item| %>
-        <div class="col-sm-4">
-          <div class="card-group">
-            <div class="card border-0 text-center">
-              <div class="card-body">
-                <h4 class="card-title"><%= link_to item.title, item_path(item) %></h4>
-                <%= link_to image_tag(item.image, class: 'display'), item_path(item) %>
-                <p class="card-text"><%= item.description %></p>
-                <p class="card-text"><%= number_to_currency(item.price) %></p>
-                <% if item.active? %>
-                    <%= button_to "Add to Cart", cart_path(item_id: item.id), class: 'btn btn-secondary add-to-cart' %>
-                <% else %>
-                  <p>Item Retired</p>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </div>
-        <% end %>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+  <% end %>
+</div>
