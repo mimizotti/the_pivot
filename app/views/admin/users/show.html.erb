@@ -1,24 +1,32 @@
-<div class="text-center" style="margin: auto;">
-  <h1>Admin Dashboard</h1>
-  <h2><strong><%= current_user.full_name %></strong></h2>
-  <h5><strong>Username: </strong><%= current_user.username %></h5>
-  <h5><strong>Address: </strong><%= current_user.address %></h5>
-  <h5><strong>Email: </strong><%= current_user.email %></h5>
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
+  <h3 class="w3-bar-item">Admin Dashboard</h3>
+  <h3 class="side-nav"><%= current_user.first_name  %></h3>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
 </div>
+<div style="margin-left:25%">
+  <div class="text-center" style="margin: auto;">
+    <h1>Admin Dashboard</h1>
+    <h2><strong><%= current_user.full_name %></strong></h2>
+    <h5><strong>Username: </strong><%= current_user.username %></h5>
+    <h5><strong>Address: </strong><%= current_user.address %></h5>
+    <h5><strong>Email: </strong><%= current_user.email %></h5>
+  </div>
+  <button type="button" class="btn btn-primary">
+    <a href="/admin/pending_stores">Pending Stores</a> <span class="badge badge-light"><%= @pending_stores.count %></span>
+  </button>
 
 
-<button type="button" class="btn btn-primary">
-  <a href="/admin/pending_stores">Pending Stores</a> <span class="badge badge-light"><%= @pending_stores.count %></span>
-</button>
-
-
-<div class="stores">
-  <% @stores.each do |store| %>
-    <%= link_to (image_tag(store.image)), admin_store_path(store), class: store.name %>
-    <% if current_user.platform_admin? %>
-    <h5>Platform Admin</h5>
-    <% else %>
-    <%= current_user.user_roles.find_by(store: store).role.name %>
+  <div class="stores">
+    <% @stores.each do |store| %>
+      <%= link_to (image_tag(store.image)), admin_store_path(store), class: store.name %>
+      <% if current_user.platform_admin? %>
+      <h5>Platform Admin</h5>
+      <% else %>
+      <%= current_user.user_roles.find_by(store: store).role.name %>
+    <% end %>
   <% end %>
-<% end %>
+  </div>
 </div>
+

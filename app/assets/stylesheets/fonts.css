@@ -2,3 +2,8 @@ h1.logo {
   font-family: 'Quicksand', sans-serif;
   font-size: 24px;
 }
+
+h3.side-nav {
+  padding: 0px 16px;
+  font-size: 16px;
+}
