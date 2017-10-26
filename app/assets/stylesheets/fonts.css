@@ -30,10 +30,11 @@ div.name {
 
 div.degination {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 15%;
   font-family: 'Lora', serif;
 }
 
 p.card-text {
   text-align: center;
+  font-weight: bold;
 }
