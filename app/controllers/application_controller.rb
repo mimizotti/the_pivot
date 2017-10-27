@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::API
+class ApplicationController < ActionController::Base
   #protect_from_forgery with: :exception
   helper_method :current_user
   helper_method :logged_in?
@@ -6,8 +6,6 @@ class ApplicationController < ActionController::API
   helper_method :require_admin
   helper_method :current_admin?
   helper_method :platform_admin?
-  before_action :authenticate_request
-  include ExceptionHandler
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
@@ -33,10 +31,4 @@ class ApplicationController < ActionController::API
     current_user.roles.where("Business Admin").any?
   end
 
-  private
-
-    def authenticate_request
-      @current_user = AuthorizeApiRequest.call(request.headers).result
-      render json: { error: 'Not Authorized' }, status: 401 unless @current_user
-    end
 end

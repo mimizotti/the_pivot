@@ -29,6 +29,7 @@ gem 'rack-cors','~>0.4.1'
 gem 'knock', '~> 2.0'
 gem 'jwt'
 gem 'simple_command'
+gem 'will_paginate'
 # gem 'capistrano-rails', group: :development
 # gem 'therubyracer', platforms: :ruby
 # gem 'redis', '~> 3.0'
