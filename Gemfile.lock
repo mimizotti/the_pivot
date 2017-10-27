@@ -86,6 +86,10 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.3)
     docile (1.1.5)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     draper (3.0.1)
       actionpack (~> 5.0)
       activemodel (~> 5.0)
@@ -133,6 +137,10 @@ GEM
       thor (>= 0.14, < 2.0)
     json (2.1.0)
     jwt (1.5.6)
+    knock (2.1.1)
+      bcrypt (~> 3.1)
+      jwt (~> 1.5)
+      rails (>= 4.2)
     launchy (2.4.3)
       addressable (~> 2.3)
     libxml-ruby (3.0.0)
@@ -177,6 +185,7 @@ GEM
     public_suffix (3.0.0)
     puma (3.10.0)
     rack (2.0.3)
+    rack-cors (0.4.1)
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
     rails (5.1.4)
@@ -257,6 +266,7 @@ GEM
     sexp_processor (4.10.0)
     shoulda-matchers (3.1.2)
       activesupport (>= 4.0.0)
+    simple_command (0.0.9)
     simplecov (0.15.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -309,6 +319,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.2)
   database_cleaner
+  dotenv-rails
   draper
   factory_girl_rails
   faker
@@ -317,17 +328,21 @@ DEPENDENCIES
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
   jquery-rails
+  jwt
+  knock (~> 2.0)
   launchy
   listen (>= 3.0.5, < 3.2)
   omniauth-twitter
   pg (~> 0.18)
   pry
   puma (~> 3.7)
+  rack-cors (~> 0.4.1)
   rails (~> 5.1.4)
   rspec-rails
   rubycritic
   sass-rails (~> 5.0)
   shoulda-matchers
+  simple_command
   simplecov
   twilio-ruby
   tzinfo-data

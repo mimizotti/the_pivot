@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root to: 'home#index'
 
   resources :stores, only: [:index, :show, :new, :create] do
@@ -55,4 +56,15 @@ Rails.application.routes.draw do
   post 'paid' => 'orders#change_to_paid', as: :paid
   post 'cancelled' => 'orders#change_to_cancelled', as: :cancelled
   post 'completed' => 'orders#change_to_completed', as: :completed
+
+  namespace :api do
+    namespace :v1 do
+      post '/auth/login', to: 'users#login'
+      get '/test', to: 'users#test'
+      resources :stores, only: [:index, :show]
+      namespace :stores do
+        resources :itemized_total, only: [:show]
+      end
+    end
+  end
 end

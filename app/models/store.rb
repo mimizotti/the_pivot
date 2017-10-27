@@ -28,4 +28,12 @@ class Store < ApplicationRecord
     end
   end
 
+  def revenue_by_item
+    items
+    .joins(:order_items)
+    .where(order_items: {status: 'paid'|| 'completed' || 'ordered'})
+    .group(:id)
+    .sum('order_items.line_item_total')
+  end
+
 end
