@@ -7,14 +7,16 @@
 <div id="main_body">
   <div class="row">
     <% @stores.each do |store| %>
-    <div class="col-md-2 store">
-      <div>
-        <ul>
-          <li class="card-img-top store_image"> <%= image_tag store.image, size: '150' %> </li>
-          <li class="store_title"> <%= link_to "#{store.name}", store_path(store) %> </li>
-        </ul>
-      </div>
-    </div>
+      <% if !(store.pending?) %>
+        <div class="col-md-2 store">
+          <div>
+            <ul>
+              <li class="card-img-top store_image"> <%= image_tag store.image, size: '150' %> </li>
+              <li class="store_title"> <%= link_to "#{store.name}", store_path(store) %> </li>
+            </ul>
+          </div>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
