@@ -19,9 +19,8 @@ During this project, the Pivot team:
 
 ### Prerequisites
 
-Suggested browser:
-* Google Chrome
-
+* Ruby 2.3.1
+* Rails 5
 
 ### Getting Started
 ```
