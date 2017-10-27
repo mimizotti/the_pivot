@@ -1,5 +1,5 @@
 class Api::V1::StoresController < ApplicationController
-  skip_before_action :authenticate_request, only: %i[login register]
+  skip_before_action :authenticate_request, only: %i[index show]
   def index
     render json: Store.all
   end

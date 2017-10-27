@@ -4,6 +4,9 @@ Rails.application.routes.draw do
       post '/auth/login', to: 'users#login'
       get '/test', to: 'users#test'
       resources :stores, only: [:index, :show]
+      namespace :stores do
+        resources :itemized_total, only: [:show]
+      end
     end
   end
 
