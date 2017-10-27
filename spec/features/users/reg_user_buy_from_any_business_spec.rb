@@ -5,8 +5,10 @@ feature 'As a registered user' do
     it 'and should be able to purchase items' do
       user = create(:user)
       stores = create_list(:store, 3)
+      category = create(:category)
       stores.each do |store|
         store.items << create_list(:item, 3)
+        category.items << store.items
       end
 
       allow_any_instance_of(ApplicationController)
@@ -19,7 +21,7 @@ feature 'As a registered user' do
         within(first(".item")) do
           click_on "Add to Cart"
         end
-        expect(page).to have_content("You now have 1 #{store.items.first.title}")
+        expect(page).to have_content("You have added #{store.items.first.title} to your cart.")
       end
 
       visit cart_path
