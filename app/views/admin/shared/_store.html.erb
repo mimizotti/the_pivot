@@ -1,5 +1,5 @@
 <%= image_tag @store.image, class: "logo" %>
 <p class="logo"><%= @store.name %></p>
-<% if @current_user.business_admin? %>
+<% if @current_user.business_admin? || @current_user.platform_admin? %>
   <%= link_to("Update Business Information", edit_admin_store_path(@store), class: "badge badge-pill badge-primary") %>
 <% end %>    

@@ -42,7 +42,7 @@ Rails.application.routes.draw do
     resources :orders, only: [:index]
     resources :order_items, only: [:update]
     resources :pending_stores, only: [:show, :update]
-    resources :user_roles, only: [:index, :destroy]
+    resources :user_roles, only: [:index, :show, :update, :destroy]
 
 
     resources :stores, only: [:show, :edit, :update] do
