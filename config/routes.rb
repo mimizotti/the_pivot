@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      post '/auth/login', to: 'users#login'
+      get '/test', to: 'users#test'
+      resources :stores, only: [:index, :show]
+    end
+  end
+
   root to: 'home#index'
 
   resources :stores, only: [:index, :show, :new, :create] do

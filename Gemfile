@@ -24,6 +24,11 @@ gem 'faraday'
 gem 'jquery-rails'
 gem 'twilio-ruby'
 gem 'draper'
+gem 'dotenv-rails'
+gem 'rack-cors','~>0.4.1'
+gem 'knock', '~> 2.0'
+gem 'jwt'
+gem 'simple_command'
 # gem 'capistrano-rails', group: :development
 # gem 'therubyracer', platforms: :ruby
 # gem 'redis', '~> 3.0'
@@ -38,7 +43,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'simplecov'
-  gem 'will_paginate'
+  gem 'dotenv-rails'
 end
 
 group :development do

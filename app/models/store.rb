@@ -28,4 +28,8 @@ class Store < ApplicationRecord
     end
   end
 
+  def best_items
+
+  end
+
 end
