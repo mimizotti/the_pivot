@@ -5,12 +5,12 @@ RSpec.describe "Admin edits the user" do
   let(:user) { create(:user, platform_admin: true) }
 
   context "with valid information" do
-    xit "and sees their dashboard with updated information" do
+    it "and sees their dashboard with updated information" do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit admin_dashboard_path
 
-      click_link("Edit Account")
+      click_link("Manage Account")
 
       fill_in "user[email]", with: "findingnemo@sea.com"
       fill_in "user[address]", with: "123 UnderSea Way"
