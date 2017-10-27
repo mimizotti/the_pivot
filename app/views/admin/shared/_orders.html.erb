@@ -14,26 +14,27 @@
   </tr>
   <tbody>
     <tr><% @paginated_orders.each do |paginated_order| %></tr>
-    <td><%= paginated_order.order.id %></td>
-    <td><%= paginated_order.order.user.full_name %></td>
-    <td><%= paginated_order.order.user.address %></td>
-    <td><%= paginated_order.item.title %>
-    <td><%= paginated_order.quantity %></td>
-    <td><%= number_to_currency(paginated_order.line_item_total) %></td>
-    <td><%= paginated_order.status.capitalize %></td>
-    <% @order = paginated_order %>
-    <td><% if @order.ordered? %>
+      <td><%= paginated_order.order.id %></td>
+      <td><%= paginated_order.order.user.full_name %></td>
+      <td><%= paginated_order.order.user.address %></td>
+      <td><%= paginated_order.item.title %>
+      <td><%= paginated_order.quantity %></td>
+      <td><%= number_to_currency(paginated_order.line_item_total) %></td>
+      <td><%= paginated_order.status.capitalize %></td>
+        <% @order = paginated_order %>
+      <td class="order">
+        <% if @order.ordered? %>
           <%= button_to "Paid", admin_order_item_path(@order, status: "paid"), method: :patch, class: "btn btn-primary" %>
         <% end %>
         <% if @order.paid? %>
           <%= button_to "Completed", admin_order_item_path(@order, status: "completed"), method: :patch, class: "btn btn-primary" %>
         <% end %>
-    </td>
-    <td>
-      <% if paginated_order.ordered? || paginated_order.paid? %>
-        <%= button_to "Cancel", admin_order_item_path(@order, status: "cancelled"), method: :patch, class: "btn btn-danger" %>
-      <% end %>
-    </td>
+      </td>
+      <td class="order-cancel">
+        <% if paginated_order.ordered? || paginated_order.paid? %>
+          <%= button_to "Cancel", admin_order_item_path(@order, status: "cancelled"), method: :patch, class: "btn btn-danger" %>
+        <% end %>
+      </td>
     <% end %>
     <%= will_paginate @paginated_orders %>
   </tbody>

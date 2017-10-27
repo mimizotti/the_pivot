@@ -12,10 +12,35 @@ describe User, type: :model do
     it { should have_many(:orders) }
   end
 
-  describe "methods" do
-    it "can generate a full name for a user" do
-      user = User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive")
-      expect(user.full_name).to eq("Bon Jovi")
+  describe ".instance_methods" do
+    let(:user) { User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive") }
+    let(:admin) { User.create(first_name: "Bon", last_name: "Jovi", address: "123 crazy street", email: "deadoralive@awesome.com", username: "bonjovirules", password: "deadoralive", platform_admin: true) }
+    let(:role) { Role.create(name: "Business Admin") }
+    let(:store) { create(:store) }
+
+    describe ".full_name" do
+      it "can generate a full name for a user" do
+        expect(user.full_name).to eq("Bon Jovi")
+      end
+    end
+
+    describe ".business_admin?" do
+      it "returns true if user.roles contains Business Admin" do
+        UserRole.create(user: user, role: role, store: store)
+        expect(user.business_admin?).to eq(true)
+      end
+      it "returns false if user.roles does not contain Business Admin" do
+        expect(user.business_admin?).to eq(false)
+      end
+    end
+
+    describe ".platform_admin?" do
+      it "returns true if user is a platform_admin" do
+        expect(admin.platform_admin?).to eq(true)
+      end
+      it "returns false if user is not a platform_admin" do
+        expect(user.platform_admin?).to eq(false)
+      end
     end
   end
 end
