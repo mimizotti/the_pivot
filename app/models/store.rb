@@ -21,7 +21,9 @@ class Store < ApplicationRecord
 
   def check_image
     begin
-      response = Net::HTTP.get_response(image)
+      escaped_address = URI.escape(image)
+      address = URI.parse(escaped_address)
+      response = Net::HTTP.get_response(address)
       return true
     rescue
       return false
