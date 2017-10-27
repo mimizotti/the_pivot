@@ -18,4 +18,14 @@ class Store < ApplicationRecord
       item.update_columns(status: 0)
     end
   end
+
+  def check_image
+    begin
+      response = Net::HTTP.get_response(image)
+      return true
+    rescue
+      return false
+    end
+  end
+
 end
