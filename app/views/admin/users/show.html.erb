@@ -10,12 +10,13 @@
         <%= link_to (image_tag("https://i.pinimg.com/originals/45/d9/2e/45d92e009aefefb6303d8d8550e4a8eb.png",
                                 class: "logo")), admin_store_path(store), class: store.name %><br>
       <% end %>
-      
+
       <p class="logo"><b><%= store.name %></b> - <i><%= store.status.capitalize %></i></p>
       <% if current_user.platform_admin? %>
         <p class="logo">Platform Admin</p>
       <% else %>
         <p class="logo"><%= current_user.user_roles.find_by(store: store).role.name %></p>
+      <% end %>
     <% end %>
   <% end %>
   </div>
