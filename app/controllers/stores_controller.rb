@@ -15,9 +15,11 @@ class StoresController < ApplicationController
   def create
     @store = Store.new(store_params)
     @store.status = "pending"
-    @store.save!
-    redirect_to stores_path
-    flash[:message] = "Thank you for your submission, if your store is approved, then you'll see it here!"
+    if check_response(@store)
+      redirect_to stores_path
+    else
+      redirect_to new_store_path
+    end
   end
 
 
@@ -25,6 +27,16 @@ class StoresController < ApplicationController
 
   def store_params
     params.require(:store).permit(:name, :description, :image)
+  end
+
+  def check_response(store)
+    if store.save
+      flash[:message] = "Thank you for your submission, if your store is approved, then you'll see it here!"
+      return true
+    else
+      flash[:message] = "Invalid submission"
+      return false
+    end
   end
 
 end
