@@ -34,8 +34,9 @@ feature "Platform Admin" do
 
     click_on(@store.name)
     click_on("Approve Business")
+    store = Store.find(@store.id)
 
-    expect(@store.pending?).to be_falsy
+    expect(store.online?).to be_truthy
     expect(page).to_not have_content(@store.name)
     expect(page).to_not have_content("Request made on #{datetime.month}/#{datetime.day}/#{datetime.year.to_s[2..3]}")
   end
@@ -52,8 +53,9 @@ feature "Platform Admin" do
 
     click_on(@store.name)
     click_on("Reject Business")
+    store = Store.find(@store.id)
 
-    expect(@store.pending?).to be_truthy
+    expect(store.rejected?).to be_truthy
     expect(page).to_not have_content(@store.name)
     expect(page).to_not have_content("Request made on #{datetime.month}/#{datetime.day}/#{datetime.year.to_s[2..3]}")
   end
