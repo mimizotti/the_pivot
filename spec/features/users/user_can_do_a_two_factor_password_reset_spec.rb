@@ -4,7 +4,7 @@ feature "Two-Factor Password Reset" do
   scenario "Guest user receives a code to reset password" do
     create_list(:item, 10)
 
-    User.create(first_name: 'Mimi', last_name: 'Le', address: "18th & Market St", email: 'mimi@mimi.com', username: 'mimi', password: 'mimi', phone_number: ENV['test_phone'])
+    User.create(first_name: 'Mimi', last_name: 'Le', address: "18th & Market St", email: 'mimi@mimi.com', username: 'mimi', password: 'mimi', phone_number: '7203616510')
 
     visit login_path
 
